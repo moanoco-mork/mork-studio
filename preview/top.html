@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MORK STUDIO｜AI のチームでつくる iPhone アプリ</title>
+<meta name="description" content="MORK STUDIO は、モークと AI のチームが iPhone アプリをつくる小さなスタジオです。">
+<meta name="robots" content="noindex"><!-- 本番では消す -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=M+PLUS+Rounded+1c:wght@400&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--surface:#fffdf3;--card:#fff;--ink:#262b33;--logo:#3d4f63;--muted:#5d6570;--link:#58708a;--rule:#e6e1cf}
+*{box-sizing:border-box}
+body{margin:0;background:var(--surface);color:var(--ink);font-family:"Zen Kaku Gothic New",system-ui,sans-serif;line-height:1.8}
+a{color:var(--link)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.nw{white-space:nowrap}
+/* ヘッダー */
+header.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:2px solid var(--ink)}
+.logo{font-family:"Dela Gothic One",sans-serif;font-size:22px;letter-spacing:.04em;color:var(--logo);text-decoration:none}
+header nav a{color:var(--ink);text-decoration:none;font-weight:700;margin-left:22px}
+/* ヒーロー（案A の見た目） */
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding:56px 0 48px}
+.big{font-family:"Dela Gothic One",sans-serif;font-weight:400;font-size:96px;line-height:1;letter-spacing:.04em;color:var(--logo);margin:0}
+.hero .sub{font-weight:900;font-size:28px;line-height:1.45;margin:22px 0 10px}
+.hero .body{font-size:17px;max-width:32em;margin:0 0 26px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;font-weight:900;text-decoration:none;border:3px solid var(--ink);border-radius:14px;padding:12px 22px;box-shadow:4px 4px 0 var(--ink);color:var(--ink);background:var(--card)}
+.btn.primary{background:var(--logo);color:#fff}
+.crowd{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;justify-items:center;align-items:center;max-width:420px;margin-left:auto}
+.crowd svg{width:100%;max-width:120px;height:auto}
+.crowd > :nth-child(3n+2){transform:translateY(22px)}
+/* 数字とスタッフへの入口 */
+.staff{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:stretch;padding:0 0 64px}
+.count{display:flex;gap:14px}
+.count div{background:var(--card);border:3px solid var(--ink);border-radius:16px;box-shadow:5px 5px 0 var(--ink);padding:12px 18px;text-align:center;min-width:120px}
+.count b{display:block;font-family:"Dela Gothic One",sans-serif;font-weight:400;font-size:40px;line-height:1.1;color:var(--logo)}
+.count span{font-size:12px;font-weight:700;color:var(--muted)}
+.staff-link{display:flex;gap:18px;align-items:center;background:var(--logo);color:#fff;text-decoration:none;border:3px solid var(--ink);border-radius:16px;box-shadow:5px 5px 0 var(--ink);padding:14px 22px}
+.staff-link b{font-size:20px;font-weight:900}
+.faces{display:flex;flex:none}
+.faces svg{width:48px;height:48px;margin-right:-10px}
+/* アプリ一覧 */
+.apps{border-top:2px solid var(--ink);padding:56px 0 24px}
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+h2{font-weight:900;font-size:30px;margin:0}
+.sec-note{color:var(--muted);margin:0;font-family:"M PLUS Rounded 1c",sans-serif}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:24px;list-style:none;margin:0;padding:0}
+.card{--app:#3d4f63;background:var(--card);border:3px solid var(--ink);border-radius:18px;box-shadow:5px 5px 0 var(--ink);display:flex;flex-direction:column;overflow:hidden}
+.card .band{height:10px;background:var(--app);border-bottom:3px solid var(--ink)}
+.card .body{padding:18px 18px 8px;flex:1}
+.card .top{display:flex;gap:14px;align-items:center}
+.card .icon{width:64px;height:64px;border-radius:15px;border:2px solid var(--ink);flex:none;object-fit:cover}
+.card .icon.ph{display:flex;align-items:center;justify-content:center;background:var(--app);color:#fff;font-weight:900;font-size:26px}
+.card h3{font-size:19px;font-weight:900;line-height:1.4;margin:12px 0 0}
+.meta{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-size:12px;font-weight:700;border-radius:8px;padding:0 8px;line-height:1.7}
+.chip.genre{background:var(--surface);border:1px solid var(--rule);color:var(--muted)}
+.chip.released{background:var(--app);color:#fff}
+.chip.soon{background:#fff;color:var(--ink);border:1px dashed var(--ink)}
+.card p{margin:12px 0 0;font-size:15px;line-height:1.7}
+.card .links{display:grid;gap:8px;padding:14px 18px 18px}
+.card .links a,.card .links span{text-align:center;font-weight:900;font-size:14px;border-radius:12px;padding:9px 12px;text-decoration:none;border:2px solid var(--ink);white-space:nowrap}
+.card .store{background:var(--app);color:#fff}
+.card .wait{background:#fff;color:var(--muted);border-style:dashed !important}
+.card .sup{background:var(--surface);color:var(--ink)}
+/* 開発記 */
+.blog{margin:56px 0 64px;display:grid;grid-template-columns:1.2fr 1fr;border:3px solid var(--ink);border-radius:20px;box-shadow:6px 6px 0 var(--ink);overflow:hidden;background:var(--card)}
+.blog .l{padding:36px}
+.blog .l p{margin-top:8px}
+.blog .r{background:var(--logo);color:#fff;padding:36px;display:flex;flex-direction:column;justify-content:center;gap:10px}
+.blog .r span{font-family:"M PLUS Rounded 1c",sans-serif;opacity:.9}
+.blog .r a{color:#fff;font-weight:900;font-size:20px}
+footer{border-top:2px solid var(--ink);padding:28px 0 44px;font-size:14px;color:var(--muted)}
+footer ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;gap:6px 18px}
+@media (max-width:980px){
+  .hero{grid-template-columns:1fr}
+  .crowd{margin:0;max-width:360px}
+  .staff{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  header nav{display:none}
+  .hero{padding:32px 0 36px;gap:24px}
+  .big{font-size:58px}
+  .hero .sub{font-size:21px}
+  .hero .body{font-size:16px}
+  .crowd{grid-template-columns:repeat(5,1fr);max-width:none}
+  .crowd > :nth-child(n+6){display:none}
+  .crowd > :nth-child(3n+2){transform:none}
+  .crowd > :nth-child(2n){transform:translateY(12px)}
+  .count{gap:10px}
+  .count div{min-width:0;flex:1;padding:10px 6px}
+  .count b{font-size:30px}
+  .staff-link .faces{display:none}
+  .blog{grid-template-columns:1fr}
+  .blog .l,.blog .r{padding:24px}
+}
+</style>
+<script src="apps.js"></script>
+<script src="staff.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><a class="logo" href="./">MORK STUDIO</a><nav><a href="#apps">アプリ</a><a href="team.html">スタッフ</a><a href="https://mork-studio.hatenablog.com/">開発記</a></nav></header>
+
+  <section class="hero">
+    <div>
+      <h1 class="big">MORK<br>STUDIO</h1>
+      <p class="sub">AI のチームで、<span class="nw">iPhone アプリを</span><span class="nw">つくっています。</span></p>
+      <p class="body">オーナーのモークが「こんなアプリがほしい」と言うと、AI のスタッフが分担して、設計・デザイン・開発・ブログまで進めます。小さなアプリを、どんどんつくっています。</p>
+      <div class="btns"><a class="btn primary" href="#apps">アプリを見る</a><a class="btn" href="team.html">スタッフ紹介</a></div>
+    </div>
+    <div class="crowd" id="crowd" aria-hidden="true"></div>
+  </section>
+
+  <section class="staff">
+    <div class="count" aria-label="数字">
+      <div><b id="n-released">0</b><span>公開中のアプリ</span></div>
+      <div><b id="n-soon">0</b><span>近日公開</span></div>
+      <div><b id="n-staff">0</b><span>スタッフ</span></div>
+    </div>
+    <a class="staff-link" href="team.html"><span class="faces" id="faces"></span><span><b>スタッフ紹介</b><br>MORK STUDIO では、こんな人たちが働いています →</span></a>
+  </section>
+
+  <section class="apps" id="apps">
+    <div class="head"><h2>アプリ</h2><p class="sec-note">新しい順。どれも iPhone 用です。</p></div>
+    <ul class="grid" id="app-grid"></ul>
+    <noscript><p>アプリの一覧を表示するには JavaScript を有効にしてください。</p></noscript>
+  </section>
+
+  <section class="blog">
+    <div class="l"><h2>開発記</h2><p class="sec-note">チームでアプリをつくる毎日を、広報課のブロガーさんが書いています。うまくいったことも、失敗も。</p></div>
+    <div class="r"><span>ブログ</span><a href="https://mork-studio.hatenablog.com/">MORK STUDIO 開発記 →</a></div>
+  </section>
+
+  <footer>
+    <ul id="support-links"></ul>
+    <div>お問い合わせ：<a href="mailto:morkstudio@icloud.com">morkstudio@icloud.com</a>　&copy; <span id="year">2026</span> MORK STUDIO</div>
+  </footer>
+</div>
+
+<script>
+(function () {
+  /* サポートページへのパス。本番（index.html）では "" にする。preview/ の中では "../" */
+  var BASE = "../";
+  var apps = (window.MORK_APPS || []).slice();
+
+  /* 新しい順：近日公開（released なし）を先頭、そのあと公開日が新しい順 */
+  apps.sort(function (a, b) {
+    if (!a.released && !b.released) return 0;
+    if (!a.released) return -1;
+    if (!b.released) return 1;
+    return b.released.localeCompare(a.released);
+  });
+
+  function el(tag, attrs, children) {
+    var n = document.createElement(tag);
+    for (var k in attrs || {}) {
+      if (k === "text") n.textContent = attrs[k];
+      else if (k === "style") n.style.cssText = attrs[k];
+      else n.setAttribute(k, attrs[k]);
+    }
+    (children || []).forEach(function (c) { if (c) n.appendChild(c); });
+    return n;
+  }
+
+  var grid = document.getElementById("app-grid");
+  apps.forEach(function (a) {
+    var released = a.status === "released";
+    var icon = a.icon
+      ? el("img", { class: "icon", src: a.icon, alt: a.name + "のアイコン", width: 64, height: 64, loading: "lazy" })
+      : el("div", { class: "icon ph", "aria-hidden": "true", text: a.name.charAt(0) });
+    var store = released && a.appStore
+      ? el("a", { class: "store", href: a.appStore, text: "App Store で見る" })
+      : el("span", { class: "wait", text: "近日公開" });
+    var card = el("li", { class: "card", style: "--app:" + (a.color || "#3d4f63") }, [
+      el("div", { class: "band" }),
+      el("div", { class: "body" }, [
+        el("div", { class: "top" }, [icon, el("div", { class: "meta" }, [
+          el("span", { class: "chip " + (released ? "released" : "soon"), text: released ? "公開中" : "近日公開" }),
+          el("span", { class: "chip genre", text: a.genre })
+        ])]),
+        el("h3", { text: a.name }),
+        el("p", { text: a.catch })
+      ]),
+      el("div", { class: "links" }, [store, el("a", { class: "sup", href: BASE + a.id + "/", text: "サポート" })])
+    ]);
+    grid.appendChild(card);
+  });
+
+  document.getElementById("n-released").textContent = apps.filter(function (a) { return a.status === "released"; }).length;
+  document.getElementById("n-soon").textContent = apps.filter(function (a) { return a.status !== "released"; }).length;
+
+  /* フッター：各アプリのサポートとプライバシーポリシー（既存の URL のまま） */
+  var ul = document.getElementById("support-links");
+  apps.forEach(function (a) {
+    ul.appendChild(el("li", {}, [el("a", { href: BASE + a.id + "/", text: a.name + " サポート" })]));
+    ul.appendChild(el("li", {}, [el("a", { href: BASE + a.id + "/privacy.html", text: "プライバシー" })]));
+  });
+  var staff = window.MORK_STAFF || [];
+  document.getElementById("n-staff").textContent = staff.length;
+  document.getElementById("crowd").innerHTML = staff.slice(0, 9).map(function (p) { return window.morkAvatar(p.avatar, 120); }).join("");
+  document.getElementById("faces").innerHTML = staff.slice(0, 5).map(function (p) { return window.morkAvatar(p.avatar, 48); }).join("");
+  document.getElementById("year").textContent = new Date().getFullYear();
+})();
+</script>
+</body></html>
