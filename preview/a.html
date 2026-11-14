@@ -30,7 +30,7 @@ nav a{color:var(--ink);text-decoration:none;font-weight:700;font-size:15px;margi
 .soon small{font-size:13px;color:var(--muted);font-weight:700;margin-top:6px}
 .soon .bell{width:16px;height:16px;border-radius:50%;background:var(--gold);border:3px solid var(--ink);margin-bottom:6px}
 h2{font-weight:900;font-size:28px;margin:0 0 24px}
-.apps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding-bottom:72px}
+.apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;padding-bottom:72px}
 .app{background:var(--card);border:3px solid var(--ink);border-radius:18px;box-shadow:6px 6px 0 var(--ink);overflow:hidden;display:flex;flex-direction:column}
 .app .shot{height:260px;overflow:hidden;border-bottom:3px solid var(--ink);display:flex;justify-content:center;gap:10px;padding:20px 12px 0}
 .app .shot img{width:42%;border:2px solid var(--ink);border-bottom:0;border-radius:18px 18px 0 0;object-fit:cover;object-position:top}
@@ -39,7 +39,7 @@ h2{font-weight:900;font-size:28px;margin:0 0 24px}
 .kind{font-size:13px;font-weight:700;color:var(--muted)}
 .name{font-weight:900;font-size:19px;line-height:1.35}
 .desc{grid-column:1/-1;font-family:"M PLUS Rounded 1c",sans-serif;font-size:15px;color:var(--muted);margin-top:10px}
-.app .cta{display:flex;gap:10px;padding:0 20px 20px}
+.app .cta{display:flex;flex-wrap:wrap;gap:10px;padding:0 20px 20px}
 .app .cta a{flex:1;white-space:nowrap;text-align:center;text-decoration:none;font-weight:900;font-size:15px;border-radius:12px;padding:10px;border:2px solid var(--ink)}
 .cta .store{color:#fff;flex:1.7 !important}
 .cta .sup{color:var(--ink);background:var(--surface)}
