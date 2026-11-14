@@ -78,7 +78,7 @@ footer{border-top:2px solid var(--ink);padding:28px 0 44px;font-size:14px;color:
 
   <div id="depts"></div>
 
-  <p class="notice" id="notice"><b>名前は募集中です。</b> 点線の枠にあるのが名前の候補です。オーナーが選んだら、ここに決まった名前が載ります。</p>
+  <p class="notice" id="notice"><b>名前は選考中です。</b> 「（仮）」の名前は、本人たちが自分で考えた名乗りの案です。点線の枠はほかの候補です。代表が選んだら、ここに決まった名前が載ります。</p>
 </div>
 <div class="wrap"><footer>&copy; <span id="year">2026</span> MORK STUDIO　<a href="top.html">ホームへ戻る</a></footer></div>
 
@@ -87,10 +87,11 @@ footer{border-top:2px solid var(--ink);padding:28px 0 44px;font-size:14px;color:
   var staff = window.MORK_STAFF || [], apps = window.MORK_APPS || [];
   var appById = {}; apps.forEach(function (a) { appById[a.id] = a; });
   var DEPTS = [
-    { id: "office", name: "経営企画室", lead: "スタジオの方針を決めて、チームをまとめます。" },
+    { id: "office", name: "社長室", lead: "スタジオの方針を決めて、チームをまとめます。" },
     { id: "studio", name: "制作本部", lead: "見た目と言葉で、スタジオを伝えます。" },
     { id: "write",  name: "アプリ開発部　書く係", lead: "アプリごとに 1 人ずつ。Windows でコードを書きます。" },
-    { id: "ship",   name: "アプリ開発部　届ける係", lead: "アプリごとに 1 人ずつ。Mac で組み立てて、iPhone と App Store に届けます。" }
+    { id: "ship",   name: "アプリ開発部　届ける係", lead: "アプリごとに 1 人ずつ。Mac で組み立てて、iPhone と App Store に届けます。" },
+    { id: "finance", name: "財務部", lead: "夜のデータ番と、数字の裏とり。スタジオの金庫の鍵を預かっています。" }
   ];
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
 
@@ -101,15 +102,13 @@ footer{border-top:2px solid var(--ink);padding:28px 0 44px;font-size:14px;color:
     var html = '<section class="dept"><h2>' + esc(d.name) + '</h2><p class="lead">' + esc(d.lead) + '</p><ul class="grid">';
     people.forEach(function (p) {
       var app = p.app && appById[p.app];
-      var shown = p.name || (p.names[0] + '<small>（仮）</small>');
-      if (p.name) shown = esc(p.name);
-      else shown = esc(p.names[0]) + '<small>（仮）</small>';
+      var shown = esc(p.name) + (p.tentative ? '<small>（仮）</small>' : '');
       html += '<li class="person' + (p.id === "owner" ? ' owner-card' : '') + '">' +
         '<div class="av">' + window.morkAvatar(p.avatar, 96) + '</div>' +
         '<div class="title">' + esc(p.title) + '</div>' +
         '<h3>' + shown + '</h3>' +
         '<div class="role">' + (app ? '<span class="app-tag" style="background:' + esc(app.color) + '">' + esc(app.name) + '</span>' : '') + '社内での呼び名：' + esc(p.role) + '</div>' +
-        (!p.name && p.names.length ? '<div class="cands"><b>名前の候補</b>' + p.names.map(function (n) { return '<span>' + esc(n) + '</span>'; }).join('') + '</div>' : '') +
+        (p.tentative && p.names.length ? '<div class="cands"><b>ほかの候補</b>' + p.names.map(function (n) { return '<span>' + esc(n) + '</span>'; }).join('') + '</div>' : '') +
         '<dl><dt>担当</dt><dd>' + esc(p.job) + '</dd>' +
         '<dt>口ぐせ</dt><dd class="quote">' + esc(p.quote) + '</dd>' +
         '<dt>ひとこと</dt><dd>' + esc(p.note) + '</dd></dl></li>';
@@ -123,7 +122,7 @@ footer{border-top:2px solid var(--ink);padding:28px 0 44px;font-size:14px;color:
     '<div><b>' + ai + ' 名</b><span>うち AI</span></div>' +
     '<div><b>' + apps.length + ' 本</b><span>担当アプリ</span></div>' +
     '<div><b>0 円</b><span>残業代</span><small>※ AI のため</small></div>';
-  if (!staff.some(function (p) { return !p.name && p.names.length; })) document.getElementById("notice").remove();
+  if (!staff.some(function (p) { return p.tentative; })) document.getElementById("notice").remove();
   document.getElementById("year").textContent = new Date().getFullYear();
 })();
 </script>
