@@ -8,7 +8,7 @@
    names     : ほかの名前の候補
    role      : 社内での呼び方
    title     : 肩書き（本人の案）
-   dept      : 部署（"office" 社長室 / "studio" 制作本部 / "write" アプリ開発部 書く係 / "ship" アプリ開発部 届ける係 / "finance" 財務部）
+   dept      : 部署（"office" 統括本部 / "studio" 制作本部 / "write" アプリ開発部 書く係 / "ship" アプリ開発部 届ける係 / "finance" 財務部）
    app       : 担当アプリの id（apps.js と同じ）。担当が無ければ null
    job       : 担当
    quote     : 口ぐせ（無ければ "" で、ページには出ない）
@@ -26,15 +26,15 @@
 window.MORK_STAFF_ALL = [
   {
     id: "owner", name: "モーク", tentative: false, names: [], role: "オーナー",
-    title: "代表", dept: "office", app: null,
+    title: "オーナー", dept: "office", app: null,
     job: "アプリのアイデアを出す。できたものを触って、OK か NG を出す。",
     quote: "それでいいよ", note: "",
     avatar: { skin: "#f2cfae", hair: "crop", hairColor: "#262b33", outfit: "hoodie", color: "#3d4f63", eyes: "dot", hat: "none", items: ["mug"] }
   },
   {
     id: "master", name: "ユイ", tentative: false, names: [], role: "master",
-    title: "社長秘書 兼 総務部長", dept: "office", app: null,
-    job: "みんなの仕事をつなぐ。依頼を出して、結果を集めて、代表に確かめる。",
+    title: "統括本部 秘書 兼 総務", dept: "office", app: null,
+    job: "みんなの仕事をつなぐ。依頼を出して、結果を集めて、オーナーに確かめる。",
     quote: "受け取ったら、まず一言お返事を。",
     note: "「受け取ったら、まず一言お返事を」と、毎朝みなさんに言って回っています。",
     avatar: { skin: "#f6d6b8", hair: "bob", hairColor: "#4a3428", outfit: "jacket", color: "#3d4f63", eyes: "smile", hat: "none", items: ["notebook"] }
