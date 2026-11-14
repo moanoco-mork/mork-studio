@@ -16,7 +16,10 @@
   .app{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:28px}
   .date{font-family:"M PLUS Rounded 1c",sans-serif;font-size:22px}
   .bell{position:absolute;right:20px;top:-20px;width:28px;height:28px;border-radius:50%;background:#a88a4f;border:4px solid #262b33}
-  .boomole{background:#58708a}.tekuteku{background:#23855c}.ekikan{background:#3f766d}.studio{background:#3d4f63}
+  .boomole{background:#ffd400;color:#111111;border-top:8px solid #111111}
+  .boomole .app{font-size:30px}
+  .bang{position:absolute;right:20px;top:-22px;width:30px;height:30px;border-radius:50%;background:#ff3b30;border:4px solid #111111}
+  .tekuteku{background:#23855c}.ekikan{background:#3f766d}.studio{background:#3d4f63}
 </style></head>
 <body>
 <div class="card">
@@ -36,7 +39,8 @@
   document.getElementById("app").textContent = NAMES[DATA.app] || NAMES.studio;
   document.getElementById("date").textContent = DATA.date;
   band.classList.add(NAMES[DATA.app] ? DATA.app : "studio");
-  if (DATA.app === "ekikan") { const b = document.createElement("span"); b.className = "bell"; band.appendChild(b); }
+  const ACCENT = { ekikan: "bell", boomole: "bang" };
+  if (ACCENT[DATA.app]) { const b = document.createElement("span"); b.className = ACCENT[DATA.app]; band.appendChild(b); }
   document.fonts.ready.then(() => {
     const title = document.querySelector(".title");
     for (const size of [60, 52, 44]) {

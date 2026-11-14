@@ -6,7 +6,7 @@
 :root{
   --surface:#fffdf3; --card:#ffffff; --ink:#262b33; --ink-logo:#3d4f63; --ink-muted:#5d6570;
   --link:#58708a; --rule:#e6e1cf;
-  --app-boomole:#58708a; --app-tekuteku:#23855c; --app-ekikan:#3f766d; --ekikan-gold:#a88a4f;
+  --app-boomole:#1e5ae6; --boomole-yellow:#ffd400; --boomole-red:#ff3b30; --boomole-ink:#111111; --app-tekuteku:#23855c; --app-ekikan:#3f766d; --ekikan-gold:#a88a4f;
 }
 
 /* 全体 */
