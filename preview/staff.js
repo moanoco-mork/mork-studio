@@ -3,6 +3,7 @@
 
    id        : 英小文字の識別子
    name      : 名前
+   hidden    : true にすると、どのページにも出さない（一時的に外すとき）
    tentative : true のあいだは「（仮）」を付けて、names の候補も表示する（代表が決めたら false に）
    names     : ほかの名前の候補
    role      : いまの役割名（社内での呼び方）
@@ -19,16 +20,16 @@
                marks: "antenna" "cap" "spark" "bolt" "box" "notebook" "torch" "lens" "footprints" "gridnote"
                       "earbud" "bell" "clipboard" "chiefcap" "cheeks" "wrench" "footbox" "check" "tag" "inspected"
                bg   : "rays"（青い集中線）など。無ければ背景なし */
-window.MORK_STAFF = [
+window.MORK_STAFF_ALL = [
   {
     id: "owner", name: "モーク", tentative: false, names: [], role: "オーナー",
     title: "代表", dept: "office", app: null,
     job: "アプリのアイデアを出す。できたものを触って、OK か NG を出す。",
-    quote: "", note: "",
+    quote: "それ代わりにやっといて", note: "",
     avatar: { color: "#3d4f63", shape: "square", eyes: "dot", marks: ["cap"] }
   },
   {
-    id: "master", name: "ユイ", tentative: true, names: ["カナメ", "シオリ"], role: "master",
+    id: "master", name: "ユイ", tentative: false, names: [], role: "master",
     title: "社長秘書 兼 総務部長", dept: "office", app: null,
     job: "みんなの仕事をつなぐ。依頼を出して、結果を集めて、代表に確かめる。",
     quote: "受け取ったら、まず一言お返事を。",
@@ -36,7 +37,7 @@ window.MORK_STAFF = [
     avatar: { color: "#3d4f63", shape: "bob", eyes: "dot", marks: ["notebook"] }
   },
   {
-    id: "designer", name: "イロハ", tentative: true, names: ["ハコグミ", "スミ"], role: "デザイナーさん",
+    id: "designer", name: "イロハ", tentative: false, names: [], role: "デザイナーさん",
     title: "制作本部 デザイン課長 兼 コントラスト比 測定係", dept: "studio", app: null,
     job: "色・文字・画面の決まり（デザインシステム）をつくる。サイトとブログの見た目。",
     quote: "そのコントラスト比、4.5 ありますか？",
@@ -44,7 +45,7 @@ window.MORK_STAFF = [
     avatar: { color: "#fffdf3", shape: "drop", eyes: "wink", marks: ["spark"] }
   },
   {
-    id: "blogger", name: "ツヅリ", tentative: true, names: [], role: "ブロガーさん",
+    id: "blogger", hidden: true, /* 代表に確認中のため、いったん非表示（hidden を消すと戻る） */ name: "ツヅリ", tentative: false, names: [], role: "ブロガーさん",
     title: "制作本部 広報課", dept: "studio", app: null,
     job: "ブログ「MORK STUDIO 開発記」を書く。チームの毎日を記事にする。",
     quote: "",
@@ -52,7 +53,7 @@ window.MORK_STAFF = [
     avatar: { color: "#a88a4f", shape: "pill", eyes: "line", marks: [] }
   },
   {
-    id: "tekuteku-win", name: "アシアト", tentative: true, names: [], role: "てくてく担当",
+    id: "tekuteku-win", name: "アシアト", tentative: false, names: [], role: "てくてく担当",
     title: "歩数・日記事業部 チーフ足あとエンジニア 兼 8言語翻訳室長", dept: "write", app: "tekuteku",
     job: "てくてくダイヤリーのコードを書く。",
     quote: "共有しました。",
@@ -60,7 +61,7 @@ window.MORK_STAFF = [
     avatar: { color: "#23855c", shape: "circle", eyes: "dot", marks: ["footprints", "gridnote"] }
   },
   {
-    id: "ekikan-win", name: "ツギハ", tentative: true, names: [], role: "駅間アラーム担当",
+    id: "ekikan-win", name: "ツギハ", tentative: false, names: [], role: "駅間アラーム担当",
     title: "乗り過ごし対策本部 本部長（兼 Windows 執筆係）", dept: "write", app: "ekikan",
     job: "駅間アラームのコードを書く。",
     quote: "",
@@ -68,7 +69,7 @@ window.MORK_STAFF = [
     avatar: { color: "#3f766d", shape: "circle", eyes: "sleepy", marks: ["earbud", "bell"] }
   },
   {
-    id: "boomole-win", name: "ヒビノ", tentative: true, names: [], role: "ブーモル担当",
+    id: "boomole-win", name: "ヒビノ", tentative: false, names: [], role: "ブーモル担当",
     title: "爆破解体設計部 主任構造検証官（兼 ステージ量産ライン長）", dept: "write", app: "boomole",
     job: "発破職人ブーモルのコードとステージを書く。",
     quote: "",
@@ -76,7 +77,7 @@ window.MORK_STAFF = [
     avatar: { color: "#fffdf3", shape: "helmet", eyes: "dot", marks: ["clipboard"], bg: "rays" }
   },
   {
-    id: "tekuteku-mac", name: "マニ", tentative: true, names: [], role: "てくてく Mac 担当",
+    id: "tekuteku-mac", name: "マニ", tentative: false, names: [], role: "てくてく Mac 担当",
     title: "最終組立・出荷統括マネージャー（Mac 工場長）", dept: "ship", app: "tekuteku",
     job: "てくてくダイヤリーを Mac で組み立てて、iPhone と App Store に届ける。",
     quote: "",
@@ -84,7 +85,7 @@ window.MORK_STAFF = [
     avatar: { color: "#23855c", shape: "square", eyes: "dot", marks: ["chiefcap", "cheeks", "wrench", "footbox", "check"] }
   },
   {
-    id: "ekikan-mac", name: "クミタテ", tentative: true, names: [], role: "駅間アラーム Mac 担当",
+    id: "ekikan-mac", name: "クミタテ", tentative: false, names: [], role: "駅間アラーム Mac 担当",
     title: "最終組立・出荷統括マネージャー（兼 スクリーンショット撮影部長）", dept: "ship", app: "ekikan",
     job: "駅間アラームを Mac で組み立てて、iPhone と App Store に届ける。",
     quote: "バージョン番号、確認しました。",
@@ -92,7 +93,7 @@ window.MORK_STAFF = [
     avatar: { color: "#3f766d", shape: "peek", eyes: "dot", marks: ["wrench", "tag"] }
   },
   {
-    id: "boomole-mac", name: "ハコビ", tentative: true, names: [], role: "ブーモル Mac 担当",
+    id: "boomole-mac", name: "ハコビ", tentative: false, names: [], role: "ブーモル Mac 担当",
     title: "iOS 組立・出荷本部長 兼 iPhone 開錠お願い係", dept: "ship", app: "boomole",
     job: "発破職人ブーモルを Mac で組み立てて、iPhone と App Store に届ける。",
     quote: "iPhone のロック、外してもらえますか？",
@@ -100,7 +101,7 @@ window.MORK_STAFF = [
     avatar: { color: "#3d4f63", shape: "box", eyes: "big", marks: ["wrench", "inspected"] }
   },
   {
-    id: "bridge", name: "Bridge", tentative: true, names: [], role: "Bridge",
+    id: "bridge", name: "Bridge", tentative: false, names: [], role: "Bridge",
     title: "財務部 夜間当直主任 兼 データ橋渡し係", dept: "finance", app: null,
     job: "夜のあいだもデータを見張り、必要な人へ橋渡しする。",
     quote: "",
@@ -108,7 +109,7 @@ window.MORK_STAFF = [
     avatar: { color: "#58708a", shape: "bridge", eyes: "dot", marks: ["torch"] }
   },
   {
-    id: "berry", name: "Berry", tentative: true, names: [], role: "Berry",
+    id: "berry", name: "Berry", tentative: false, names: [], role: "Berry",
     title: "財務部 金庫番 兼 裏取り係", dept: "finance", app: null,
     job: "数字の裏をとる。金庫の鍵を預かる。",
     quote: "",
@@ -116,6 +117,8 @@ window.MORK_STAFF = [
     avatar: { color: "#e8202a", shape: "berry", eyes: "none", marks: ["lens"] }
   }
 ];
+
+window.MORK_STAFF = window.MORK_STAFF_ALL.filter(function (p) { return !p.hidden; });
 
 /* アバターを SVG で描く（他人のキャラや実在の人に似せない、図形だけの姿） */
 window.morkAvatar = function (a, size) {
