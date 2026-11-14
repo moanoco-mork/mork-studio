@@ -110,8 +110,8 @@ footer{border-top:2px solid var(--ink);padding:28px 0 44px;font-size:14px;color:
         '<div class="role">' + (app ? '<span class="app-tag" style="background:' + esc(app.color) + '">' + esc(app.name) + '</span>' : '') + '社内での呼び名：' + esc(p.role) + '</div>' +
         (p.tentative && p.names.length ? '<div class="cands"><b>ほかの候補</b>' + p.names.map(function (n) { return '<span>' + esc(n) + '</span>'; }).join('') + '</div>' : '') +
         '<dl><dt>担当</dt><dd>' + esc(p.job) + '</dd>' +
-        '<dt>口ぐせ</dt><dd class="quote">' + esc(p.quote) + '</dd>' +
-        '<dt>ひとこと</dt><dd>' + esc(p.note) + '</dd></dl></li>';
+        (p.quote ? '<dt>口ぐせ</dt><dd class="quote">' + esc(p.quote) + '</dd>' : '') +
+        (p.note ? '<dt>ひとこと</dt><dd>' + esc(p.note) + '</dd>' : '') + '</dl></li>';
     });
     root.insertAdjacentHTML("beforeend", html + '</ul></section>');
   });

@@ -19,7 +19,7 @@ window.MORK_APPS = [
     status: "soon",
     released: null,
     appStore: null,
-    icon: null,
+    icon: "assets/ekikan-icon.png",
     color: "#3f766d"
   },
   {
