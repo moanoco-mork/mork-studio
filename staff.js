@@ -42,7 +42,7 @@ window.MORK_STAFF_ALL = [
   {
     id: "designer", name: "イロハ", tentative: false, names: [], role: "デザイナーさん",
     title: "制作本部 デザイン課長 兼 コントラスト比 測定係", dept: "studio", app: null,
-    job: "色・文字・画面の決まり（デザインシステム）をつくる。サイトとブログの見た目。",
+    job: "色・文字・画面の決まり（デザインシステム）をつくる。サイトの見た目。",
     quote: "そのコントラスト比、4.5 ありますか？",
     note: "色を決める前に、まずコントラスト比を測ります。4.5 未満は通しません。",
     avatar: { skin: "#f6d6b8", hair: "bun", hairColor: "#3d4f63", outfit: "tee", color: "#fffdf3", eyes: "wink", hat: "none", items: ["starpin", "swatch"] }
