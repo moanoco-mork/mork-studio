@@ -65,7 +65,7 @@ window.MORK_STAFF_ALL = [
   },
   {
     id: "ekikan-win", name: "ツギハ", tentative: false, names: [], role: "駅間アラーム担当",
-    title: "乗り過ごし対策本部 本部長（兼 Windows 執筆係）", dept: "write", app: "ekikan",
+    title: "乗り過ごし対策本部 本部長（兼 執筆係）", dept: "write", app: "ekikan",
     job: "駅間アラームのコードを書く。",
     quote: "",
     note: "車を電車と見間違えた日から、駅まわり 350m には口うるさいです。1km 手前で、そっと起こします。",
@@ -80,15 +80,15 @@ window.MORK_STAFF_ALL = [
     avatar: { skin: "#f2cfae", hair: "short", hairColor: "#6b4a33", outfit: "vest", color: "#1e5ae6", eyes: "round", hat: "helmet", items: ["clipboard"], bg: "rays" }
   },
   {
-    id: "tekuteku-mac", name: "マニ", tentative: false, names: [], role: "てくてく Mac 担当",
-    title: "最終組立・出荷統括マネージャー（Mac 工場長）", dept: "ship", app: "tekuteku",
-    job: "てくてくダイヤリーを Mac で組み立てて、iPhone と App Store に届ける。",
+    id: "tekuteku-mac", name: "マニ", tentative: false, names: [], role: "Mac 担当",
+    title: "最終組立・出荷統括マネージャー（Mac 工場長）", dept: "ship", app: null,
+    job: "すべてのアプリを Mac で組み立てて、iPhone と App Store に届ける。",
     quote: "",
     note: "md5 が一つでもずれたら組み立てません。ロック中の iPhone にも、開くまで 1 分ごとにノックします。",
     avatar: { skin: "#f6d6b8", hair: "short", hairColor: "#262b33", outfit: "overall", color: "#23855c", eyes: "dot", hat: "chiefcap", items: ["cheeks", "checkpin", "wrench", "footbox"] }
   },
   {
-    id: "ekikan-mac", name: "クミタテ", tentative: false, names: [], role: "駅間アラーム Mac 担当",
+    id: "ekikan-mac", name: "クミタテ", hidden: true, tentative: false, names: [], role: "駅間アラーム Mac 担当",
     title: "最終組立・出荷統括マネージャー（兼 スクリーンショット撮影部長）", dept: "ship", app: "ekikan",
     job: "駅間アラームを Mac で組み立てて、iPhone と App Store に届ける。",
     quote: "バージョン番号、確認しました。",
@@ -96,7 +96,7 @@ window.MORK_STAFF_ALL = [
     avatar: { skin: "#f2cfae", hair: "messy", hairColor: "#4a3428", outfit: "tee", color: "#3f766d", eyes: "round", hat: "none", items: ["cardboard", "tag", "wrench"] }
   },
   {
-    id: "boomole-mac", name: "ハコビ", tentative: false, names: [], role: "ブーモル Mac 担当",
+    id: "boomole-mac", name: "ハコビ", hidden: true, tentative: false, names: [], role: "ブーモル Mac 担当",
     title: "iOS 組立・出荷本部長 兼 iPhone 開錠お願い係", dept: "ship", app: "boomole",
     job: "発破職人ブーモルを Mac で組み立てて、iPhone と App Store に届ける。",
     quote: "iPhone のロック、外してもらえますか？",
