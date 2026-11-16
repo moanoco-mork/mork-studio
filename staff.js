@@ -27,7 +27,7 @@ window.MORK_STAFF_ALL = [
   {
     id: "owner", name: "モルク", tentative: false, names: [], role: "オーナー",
     title: "オーナー", dept: "office", app: null,
-    job: "アプリのアイデアを出す。できたものを触って、OK か NG を出す。",
+    job: "アプリの元ネタを出す。AI がふくらませてくれるので、悩む時間はみじかめ。できたものを触って、OK か NG を出す。",
     quote: "それでいいよ", note: "",
     avatar: { skin: "#f2cfae", hair: "crop", hairColor: "#262b33", outfit: "hoodie", color: "#3d4f63", eyes: "dot", hat: "none", items: ["mug"] }
   },
