@@ -1,30 +1,106 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>駅間アラーム｜サポート</title>
+<title>駅間アラーム｜降りる駅の手前で、イヤホンにだけ鳴る寝過ごし防止アプリ</title>
+<meta name="description" content="電車で眠ってしまっても、降りる駅の手前でイヤホンにだけアラームを鳴らして起こすiPhoneアプリ。地下鉄でも鳴る。全国約1万駅に対応。乗り換え・経路選び・ウィジェットにも対応。">
+<link rel="canonical" href="https://moanoco-mork.github.io/mork-studio/ekikan/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="MORK STUDIO">
+<meta property="og:title" content="駅間アラーム｜降りる駅の手前で、イヤホンにだけ鳴る寝過ごし防止アプリ"><meta property="og:description" content="電車で眠ってしまっても、降りる駅の手前でイヤホンにだけアラームを鳴らして起こすiPhoneアプリ。地下鉄でも鳴る。全国約1万駅に対応。乗り換え・経路選び・ウィジェットにも対応。">
+<meta property="og:url" content="https://moanoco-mork.github.io/mork-studio/ekikan/"><meta property="og:image" content="https://moanoco-mork.github.io/mork-studio/assets/ekikan/store_1_ride.jpg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@mork_studio">
+
+<link rel="icon" href="../assets/ekikan-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=M+PLUS+Rounded+1c:wght@400&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
-<style>body{font-family:"Zen Kaku Gothic New",system-ui,sans-serif;max-width:720px;margin:0 auto;padding:24px 16px;line-height:1.8;color:#262b33;background:#f7fbfa}h1,h2{font-weight:900}h1{font-size:24px}h2{font-size:17px;margin-top:28px;border-left:5px solid #5f9a90;padding-left:8px}a{color:#3f766d}dt{font-weight:bold;margin-top:14px}dd{margin-left:0}</style></head>
-<body>
-<h1>駅間アラーム</h1>
-<p>降りる駅の手前で、イヤホンにだけアラームを鳴らして起こしてくれる、電車の寝過ごし防止アプリです。</p>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "駅間アラーム", "operatingSystem": "iOS", "applicationCategory": "TravelApplication", "description": "電車で眠ってしまっても、降りる駅の手前でイヤホンにだけアラームを鳴らして起こすiPhoneアプリ。地下鉄でも鳴る。全国約1万駅に対応。乗り換え・経路選び・ウィジェットにも対応。", "url": "https://moanoco-mork.github.io/mork-studio/ekikan/", "image": "https://moanoco-mork.github.io/mork-studio/assets/ekikan-icon.png", "author": {"@type": "Organization", "name": "MORK STUDIO", "url": "https://moanoco-mork.github.io/mork-studio/"}}</script>
+<style>:root{--app:#3f766d;--soft:#e6f1ee;--bg:#f7fbfa}
+:root{--ink:#262b33;--logo:#3d4f63;--muted:#5d6570;--card:#fff;--rule:#e6e1cf}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New",system-ui,sans-serif;line-height:1.85}
+a{color:var(--app)}
+img{max-width:100%;height:auto}
+.hero>*,.feat>*,.who li,.cards>*{min-width:0}
+html,body{overflow-x:hidden}
+p,li,dd,summary{overflow-wrap:anywhere}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:2px solid var(--ink)}
+.logo{font-family:"Dela Gothic One",sans-serif;font-size:20px;letter-spacing:.04em;color:var(--logo);text-decoration:none}
+header nav a{color:var(--ink);text-decoration:none;font-weight:700;margin-left:18px;font-size:15px}
+.crumb{font-size:13px;color:var(--muted);margin:14px 0 0}.crumb a{color:var(--muted)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:40px 0 56px}
+.app-id{display:flex;gap:16px;align-items:center}
+.app-id img{width:84px;height:84px;border-radius:20px;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.app-id .nm{font-weight:900;font-size:22px;line-height:1.3}.app-id .gn{font-size:13px;color:var(--muted)}
+h1{font-family:"Dela Gothic One",sans-serif;font-weight:400;font-size:54px;line-height:1.2;letter-spacing:.02em;margin:26px 0 16px;color:var(--ink)}
+.lead{font-size:17px;margin:0 0 20px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px;padding:0;list-style:none}
+.chips li{background:var(--soft);border:2px solid var(--app);color:var(--ink);font-weight:700;font-size:13px;border-radius:999px;padding:2px 12px}
+.badge img{height:52px;width:auto}
+.soon{display:inline-block;font-weight:900;border:3px dashed var(--ink);border-radius:14px;padding:10px 20px;background:#fff}
+.phone{justify-self:center;max-width:300px;border:4px solid var(--ink);border-radius:34px;overflow:hidden;box-shadow:8px 8px 0 var(--app);background:#fff}
+.phone img{display:block}
+section{padding:56px 0;border-top:2px solid var(--ink)}
+h2{font-weight:900;font-size:30px;line-height:1.4;margin:0 0 8px}
+.sec-lead{color:var(--muted);margin:0 0 28px}
+.who{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;list-style:none;margin:0;padding:0}
+.who li{background:var(--card);border:3px solid var(--ink);border-radius:16px;box-shadow:4px 4px 0 var(--ink);padding:16px}
+.who b{display:block;font-size:17px;color:var(--app);margin-bottom:4px}
+.feat{display:grid;grid-template-columns:1fr 280px;gap:48px;align-items:center;padding:36px 0}
+.feat:nth-of-type(even){grid-template-columns:280px 1fr}
+.feat:nth-of-type(even) .shot{order:-1}
+.feat .tag{display:inline-block;background:var(--app);color:#fff;font-weight:900;font-size:13px;border-radius:8px;padding:0 10px;margin-bottom:6px}
+.feat h3{font-size:26px;font-weight:900;line-height:1.4;margin:0 0 10px}
+.feat p{margin:0 0 12px}
+.shot{border:3px solid var(--ink);border-radius:26px;overflow:hidden;box-shadow:6px 6px 0 var(--ink);background:#fff;margin:0}
+.shot img{display:block}.shot figcaption{font-size:12px;color:var(--muted);padding:6px 10px;border-top:2px solid var(--ink);background:var(--soft)}
+.gallery{display:flex;gap:16px;overflow-x:auto;padding:4px 4px 18px;scroll-snap-type:x mandatory}
+.gallery img{flex:none;width:220px;border:3px solid var(--ink);border-radius:20px;scroll-snap-align:start;background:#fff}
+.note{font-size:13px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:var(--card);border:3px solid var(--ink);border-radius:16px;box-shadow:4px 4px 0 var(--ink);padding:18px}
+.card b{display:block;font-size:18px;margin-bottom:6px}
+.box{background:var(--soft);border:2px solid var(--app);border-radius:14px;padding:16px 18px}
+dl.spec{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin:0}dl.spec dt{font-weight:900}dl.spec dd{margin:0}
+.faq details{background:var(--card);border:2px solid var(--ink);border-radius:12px;padding:12px 16px;margin:0 0 10px}
+.faq summary{font-weight:900;cursor:pointer}.faq p{margin:8px 0 0}
+.cta{text-align:center}
+footer{border-top:2px solid var(--ink);padding:28px 0 40px;font-size:14px;color:var(--muted)}
+footer a{color:var(--muted);margin-right:14px}
+@media (max-width:820px){
+ .hero{grid-template-columns:1fr;gap:28px;padding:28px 0 40px}h1{font-size:38px}
+ .who{grid-template-columns:1fr 1fr}
+ .feat,.feat:nth-of-type(even){grid-template-columns:1fr;gap:20px}.feat:nth-of-type(even) .shot{order:0}
+ .shot{max-width:280px;justify-self:center}
+ .phone{max-width:260px}
+ .app-id img{width:68px;height:68px}
+ header nav a{margin-left:12px;font-size:14px}
+}
+@media (max-width:480px){.logo{font-size:16px}header nav a{margin-left:10px;font-size:13px;white-space:nowrap}}
+@media (max-width:420px){.who{grid-template-columns:1fr}h1{font-size:32px}h2{font-size:24px}}
+</style></head>
+<body><div class="wrap">
+<header class="top"><a class="logo" href="../">MORK STUDIO</a><nav><a href="../#apps">アプリ</a><a href="../team/">スタッフ</a><a href="https://mork-studio.hatenablog.com/">開発記</a></nav></header>
+<p class="crumb"><a href="../">ホーム</a> ＞ 駅間アラーム</p>
+<div class="hero"><div>
+<div class="app-id"><img src="../assets/ekikan-icon.png" alt="駅間アラームのアイコン"><div><div class="nm">駅間アラーム</div><div class="gn">ナビゲーション・iPhone</div></div></div>
+<h1>もう、寝過ごさない。</h1>
+<p class="lead">降りる駅を選んで、ポケットに入れるだけ。駅の手前で、イヤホンにだけアラームを鳴らして起こします。着く時刻を調べる必要はありません。</p>
+<ul class="chips"><li>全国 約1万駅</li><li>地下鉄でも鳴る</li><li>広告なし</li><li>位置情報は iPhone の中だけ</li></ul>
+<span class="soon">近日公開（App Store）</span>
+</div>
+<div class="phone"><img src="../assets/ekikan/store_1_ride.jpg" alt="駅間アラームの画面" width="300"></div></div>
 
-<h2>よくある質問</h2>
-<dl>
-<dt>イヤホンをしていないと、どうなりますか？</dt>
-<dd>周りの人に聞こえないよう、音は出さずに振動だけで知らせます。鳴っている途中でイヤホンが外れたときも、すぐに音を止めて振動だけにします。</dd>
-<dt>地下鉄やトンネルでも使えますか？</dt>
-<dd>位置情報が届かない間は、駅の間の距離から計算した時間で鳴らします。一度「降りた」を押すと実際にかかった時間を覚えるので、次からはもっと正確になります。</dd>
-<dt>音が小さい・聞こえません。</dt>
-<dd>アラームの音量は iPhone 本体の音量に対する割合です。本体の音量を上げてから、設定の「アラームの音」で音量を調整してください。</dd>
-<dt>購入を復元するには？</dt>
-<dd>設定画面の「購入」欄にある「購入を復元する」を押してください。</dd>
-<dt>対応している路線は？</dt>
-<dd>国土数値情報（鉄道データ）にもとづき、日本全国のJR・私鉄・地下鉄・新幹線の駅に対応しています。所要時間は時刻表ではなく目安です。</dd>
-</dl>
-
-<h2>お問い合わせ</h2>
-<p>不具合やご要望は、こちらへお送りください。<br>MORK STUDIO：<a href="mailto:morkstudio@icloud.com">morkstudio@icloud.com</a></p>
-
-<p><a href="privacy.html">プライバシーポリシー</a></p>
-<p style="font-size:13px;color:#5d6570">駅のデータ：国土数値情報（鉄道データ）（国土交通省）をもとに MORK STUDIO 作成</p>
-</body></html>
+<section><h2>こんな人に</h2><p class="sec-lead">駅間アラーム は、こんな場面で役に立ちます。</p><ul class="who"><li><b>朝の通勤・通学</b>ついうとうとしても、降りる駅の手前で起こします。</li><li><b>残業や飲み会帰りの終電</b>寝過ごせない夜に。音はイヤホンにだけ出ます。</li><li><b>初めて行く駅・遠くの駅</b>着く時刻を調べなくても、駅を選ぶだけ。</li><li><b>乗り換えのある移動</b>乗り換える駅の手前でも起こします。</li></ul></section>
+<section><h2>できること</h2>
+<div class="feat"><div><span class="tag">起こし方</span><h3>音は、イヤホンにだけ</h3><p>周りの人に聞こえず、自分だけ起きられます。イヤホンをしていないときや、途中で外れたときは、音を止めて振動だけで知らせます。</p><p>起こすのは、在来線なら駅の1km手前。新幹線は荷物を下ろす時間をみて、10km手前です。</p></div><figure class="shot"><img src="../assets/ekikan/store_2_ringing.jpg" alt="駅の手前で鳴っている画面" loading="lazy" width="280"><figcaption>駅の手前で鳴っている画面</figcaption></figure></div>
+<div class="feat"><div><span class="tag">かんたん</span><h3>着く時刻は、調べなくていい</h3><p>乗る駅と降りる駅を選んで「乗車してスタート」を押すだけ。時刻表で着く時刻を調べて、アラームを合わせる必要はありません。ホームで押しても、電車が動き出してから数え始めます。</p></div><figure class="shot"><img src="../assets/ekikan/store_4_new.jpg" alt="駅を選ぶ画面" loading="lazy" width="280"><figcaption>駅を選ぶ画面</figcaption></figure></div>
+<div class="feat"><div><span class="tag">地下鉄</span><h3>地下鉄でも、ちゃんと鳴る</h3><p>位置情報で駅への近づき具合を見ながら、届かない地下やトンネルでは、駅の間の距離から計算した時間で鳴らします。「降りた」を押すと実際にかかった時間を覚えて、次からもっと正確になります。</p></div><figure class="shot"><img src="../assets/ekikan/store_6_subway.jpg" alt="地下鉄で見守っている画面" loading="lazy" width="280"><figcaption>地下鉄で見守っている画面</figcaption></figure></div>
+<div class="feat"><div><span class="tag">経路</span><h3>安い経路も、いつもの経路も</h3><p>いちばん早い経路だけでなく、別の路線を通る経路も候補に出します。運賃やいつもの乗り方に合わせて選べます。乗り換える駅を自分で指定することもできます。</p></div><figure class="shot"><img src="../assets/ekikan/store_5_candidates.jpg" alt="経路を選ぶ画面" loading="lazy" width="280"><figcaption>経路を選ぶ画面</figcaption></figure></div>
+<div class="feat"><div><span class="tag">ロック画面</span><h3>ポケットに入れて、眠るだけ</h3><p>乗車中は、ロック画面とダイナミックアイランドに、降りる駅と残り時間を表示します。画面を消しても、あとどれくらいかが分かります。</p></div><figure class="shot"><img src="../assets/ekikan/store_3_lock.jpg" alt="ロック画面の表示" loading="lazy" width="280"><figcaption>ロック画面の表示</figcaption></figure></div>
+<div class="feat"><div><span class="tag">いつもの区間</span><h3>通勤・通学は、ワンタップで</h3><p>よく使う区間を5つまで登録できます。行き・帰りのどちらにも、ワンタップ。ホーム画面のウィジェットから、すぐに開けます。</p><p>音は、やさしい音から目覚まし時計のジリリリまで7種類。音量と「だんだん大きくする」も設定できます。</p></div><figure class="shot"><img src="../assets/ekikan/store_8_widget.jpg" alt="よく使う区間のウィジェット" loading="lazy" width="280"><figcaption>よく使う区間のウィジェット</figcaption></figure></div>
+</section>
+<section><h2>画面</h2><div class="gallery"><img src="../assets/ekikan/store_1_ride.jpg" alt="駅間アラームの画面" loading="lazy" width="220"><img src="../assets/ekikan/store_2_ringing.jpg" alt="駅間アラームの画面" loading="lazy" width="220"><img src="../assets/ekikan/store_3_lock.jpg" alt="駅間アラームの画面" loading="lazy" width="220"><img src="../assets/ekikan/store_4_new.jpg" alt="駅間アラームの画面" loading="lazy" width="220"><img src="../assets/ekikan/store_5_candidates.jpg" alt="駅間アラームの画面" loading="lazy" width="220"><img src="../assets/ekikan/store_6_subway.jpg" alt="駅間アラームの画面" loading="lazy" width="220"><img src="../assets/ekikan/store_7_sound.jpg" alt="駅間アラームの画面" loading="lazy" width="220"><img src="../assets/ekikan/store_8_widget.jpg" alt="駅間アラームの画面" loading="lazy" width="220"></div></section>
+<section><h2>料金</h2><div class="cards"><div class="card"><b>10回まで無料でお試しいただけます</b>気に入ったら、一度の購入でずっと回数無制限で使えます。買い切りで、サブスクではありません。広告もありません。</div></div></section>
+<section><h2>プライバシー</h2><p>位置情報は iPhone の中だけで使い、外部へは送りません。広告もありません。</p><p><a href="privacy.html">プライバシーポリシー</a></p><ul class="note"><li>駅へ向かうバスや車の中で押すと、その動きに反応して早めに数え始めることがあります。電車に乗ってから（またはホームで）押してください。</li><li>所要時間は時刻表ではなく目安です。大事な予定の日は、ほかの方法と組み合わせてお使いください。</li></ul><dl class="spec"><dt>対応</dt><dd>iPhone</dd><dt>配信</dt><dd>日本</dd><dt>カテゴリ</dt><dd>ナビゲーション</dd><dt>駅のデータ</dt><dd>国土数値情報（鉄道データ）（国土交通省）をもとに MORK STUDIO 作成</dd></dl></section>
+<section class="faq" id="support"><h2>よくある質問・サポート</h2><details><summary>イヤホンをしていないと、どうなりますか？</summary><p>周りの人に聞こえないよう、音は出さずに振動だけで知らせます。鳴っている途中でイヤホンが外れたときも、すぐに音を止めて振動だけにします。</p></details><details><summary>地下鉄やトンネルでも使えますか？</summary><p>位置情報が届かない間は、駅の間の距離から計算した時間で鳴らします。一度「降りた」を押すと実際にかかった時間を覚えるので、次からはもっと正確になります。</p></details><details><summary>音が小さい・聞こえません。</summary><p>アラームの音量は iPhone 本体の音量に対する割合です。本体の音量を上げてから、設定の「アラームの音」で音量を調整してください。</p></details><details><summary>購入を復元するには？</summary><p>設定画面の「購入」欄にある「購入を復元する」を押してください。</p></details><details><summary>対応している路線は？</summary><p>国土数値情報（鉄道データ）にもとづき、日本全国の JR・私鉄・地下鉄・新幹線の駅に対応しています。所要時間は時刻表ではなく目安です。</p></details><p style="margin-top:20px">不具合やご要望は、こちらへお送りください。お使いの端末と iOS のバージョンを書いていただけると助かります。<br>MORK STUDIO：<a href="mailto:morkstudio@icloud.com">morkstudio@icloud.com</a></p></section>
+<section class="cta"><h2>駅間アラーム</h2><p class="sec-lead">電車で眠ってしまっても、降りる駅の手前でイヤホンにだけアラームを鳴らして起こすiPhoneアプリ。地下鉄でも鳴る。全国約1万駅に対応。乗り換え・経路選び・ウィジェットにも対応。</p><span class="soon">近日公開（App Store）</span></section>
+<footer><a href="../">MORK STUDIO</a><a href="../team/">スタッフ紹介</a><a href="privacy.html">プライバシーポリシー</a><br>&copy; 2026 MORK STUDIO</footer></div></body></html>

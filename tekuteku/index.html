@@ -1,48 +1,109 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>てくてくダイヤリー｜サポート / TekuTeku Support</title>
+<title>てくてくダイヤリー｜歩数と行った場所が、そのまま日記になる iPhone アプリ</title>
+<meta name="description" content="歩数・行った場所・予定・写真・天気が、iPhone を持って歩くだけで1日の日記になるアプリ。記録は iPhone の中だけに保存。老眼モード、12色のテーマ、ウィジェットにも対応。">
+<link rel="canonical" href="https://moanoco-mork.github.io/mork-studio/tekuteku/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="MORK STUDIO">
+<meta property="og:title" content="てくてくダイヤリー｜歩数と行った場所が、そのまま日記になる iPhone アプリ"><meta property="og:description" content="歩数・行った場所・予定・写真・天気が、iPhone を持って歩くだけで1日の日記になるアプリ。記録は iPhone の中だけに保存。老眼モード、12色のテーマ、ウィジェットにも対応。">
+<meta property="og:url" content="https://moanoco-mork.github.io/mork-studio/tekuteku/"><meta property="og:image" content="https://moanoco-mork.github.io/mork-studio/assets/tekuteku/store_01_month.jpg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@mork_studio">
+<meta name="apple-itunes-app" content="app-id=6834400667">
+<link rel="icon" href="../assets/tekuteku-icon.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
-<style>body{font-family:"Zen Kaku Gothic New",system-ui,sans-serif;max-width:720px;margin:0 auto;padding:24px 16px;line-height:1.8;color:#262b33;background:#f6fbf8}h1,h2{font-weight:900}h1{font-size:24px}h2{font-size:17px;margin-top:28px;border-left:5px solid #299e6e;padding-left:8px}a{color:#23855c}dt{font-weight:bold;margin-top:14px}dd{margin-left:0}.lang{font-size:14px}hr{border:0;border-top:1px solid #cfe3d9;margin:48px 0}</style></head>
-<body>
-<p class="lang">日本語 ｜ <a href="#en">English</a></p>
-<h1>てくてくダイヤリー</h1>
-<p>歩いた歩数と、行った場所を、カレンダーと日記に自動で残すアプリです。記録はすべて iPhone の中だけに保存されます。</p>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "てくてくダイヤリー", "operatingSystem": "iOS", "applicationCategory": "LifestyleApplication", "description": "歩数・行った場所・予定・写真・天気が、iPhone を持って歩くだけで1日の日記になるアプリ。記録は iPhone の中だけに保存。老眼モード、12色のテーマ、ウィジェットにも対応。", "url": "https://moanoco-mork.github.io/mork-studio/tekuteku/", "image": "https://moanoco-mork.github.io/mork-studio/assets/tekuteku-icon.jpg", "author": {"@type": "Organization", "name": "MORK STUDIO", "url": "https://moanoco-mork.github.io/mork-studio/"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "JPY"}, "downloadUrl": "https://apps.apple.com/jp/app/id6834400667"}</script>
+<style>:root{--app:#23855c;--soft:#e8f4ee;--bg:#f6fbf8}
+:root{--ink:#262b33;--logo:#3d4f63;--muted:#5d6570;--card:#fff;--rule:#e6e1cf}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New",system-ui,sans-serif;line-height:1.85}
+a{color:var(--app)}
+img{max-width:100%;height:auto}
+.hero>*,.feat>*,.who li,.cards>*{min-width:0}
+html,body{overflow-x:hidden}
+p,li,dd,summary{overflow-wrap:anywhere}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:2px solid var(--ink)}
+.logo{font-family:"Dela Gothic One",sans-serif;font-size:20px;letter-spacing:.04em;color:var(--logo);text-decoration:none}
+header nav a{color:var(--ink);text-decoration:none;font-weight:700;margin-left:18px;font-size:15px}
+.crumb{font-size:13px;color:var(--muted);margin:14px 0 0}.crumb a{color:var(--muted)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:40px 0 56px}
+.app-id{display:flex;gap:16px;align-items:center}
+.app-id img{width:84px;height:84px;border-radius:20px;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.app-id .nm{font-weight:900;font-size:22px;line-height:1.3}.app-id .gn{font-size:13px;color:var(--muted)}
+h1{font-family:"Dela Gothic One",sans-serif;font-weight:400;font-size:54px;line-height:1.2;letter-spacing:.02em;margin:26px 0 16px;color:var(--ink)}
+.lead{font-size:17px;margin:0 0 20px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px;padding:0;list-style:none}
+.chips li{background:var(--soft);border:2px solid var(--app);color:var(--ink);font-weight:700;font-size:13px;border-radius:999px;padding:2px 12px}
+.badge img{height:52px;width:auto}
+.soon{display:inline-block;font-weight:900;border:3px dashed var(--ink);border-radius:14px;padding:10px 20px;background:#fff}
+.phone{justify-self:center;max-width:300px;border:4px solid var(--ink);border-radius:34px;overflow:hidden;box-shadow:8px 8px 0 var(--app);background:#fff}
+.phone img{display:block}
+section{padding:56px 0;border-top:2px solid var(--ink)}
+h2{font-weight:900;font-size:30px;line-height:1.4;margin:0 0 8px}
+.sec-lead{color:var(--muted);margin:0 0 28px}
+.who{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;list-style:none;margin:0;padding:0}
+.who li{background:var(--card);border:3px solid var(--ink);border-radius:16px;box-shadow:4px 4px 0 var(--ink);padding:16px}
+.who b{display:block;font-size:17px;color:var(--app);margin-bottom:4px}
+.feat{display:grid;grid-template-columns:1fr 280px;gap:48px;align-items:center;padding:36px 0}
+.feat:nth-of-type(even){grid-template-columns:280px 1fr}
+.feat:nth-of-type(even) .shot{order:-1}
+.feat .tag{display:inline-block;background:var(--app);color:#fff;font-weight:900;font-size:13px;border-radius:8px;padding:0 10px;margin-bottom:6px}
+.feat h3{font-size:26px;font-weight:900;line-height:1.4;margin:0 0 10px}
+.feat p{margin:0 0 12px}
+.shot{border:3px solid var(--ink);border-radius:26px;overflow:hidden;box-shadow:6px 6px 0 var(--ink);background:#fff;margin:0}
+.shot img{display:block}.shot figcaption{font-size:12px;color:var(--muted);padding:6px 10px;border-top:2px solid var(--ink);background:var(--soft)}
+.gallery{display:flex;gap:16px;overflow-x:auto;padding:4px 4px 18px;scroll-snap-type:x mandatory}
+.gallery img{flex:none;width:220px;border:3px solid var(--ink);border-radius:20px;scroll-snap-align:start;background:#fff}
+.note{font-size:13px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:var(--card);border:3px solid var(--ink);border-radius:16px;box-shadow:4px 4px 0 var(--ink);padding:18px}
+.card b{display:block;font-size:18px;margin-bottom:6px}
+.box{background:var(--soft);border:2px solid var(--app);border-radius:14px;padding:16px 18px}
+dl.spec{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin:0}dl.spec dt{font-weight:900}dl.spec dd{margin:0}
+.faq details{background:var(--card);border:2px solid var(--ink);border-radius:12px;padding:12px 16px;margin:0 0 10px}
+.faq summary{font-weight:900;cursor:pointer}.faq p{margin:8px 0 0}
+.cta{text-align:center}
+footer{border-top:2px solid var(--ink);padding:28px 0 40px;font-size:14px;color:var(--muted)}
+footer a{color:var(--muted);margin-right:14px}
+@media (max-width:820px){
+ .hero{grid-template-columns:1fr;gap:28px;padding:28px 0 40px}h1{font-size:38px}
+ .who{grid-template-columns:1fr 1fr}
+ .feat,.feat:nth-of-type(even){grid-template-columns:1fr;gap:20px}.feat:nth-of-type(even) .shot{order:0}
+ .shot{max-width:280px;justify-self:center}
+ .phone{max-width:260px}
+ .app-id img{width:68px;height:68px}
+ header nav a{margin-left:12px;font-size:14px}
+}
+@media (max-width:480px){.logo{font-size:16px}header nav a{margin-left:10px;font-size:13px;white-space:nowrap}}
+@media (max-width:420px){.who{grid-template-columns:1fr}h1{font-size:32px}h2{font-size:24px}}
+</style></head>
+<body><div class="wrap">
+<header class="top"><a class="logo" href="../">MORK STUDIO</a><nav><a href="../#apps">アプリ</a><a href="../team/">スタッフ</a><a href="https://mork-studio.hatenablog.com/">開発記</a></nav></header>
+<p class="crumb"><a href="../">ホーム</a> ＞ てくてくダイヤリー</p>
+<div class="hero"><div>
+<div class="app-id"><img src="../assets/tekuteku-icon.jpg" alt="てくてくダイヤリーのアイコン"><div><div class="nm">てくてくダイヤリー</div><div class="gn">ライフスタイル・iPhone</div></div></div>
+<h1>持って歩くだけで、<br>1日が日記になる。</h1>
+<p class="lead">歩いた歩数と、行った場所と、その日の予定や写真。iPhone を持って歩くだけで、カレンダーと日記に自動で残ります。記録はすべて iPhone の中だけ。サーバーには送りません。</p>
+<ul class="chips"><li>無料で始められる</li><li>広告なし</li><li>記録は iPhone の中だけ</li><li>8言語</li></ul>
+<a class="badge" href="https://apps.apple.com/jp/app/id6834400667"><img src="../assets/app-store-badge-ja.svg" alt="App Store からダウンロード"></a>
+</div>
+<div class="phone"><img src="../assets/tekuteku/store_01_month.jpg" alt="てくてくダイヤリーの画面" width="300"></div></div>
 
-<h2>よくある質問</h2>
-<dl>
-<dt>行った場所が記録されません。</dt>
-<dd>iPhone の「設定」→「てくてく」→「位置情報」を「常に」にしてください。「使用中のみ」では、アプリを閉じている間の場所が記録されません。</dd>
-<dt>通っただけの場所が記録されました。</dt>
-<dd>短い滞在で、その間ずっと歩いていたものは自動で隠します。残ってしまったときは、1日の画面でその滞在を左にスワイプすると消せます。長押しで「通っただけ（隠す）」も選べます。</dd>
-<dt>歩数が出ません。</dt>
-<dd>ヘルスケア →右上の顔→「アプリ」→「てくてく」で、歩数と距離の読み取りをオンにしてください。</dd>
-<dt>購入を復元するには？</dt>
-<dd>設定画面の購入の欄にある「購入を復元」を押してください。</dd>
-</dl>
-
-<h2>お問い合わせ</h2>
-<p>不具合やご要望は、こちらへお送りください。<br>MORK STUDIO：<a href="mailto:morkstudio@icloud.com">morkstudio@icloud.com</a></p>
-<p><a href="privacy.html">プライバシーポリシー</a></p>
-
-<hr>
-
-<h1 id="en">TekuTeku</h1>
-<p>TekuTeku automatically keeps your steps and the places you visit in a calendar and diary. Everything is stored only on your iPhone.</p>
-
-<h2>FAQ</h2>
-<dl>
-<dt>Places aren’t being recorded.</dt>
-<dd>Go to iPhone Settings → TekuTeku → Location and choose “Always”. With “While Using the App”, places aren’t recorded while the app is closed.</dd>
-<dt>A place I only walked past was recorded.</dt>
-<dd>Short stays where you kept walking are hidden automatically. If one remains, swipe it left in the day view to delete it, or long-press it and choose “Just passing (hide)”.</dd>
-<dt>Steps don’t appear.</dt>
-<dd>In the Health app, tap your profile (top right) → Apps → TekuTeku and turn on Steps and Walking Distance.</dd>
-<dt>How do I restore my purchase?</dt>
-<dd>Tap “Restore Purchase” in the purchase section of the app’s Settings.</dd>
-</dl>
-
-<h2>Contact</h2>
-<p>Please send bug reports and requests to:<br>MORK STUDIO: <a href="mailto:morkstudio@icloud.com">morkstudio@icloud.com</a></p>
-<p><a href="privacy.html#en">Privacy Policy</a></p>
-</body></html>
+<section><h2>こんな人に</h2><p class="sec-lead">てくてくダイヤリー は、こんな場面で役に立ちます。</p><ul class="who"><li><b>旅行・おでかけ</b>行った場所と写真が、その日のページにまとまって残ります。</li><li><b>散歩・ウォーキング</b>歩いた日が色で残るので、続けるほど楽しくなります。</li><li><b>日記が続かない人</b>ボタン1つで、その日の記録が日記に入ります。</li><li><b>小さい字が見えにくい人</b>文字が大きく太くなる「老眼モード」があります。</li></ul></section>
+<section><h2>できること</h2>
+<div class="feat"><div><span class="tag">行動ログ</span><h3>行った場所と滞在時間が、自動で残る</h3><p>何も操作しなくても、1日が終わるとその日のページができています。どこにいて、何分いたか。そのとき撮った写真と天気も並びます。</p><p>歩いている途中に通りすぎただけの場所は、自動で隠します。残ってしまった場所も、手でかんたんに消せます。</p></div><figure class="shot"><img src="../assets/tekuteku/store_03_day.jpg" alt="1日の画面。行った場所と滞在時間、写真が並ぶ" loading="lazy" width="280"><figcaption>1日の画面。行った場所と滞在時間、写真が並ぶ</figcaption></figure></div>
+<div class="feat"><div><span class="tag">予定</span><h3>予定と「実際に行った場所」を並べて見る</h3><p>iPhone のカレンダー（Google カレンダーなども）の予定と、実際にいた時間を並べて表示します。月・週・5日・2日・1日を切り替えられ、予定の追加や編集もこのアプリの中でできます。</p></div><figure class="shot"><img src="../assets/tekuteku/store_02_2day.jpg" alt="2日の画面。予定と行った場所が並ぶ" loading="lazy" width="280"><figcaption>2日の画面。予定と行った場所が並ぶ</figcaption></figure></div>
+<div class="feat"><div><span class="tag">歩数</span><h3>歩いた日が、色でひと目に</h3><p>カレンダーの1日1日が、歩数に合わせて色の濃さで変わります。「先週はよく歩いたな」が、数字を読まなくても分かります。</p><p>歩いた距離は「東京駅→静岡駅（約180km）をこえました」のように、地名でたとえて出します。数字が、ちょっとした旅になります。</p></div><figure class="shot"><img src="../assets/tekuteku/store_01_month.jpg" alt="月の画面。歩いた日が色の濃さで見える" loading="lazy" width="280"><figcaption>月の画面。歩いた日が色の濃さで見える</figcaption></figure></div>
+<div class="feat"><div><span class="tag">日記</span><h3>ボタン1つ。書かなくても残る日記</h3><p>日記の画面でボタンを押すと、その日の歩数・行った場所・予定・天気が本文に入ります。一言足したい日だけ、足せばいい。</p><p>よく行く場所は、ポチポチ押すだけで「#駅前のカフェ」のようにハッシュタグで残せます。気分は顔のマーク5つから選ぶだけ。</p></div><figure class="shot"><img src="../assets/tekuteku/store_04_diary_editor.jpg" alt="日記を書く画面。その日の記録が自動で入る" loading="lazy" width="280"><figcaption>日記を書く画面。その日の記録が自動で入る</figcaption></figure></div>
+<div class="feat"><div><span class="tag">ふり返り</span><h3>足あとの地図と、1年のふり返り</h3><p>長くいた場所のランキングや、足あとの地図が見られます。1年前の同じ日に、どこにいて何を撮ったかも。</p><p>月のまとめや1年のふり返りは、画像にしてそのまま SNS に投稿できます。</p></div><figure class="shot"><img src="../assets/tekuteku/store_07_year.jpg" alt="1年のふり返り" loading="lazy" width="280"><figcaption>1年のふり返り</figcaption></figure></div>
+<div class="feat"><div><span class="tag">見やすさ</span><h3>老眼モード、12色のテーマ、ダークモード</h3><p>細い字・小さい字が読みにくい人のために「老眼モード」を入れました。文字が大きく太くなり、色のコントラストもはっきりします。文字の大きさだけを3段階で変えることもできます。</p><p>テーマの色は12色から。ダークモードにも対応しています。ホーム画面とロック画面のウィジェットもあります。</p></div><figure class="shot"><img src="../assets/tekuteku/07_easyread_off_on.jpg" alt="老眼モードのオフとオン" loading="lazy" width="280"><figcaption>老眼モードのオフとオン</figcaption></figure></div>
+<div class="feat"><div><span class="tag">電池</span><h3>位置情報を「常に」にしても、電池にやさしい</h3><p>GPS を動かしっぱなしにはしません。iPhone にもともと入っている省電力の仕組みが「着いた」「離れた」と知らせてくれたときだけ、目を覚まして書きとめます。歩数も、iPhone がもともと数えているヘルスケアの数字を読むだけです。</p><p>歩いた道をこまかく残したいときだけ、設定で「歩いた道すじをこまかく記録」をオンにできます（このときは電池を多めに使います）。</p></div><figure class="shot"><img src="../assets/tekuteku/10_route_switch.jpg" alt="設定の「歩いた道すじをこまかく記録」" loading="lazy" width="280"><figcaption>設定の「歩いた道すじをこまかく記録」</figcaption></figure></div>
+</section>
+<section><h2>画面</h2><div class="gallery"><img src="../assets/tekuteku/store_01_month.jpg" alt="てくてくダイヤリーの画面" loading="lazy" width="220"><img src="../assets/tekuteku/store_02_2day.jpg" alt="てくてくダイヤリーの画面" loading="lazy" width="220"><img src="../assets/tekuteku/store_03_day.jpg" alt="てくてくダイヤリーの画面" loading="lazy" width="220"><img src="../assets/tekuteku/store_04_diary_editor.jpg" alt="てくてくダイヤリーの画面" loading="lazy" width="220"><img src="../assets/tekuteku/store_05_diary_list.jpg" alt="てくてくダイヤリーの画面" loading="lazy" width="220"><img src="../assets/tekuteku/store_06_places.jpg" alt="てくてくダイヤリーの画面" loading="lazy" width="220"><img src="../assets/tekuteku/store_07_year.jpg" alt="てくてくダイヤリーの画面" loading="lazy" width="220"><img src="../assets/tekuteku/08a_theme_colors.jpg" alt="てくてくダイヤリーの画面" loading="lazy" width="220"><img src="../assets/tekuteku/08b_dark_month.jpg" alt="てくてくダイヤリーの画面" loading="lazy" width="220"><img src="../assets/tekuteku/09_widget.jpg" alt="てくてくダイヤリーの画面" loading="lazy" width="220"></div></section>
+<section><h2>料金</h2><div class="cards"><div class="card"><b>無料で始められます</b>直近32日の記録は、無料で全部見られます。日記・予定・写真・バックアップも無料です。</div><div class="card"><b>それより前の記録は、1回だけの購入で</b>¥680 の買い切りで、ずっと見られます。毎月の支払いはありません。広告もありません。</div></div></section>
+<section><h2>プライバシー</h2><p>歩数も、行った場所も、日記も、この iPhone の中だけに保存します。サーバーには送りません。天気を調べるときだけ、約1km の範囲にぼかした位置を Apple の天気サービスに送ります。機種変更のときは、記録を書き出して新しい iPhone で読み込めます。</p><p><a href="privacy.html">プライバシーポリシー</a></p><dl class="spec"><dt>対応</dt><dd>iPhone（iOS 17 以上）</dd><dt>言語</dt><dd>日本語・英語・ドイツ語・韓国語・中国語（繁体字）・スペイン語・イタリア語・フランス語</dd><dt>カテゴリ</dt><dd>ライフスタイル</dd><dt>料金</dt><dd>無料（アプリ内課金 ¥680）</dd></dl></section>
+<section class="faq" id="support"><h2>よくある質問・サポート</h2><details><summary>行った場所が記録されません。</summary><p>iPhone の「設定」→「てくてく」→「位置情報」を「常に」にしてください。「使用中のみ」では、アプリを閉じている間の場所が記録されません。</p></details><details><summary>通っただけの場所が記録されました。</summary><p>短い滞在で、その間ずっと歩いていたものは自動で隠します。残ってしまったときは、1日の画面でその滞在を左にスワイプすると消せます。長押しで「通っただけ（隠す）」も選べます。</p></details><details><summary>歩数が出ません。</summary><p>ヘルスケア → 右上の顔 →「アプリ」→「てくてく」で、歩数と距離の読み取りをオンにしてください。</p></details><details><summary>購入を復元するには？</summary><p>設定画面の購入の欄にある「購入を復元」を押してください。</p></details><p style="margin-top:20px">不具合やご要望は、こちらへお送りください。お使いの端末と iOS のバージョンを書いていただけると助かります。<br>MORK STUDIO：<a href="mailto:morkstudio@icloud.com">morkstudio@icloud.com</a></p></section>
+<section><h2>開発記</h2><p><a href="https://mork-studio.hatenablog.com/entry/tekuteku-diary">歩いた日が、色で残る。「てくてくダイヤリー」の話</a></p></section>
+<section class="cta"><h2>てくてくダイヤリー</h2><p class="sec-lead">歩数・行った場所・予定・写真・天気が、iPhone を持って歩くだけで1日の日記になるアプリ。記録は iPhone の中だけに保存。老眼モード、12色のテーマ、ウィジェットにも対応。</p><a class="badge" href="https://apps.apple.com/jp/app/id6834400667"><img src="../assets/app-store-badge-ja.svg" alt="App Store からダウンロード"></a></section>
+<section id="en" lang="en"><h2>English</h2><p>TekuTeku automatically keeps your steps and the places you visit in a calendar and diary. Everything is stored only on your iPhone.</p><details><summary>Places aren’t being recorded.</summary><p>Go to iPhone Settings → TekuTeku → Location and choose “Always”. With “While Using the App”, places aren’t recorded while the app is closed.</p></details><details><summary>A place I only walked past was recorded.</summary><p>Short stays where you kept walking are hidden automatically. If one remains, swipe it left in the day view to delete it, or long-press it and choose “Just passing (hide)”.</p></details><details><summary>Steps don’t appear.</summary><p>In the Health app, tap your profile (top right) → Apps → TekuTeku and turn on Steps and Walking Distance.</p></details><details><summary>How do I restore my purchase?</summary><p>Tap “Restore Purchase” in the purchase section of the app’s Settings.</p></details><p>Support: <a href="mailto:morkstudio@icloud.com">morkstudio@icloud.com</a> ・ <a href="privacy.html#en">Privacy Policy</a></p></section>
+<footer><a href="../">MORK STUDIO</a><a href="../team/">スタッフ紹介</a><a href="privacy.html">プライバシーポリシー</a><br>&copy; 2026 MORK STUDIO</footer></div></body></html>
