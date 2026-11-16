@@ -64,6 +64,10 @@ h2{font-weight:900;font-size:30px;margin:0}
 .card .store{background:var(--ink);color:#fff}
 .card .wait{background:#fff;color:var(--muted);border-style:dashed !important}
 .card .sup{background:var(--surface);color:var(--ink)}
+/* X の最新の投稿 */
+.xposts{border-top:2px solid var(--ink);padding:56px 0 8px}
+.xgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;align-items:start}
+.xgrid .twitter-tweet{margin:0!important}
 /* 開発記 */
 .blog{margin:56px 0 64px;display:grid;grid-template-columns:1.2fr 1fr;border:3px solid var(--ink);border-radius:20px;box-shadow:6px 6px 0 var(--ink);overflow:hidden;background:var(--card)}
 .blog .l{padding:36px}
@@ -101,6 +105,7 @@ footer ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;g
 </style>
 <script src="apps.js"></script>
 <script src="staff.js"></script>
+<script src="x-posts.js"></script>
 </head>
 <body>
 <div class="wrap">
@@ -131,6 +136,10 @@ footer ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;g
     <noscript><p>アプリの一覧を表示するには JavaScript を有効にしてください。</p></noscript>
   </section>
 
+  <section class="xposts" id="x">
+    <div class="head"><h2>X の最新の投稿</h2><p class="sec-note"><a href="https://x.com/mork_studio">@mork_studio をフォロー →</a></p></div>
+    <div class="xgrid" id="xgrid"></div>
+  </section>
   <section class="blog">
     <div class="l"><h2>開発記</h2><p class="sec-note">モルクが、AI のチームとアプリをつくる毎日を書いています。うまくいったことも、失敗も。</p></div>
     <div class="r"><span>ブログ（はてなブログ）</span><a href="https://mork-studio.hatenablog.com/">MORK STUDIO 開発記 →</a><span>note</span><a href="https://note.com/mork_studio">MORK STUDIO の note →</a><span>X（旧 Twitter）</span><a href="https://x.com/mork_studio">@mork_studio →</a></div>
@@ -216,6 +225,14 @@ footer ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;g
   document.getElementById("crowd").innerHTML = staff.slice(0, 9).map(function (p) { return window.morkAvatar(p.avatar, 120); }).join("");
   document.getElementById("faces").innerHTML = staff.slice(0, 5).map(function (p) { return window.morkAvatar(p.avatar, 48); }).join("");
   document.getElementById("year").textContent = new Date().getFullYear();
+})();
+</script>
+<script>
+(function(){
+  var u=window.MORK_X||[], g=document.getElementById("xgrid");
+  if(!u.length||!g){var s=document.getElementById("x"); if(s) s.style.display="none"; return;}
+  u.forEach(function(x){var b=document.createElement("blockquote"); b.className="twitter-tweet"; b.setAttribute("data-lang","ja"); b.setAttribute("data-dnt","true"); var a=document.createElement("a"); a.href=x.replace("https://x.com","https://twitter.com"); a.textContent="X の投稿を見る"; b.appendChild(a); g.appendChild(b);});
+  var w=document.createElement("script"); w.async=true; w.src="https://platform.twitter.com/widgets.js"; document.body.appendChild(w);
 })();
 </script>
 </body></html>
