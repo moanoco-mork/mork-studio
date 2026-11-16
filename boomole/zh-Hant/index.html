@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>爆破職人 BOOMOLE — 讓大樓筆直倒下的爆破解謎</title>
+<meta name="description" content="挑戰炸鐵老大的無理要求！炸彈要放在哪裡，大樓才會筆直往下倒？物理運算真實倒塌的全100關。用最少的炸彈過關收集獎牌，擴建BOOMOLE之家吧！">
+<link rel="canonical" href="https://moanoco-mork.github.io/mork-studio/boomole/zh-Hant/"><link rel="alternate" hreflang="ja" href="https://moanoco-mork.github.io/mork-studio/boomole/"><link rel="alternate" hreflang="en" href="https://moanoco-mork.github.io/mork-studio/boomole/en/"><link rel="alternate" hreflang="de" href="https://moanoco-mork.github.io/mork-studio/boomole/de/"><link rel="alternate" hreflang="ko" href="https://moanoco-mork.github.io/mork-studio/boomole/ko/"><link rel="alternate" hreflang="zh-Hant" href="https://moanoco-mork.github.io/mork-studio/boomole/zh-Hant/"><link rel="alternate" hreflang="x-default" href="https://moanoco-mork.github.io/mork-studio/boomole/en/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="MORK STUDIO"><meta property="og:title" content="爆破職人 BOOMOLE"><meta property="og:description" content="挑戰炸鐵老大的無理要求！炸彈要放在哪裡，大樓才會筆直往下倒？物理運算真實倒塌的全100關。用最少的炸彈過關收集獎牌，擴建BOOMOLE之家吧！"><meta property="og:url" content="https://moanoco-mork.github.io/mork-studio/boomole/zh-Hant/"><meta property="og:image" content="https://moanoco-mork.github.io/mork-studio/assets/boomole/zh-Hant/1_start.jpg"><meta name="twitter:card" content="summary_large_image">
+<meta name="apple-itunes-app" content="app-id=6832903245">
+<link rel="icon" href="../../assets/boomole-icon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "爆破職人 BOOMOLE", "operatingSystem": "iOS", "applicationCategory": "GameApplication", "description": "挑戰炸鐵老大的無理要求！炸彈要放在哪裡，大樓才會筆直往下倒？物理運算真實倒塌的全100關。用最少的炸彈過關收集獎牌，擴建BOOMOLE之家吧！", "url": "https://moanoco-mork.github.io/mork-studio/boomole/zh-Hant/", "inLanguage": "zh-Hant", "image": "https://moanoco-mork.github.io/mork-studio/assets/boomole-icon.jpg", "downloadUrl": "https://apps.apple.com/app/id6832903245", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Organization", "name": "MORK STUDIO"}}</script>
+<style>:root{--app:#1e5ae6;--soft:#e8eefc;--bg:#fffdf3}
+:root{--ink:#262b33;--logo:#3d4f63;--muted:#5d6570;--card:#fff;--rule:#e6e1cf}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New",system-ui,sans-serif;line-height:1.85}
+a{color:var(--app)}
+img{max-width:100%;height:auto}
+.hero>*,.feat>*,.who li,.cards>*{min-width:0}
+html,body{overflow-x:hidden}
+p,li,dd,summary{overflow-wrap:anywhere}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:2px solid var(--ink);position:sticky;top:0;z-index:50;background:var(--bg)}
+[id]{scroll-margin-top:90px}
+.logo{font-family:"Dela Gothic One",sans-serif;font-size:20px;letter-spacing:.04em;color:var(--logo);text-decoration:none}
+header nav a{color:var(--ink);text-decoration:none;font-weight:700;margin-left:18px;font-size:15px}
+.crumb{font-size:13px;color:var(--muted);margin:14px 0 0}.crumb a{color:var(--muted)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:40px 0 56px}
+.app-id{display:flex;gap:16px;align-items:center}
+.app-id img{width:84px;height:84px;border-radius:20px;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.app-id .nm{font-weight:900;font-size:22px;line-height:1.3}.app-id .gn{font-size:13px;color:var(--muted)}
+h1{font-family:"Dela Gothic One",sans-serif;font-weight:400;font-size:54px;line-height:1.2;letter-spacing:.02em;margin:26px 0 16px;color:var(--ink)}
+.lead{font-size:17px;margin:0 0 20px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px;padding:0;list-style:none}
+.chips li{background:var(--soft);border:2px solid var(--app);color:var(--ink);font-weight:700;font-size:13px;border-radius:999px;padding:2px 12px}
+.badge img{height:52px;width:auto}
+.soon{display:inline-block;font-weight:900;border:3px dashed var(--ink);border-radius:14px;padding:10px 20px;background:#fff}
+.phone{justify-self:center;max-width:300px;border:4px solid var(--ink);border-radius:34px;overflow:hidden;box-shadow:8px 8px 0 var(--app);background:#fff}
+.phone img{display:block}
+section{padding:56px 0;border-top:2px solid var(--ink)}
+h2{font-weight:900;font-size:30px;line-height:1.4;margin:0 0 8px}
+.sec-lead{color:var(--muted);margin:0 0 28px}
+.who{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;list-style:none;margin:0;padding:0}
+.who li{background:var(--card);border:3px solid var(--ink);border-radius:16px;box-shadow:4px 4px 0 var(--ink);padding:16px}
+.who b{display:block;font-size:17px;color:var(--app);margin-bottom:4px}
+.feat{display:grid;grid-template-columns:1fr 280px;gap:48px;align-items:center;padding:36px 0}
+.feat:nth-of-type(even){grid-template-columns:280px 1fr}
+.feat:nth-of-type(even) .shot{order:-1}
+.feat .tag{display:inline-block;background:var(--app);color:#fff;font-weight:900;font-size:13px;border-radius:8px;padding:0 10px;margin-bottom:6px}
+.feat h3{font-size:26px;font-weight:900;line-height:1.4;margin:0 0 10px}
+.feat p{margin:0 0 12px}
+.shot{border:3px solid var(--ink);border-radius:26px;overflow:hidden;box-shadow:6px 6px 0 var(--ink);background:#fff;margin:0}
+.shot img{display:block}.shot figcaption{font-size:12px;color:var(--muted);padding:6px 10px;border-top:2px solid var(--ink);background:var(--soft)}
+.gallery{display:flex;gap:16px;overflow-x:auto;padding:4px 4px 18px;scroll-snap-type:x mandatory}
+.gallery img{flex:none;width:220px;border:3px solid var(--ink);border-radius:20px;scroll-snap-align:start;background:#fff}
+.note{font-size:13px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:var(--card);border:3px solid var(--ink);border-radius:16px;box-shadow:4px 4px 0 var(--ink);padding:18px}
+.card b{display:block;font-size:18px;margin-bottom:6px}
+.box{background:var(--soft);border:2px solid var(--app);border-radius:14px;padding:16px 18px}
+dl.spec{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin:0}dl.spec dt{font-weight:900}dl.spec dd{margin:0}
+.faq details{background:var(--card);border:2px solid var(--ink);border-radius:12px;padding:12px 16px;margin:0 0 10px}
+.faq summary{font-weight:900;cursor:pointer}.faq p{margin:8px 0 0}
+.cta{text-align:center}
+footer{border-top:2px solid var(--ink);padding:28px 0 40px;font-size:14px;color:var(--muted)}
+footer a{color:var(--muted);margin-right:14px}
+@media (max-width:820px){
+ .hero{grid-template-columns:1fr;gap:28px;padding:28px 0 40px}h1{font-size:38px}
+ .who{grid-template-columns:1fr 1fr}
+ .feat,.feat:nth-of-type(even){grid-template-columns:1fr;gap:20px}.feat:nth-of-type(even) .shot{order:0}
+ .shot{max-width:280px;justify-self:center}
+ .phone{max-width:260px}
+ .app-id img{width:68px;height:68px}
+ header nav a{margin-left:12px;font-size:14px}
+}
+@media (max-width:480px){.logo{font-size:16px}header nav a{margin-left:10px;font-size:13px;white-space:nowrap}}
+@media (max-width:420px){.who{grid-template-columns:1fr}h1{font-size:32px}h2{font-size:24px}}
+
+.langs{font-size:13px;margin:10px 0 0}.langs a{color:var(--muted)}
+.btn-store{display:inline-flex;flex-direction:column;background:#000;color:#fff;text-decoration:none;border-radius:12px;padding:8px 18px;line-height:1.2;border:2px solid #000}.btn-store small{font-size:11px}.btn-store b{font-size:20px}
+h1{font-family:system-ui,"Zen Kaku Gothic New",sans-serif;font-weight:900}
+.feat ul{margin:0 0 12px;padding-left:1.2em}
+</style></head>
+<body><div class="wrap">
+<header class="top"><a class="logo" href="../../">MORK STUDIO</a><nav><a href="../../#apps">App</a><a href="../../team/">成員</a><a href="https://mork-studio.hatenablog.com/">部落格</a></nav></header>
+<p class="langs"><a href="../" hreflang="ja">日本語</a> ・ <a href="../en/" hreflang="en">English</a> ・ <a href="../de/" hreflang="de">Deutsch</a> ・ <a href="../ko/" hreflang="ko">한국어</a> ・ <b>繁體中文</b></p>
+<div class="hero"><div>
+<div class="app-id"><img src="../../assets/boomole-icon.jpg" alt=""><div><div class="nm">爆破職人 BOOMOLE</div><div class="gn">iPhone ・ 免費</div></div></div>
+<h1>讓大樓筆直倒下的爆破解謎</h1>
+<p class="lead">挑戰炸鐵老大的無理要求！炸彈要放在哪裡，大樓才會筆直往下倒？物理運算真實倒塌的全100關。用最少的炸彈過關收集獎牌，擴建BOOMOLE之家吧！</p>
+<a class="btn-store" href="https://apps.apple.com/app/id6832903245"><small>從 App Store</small><b>下載</b></a>
+</div><div class="phone"><img src="../../assets/boomole/zh-Hant/1_start.jpg" alt="" width="300"></div></div>
+<section><h2>1.0.3 版更新內容</h2><p class="sec-lead">關卡全面重新製作。</p>
+<div class="feat"><div><ul><li>100個關卡全部換成新的建築。</li><li>倒塌的樣子更自然了。留在細柱子上的建築現在會倒下。</li><li>炸彈數量是「最少數量＋1顆」。用最少數量完成可以拿到高分。</li><li>放下炸彈後，可以看到倒塌的預測。</li><li>定時炸彈有了新的任務：把可能掉到鄰居房子上的部分，在掉落途中炸成粉。新增了10個專用關卡。</li><li>新獎牌「職人」：不用提示也不用備用，以最少數量拿到3顆星就能獲得。集滿100枚，BOOMOLE之家會有好事發生。</li><li>MOLMY會來為你加油。</li></ul></div><figure class="shot"><img src="../../assets/boomole/zh-Hant/3_forecast.jpg" alt="" loading="lazy" width="280"></figure></div></section>
+<section><h2>玩法</h2><p>頭上頂著葉子的鼴鼠「BOOMOLE」，是拆除公司「炸鐵組」的新人。</p><p>跟著嚴格但技術一流的炸鐵老大學習，成為獨當一面的「爆破職人」吧！</p><p>按下引爆按鈕，開始工作！</p><p>炸彈要放在哪裡，大樓才會筆直往下倒？</p>
+<div class="feat"><div><h3>玩法</h3><p>想好要在柱子的哪裡放炸彈，按下「引爆！」就好。</p><p>大樓會用物理運算真實地倒塌。</p><p>讓瓦礫剛好落在基地內，挑戰「爆藝分」100分！</p><p>隔壁房子刮傷最多只能拿2顆星，弄倒就失敗。要小心！</p></div><figure class="shot"><img src="../../assets/boomole/zh-Hant/5_boom.jpg" alt="" loading="lazy" width="280"></figure></div>
+<div class="feat"><div><h3>特色</h3><ul><li>全100關。從木造小屋到超高層大樓</li><li>4種炸彈：普通、強力、切割、定時炸彈</li><li>多種材質：木材、玻璃、混凝土、鋼筋混凝土、鋼骨</li><li>瓦斯桶會大爆炸！善用連鎖爆炸</li><li>結構檢視能看出負重集中的弱點</li><li>收集3顆星和3種獎牌（職人、完美、大連鎖）</li><li>卡關時看廣告就能用提示知道一個炸彈位置</li></ul></div><figure class="shot"><img src="../../assets/boomole/zh-Hant/3_forecast.jpg" alt="" loading="lazy" width="280"></figure></div>
+<div class="feat"><div><h3>劇情</h3><p>全10話。削減經費令、小氣的業主、老大閃到腰……</p><p>每個工地都有老大的新要求。可愛的MOLMY也會登場！</p></div><figure class="shot"><img src="../../assets/boomole/zh-Hant/9_story.jpg" alt="" loading="lazy" width="280"></figure></div>
+<div class="feat"><div><h3>更多玩法</h3><ul><li>章節挑戰：連續10關、每關一次，評定S～C</li><li>10種稱號：從學徒到傳說的爆破職人</li><li>用橡實在BOOMOLE之家挖房間：床鋪、廚房、地下溫泉、劇院等</li></ul></div><figure class="shot"><img src="../../assets/boomole/zh-Hant/8_house.jpg" alt="" loading="lazy" width="280"></figure></div>
+<div class="card" style="margin:18px 0"><b>安心遊玩</b><ul><li>沒有人或角色受傷的畫面（只會炸大樓）</li><li>紀錄只存在裝置裡。不需要名字或電子郵件</li><li>廣告使用兒童設定，只顯示全年齡內容</li><li>遊玩關卡時不顯示廣告。獎勵廣告只在自己選擇時播放</li></ul></div>
+</section>
+<section><h2>畫面</h2><div class="gallery"><img src="../../assets/boomole/zh-Hant/1_start.jpg" alt="" loading="lazy" width="220"><img src="../../assets/boomole/zh-Hant/2_title.jpg" alt="" loading="lazy" width="220"><img src="../../assets/boomole/zh-Hant/3_forecast.jpg" alt="" loading="lazy" width="220"><img src="../../assets/boomole/zh-Hant/4_aim.jpg" alt="" loading="lazy" width="220"><img src="../../assets/boomole/zh-Hant/5_boom.jpg" alt="" loading="lazy" width="220"><img src="../../assets/boomole/zh-Hant/6_timer.jpg" alt="" loading="lazy" width="220"><img src="../../assets/boomole/zh-Hant/7_result.jpg" alt="" loading="lazy" width="220"><img src="../../assets/boomole/zh-Hant/8_house.jpg" alt="" loading="lazy" width="220"><img src="../../assets/boomole/zh-Hant/9_story.jpg" alt="" loading="lazy" width="220"></div></section>
+<section class="faq"><h2>常見問題與支援</h2><details><summary>換手機時可以轉移紀錄嗎？</summary><p>遊戲紀錄只儲存在裝置中，因此無法轉移。</p></details><details><summary>刪除 App 會怎樣？</summary><p>紀錄也會一起刪除。</p></details><details><summary>沒有聲音。</summary><p>請確認 iPhone 的靜音開關與音量。</p></details><p style="margin-top:20px">如有錯誤回報或意見，請來信告訴我們，並附上裝置、iOS 版本與發生問題的關卡。<br>MORK STUDIO: <a href="mailto:morkstudio@icloud.com">morkstudio@icloud.com</a></p><p><a href="../privacy.html">隱私權政策</a></p></section>
+<section class="cta"><h2>下載爆破職人 BOOMOLE</h2><a class="btn-store" href="https://apps.apple.com/app/id6832903245"><small>從 App Store</small><b>下載</b></a></section>
+<footer><a href="../../">MORK STUDIO</a><a href="../privacy.html">隱私權政策</a><br>&copy; 2026 MORK STUDIO</footer></div></body></html>

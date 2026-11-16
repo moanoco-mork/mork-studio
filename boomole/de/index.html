@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BOOMOLE: Spreng-Puzzle — Häuser gerade sprengen</title>
+<meta name="description" content="Wohin mit den Bomben, damit das Haus gerade fällt? 100 Stufen mit echter Physik und Chef Bomtetsus Aufträgen. Spare Bomben, sammle Medaillen, baue das Boomole-Haus!">
+<link rel="canonical" href="https://moanoco-mork.github.io/mork-studio/boomole/de/"><link rel="alternate" hreflang="ja" href="https://moanoco-mork.github.io/mork-studio/boomole/"><link rel="alternate" hreflang="en" href="https://moanoco-mork.github.io/mork-studio/boomole/en/"><link rel="alternate" hreflang="de" href="https://moanoco-mork.github.io/mork-studio/boomole/de/"><link rel="alternate" hreflang="ko" href="https://moanoco-mork.github.io/mork-studio/boomole/ko/"><link rel="alternate" hreflang="zh-Hant" href="https://moanoco-mork.github.io/mork-studio/boomole/zh-Hant/"><link rel="alternate" hreflang="x-default" href="https://moanoco-mork.github.io/mork-studio/boomole/en/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="MORK STUDIO"><meta property="og:title" content="BOOMOLE: Spreng-Puzzle"><meta property="og:description" content="Wohin mit den Bomben, damit das Haus gerade fällt? 100 Stufen mit echter Physik und Chef Bomtetsus Aufträgen. Spare Bomben, sammle Medaillen, baue das Boomole-Haus!"><meta property="og:url" content="https://moanoco-mork.github.io/mork-studio/boomole/de/"><meta property="og:image" content="https://moanoco-mork.github.io/mork-studio/assets/boomole/de/1_start.jpg"><meta name="twitter:card" content="summary_large_image">
+<meta name="apple-itunes-app" content="app-id=6832903245">
+<link rel="icon" href="../../assets/boomole-icon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "BOOMOLE: Spreng-Puzzle", "operatingSystem": "iOS", "applicationCategory": "GameApplication", "description": "Wohin mit den Bomben, damit das Haus gerade fällt? 100 Stufen mit echter Physik und Chef Bomtetsus Aufträgen. Spare Bomben, sammle Medaillen, baue das Boomole-Haus!", "url": "https://moanoco-mork.github.io/mork-studio/boomole/de/", "inLanguage": "de", "image": "https://moanoco-mork.github.io/mork-studio/assets/boomole-icon.jpg", "downloadUrl": "https://apps.apple.com/app/id6832903245", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Organization", "name": "MORK STUDIO"}}</script>
+<style>:root{--app:#1e5ae6;--soft:#e8eefc;--bg:#fffdf3}
+:root{--ink:#262b33;--logo:#3d4f63;--muted:#5d6570;--card:#fff;--rule:#e6e1cf}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New",system-ui,sans-serif;line-height:1.85}
+a{color:var(--app)}
+img{max-width:100%;height:auto}
+.hero>*,.feat>*,.who li,.cards>*{min-width:0}
+html,body{overflow-x:hidden}
+p,li,dd,summary{overflow-wrap:anywhere}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:2px solid var(--ink);position:sticky;top:0;z-index:50;background:var(--bg)}
+[id]{scroll-margin-top:90px}
+.logo{font-family:"Dela Gothic One",sans-serif;font-size:20px;letter-spacing:.04em;color:var(--logo);text-decoration:none}
+header nav a{color:var(--ink);text-decoration:none;font-weight:700;margin-left:18px;font-size:15px}
+.crumb{font-size:13px;color:var(--muted);margin:14px 0 0}.crumb a{color:var(--muted)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:40px 0 56px}
+.app-id{display:flex;gap:16px;align-items:center}
+.app-id img{width:84px;height:84px;border-radius:20px;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.app-id .nm{font-weight:900;font-size:22px;line-height:1.3}.app-id .gn{font-size:13px;color:var(--muted)}
+h1{font-family:"Dela Gothic One",sans-serif;font-weight:400;font-size:54px;line-height:1.2;letter-spacing:.02em;margin:26px 0 16px;color:var(--ink)}
+.lead{font-size:17px;margin:0 0 20px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px;padding:0;list-style:none}
+.chips li{background:var(--soft);border:2px solid var(--app);color:var(--ink);font-weight:700;font-size:13px;border-radius:999px;padding:2px 12px}
+.badge img{height:52px;width:auto}
+.soon{display:inline-block;font-weight:900;border:3px dashed var(--ink);border-radius:14px;padding:10px 20px;background:#fff}
+.phone{justify-self:center;max-width:300px;border:4px solid var(--ink);border-radius:34px;overflow:hidden;box-shadow:8px 8px 0 var(--app);background:#fff}
+.phone img{display:block}
+section{padding:56px 0;border-top:2px solid var(--ink)}
+h2{font-weight:900;font-size:30px;line-height:1.4;margin:0 0 8px}
+.sec-lead{color:var(--muted);margin:0 0 28px}
+.who{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;list-style:none;margin:0;padding:0}
+.who li{background:var(--card);border:3px solid var(--ink);border-radius:16px;box-shadow:4px 4px 0 var(--ink);padding:16px}
+.who b{display:block;font-size:17px;color:var(--app);margin-bottom:4px}
+.feat{display:grid;grid-template-columns:1fr 280px;gap:48px;align-items:center;padding:36px 0}
+.feat:nth-of-type(even){grid-template-columns:280px 1fr}
+.feat:nth-of-type(even) .shot{order:-1}
+.feat .tag{display:inline-block;background:var(--app);color:#fff;font-weight:900;font-size:13px;border-radius:8px;padding:0 10px;margin-bottom:6px}
+.feat h3{font-size:26px;font-weight:900;line-height:1.4;margin:0 0 10px}
+.feat p{margin:0 0 12px}
+.shot{border:3px solid var(--ink);border-radius:26px;overflow:hidden;box-shadow:6px 6px 0 var(--ink);background:#fff;margin:0}
+.shot img{display:block}.shot figcaption{font-size:12px;color:var(--muted);padding:6px 10px;border-top:2px solid var(--ink);background:var(--soft)}
+.gallery{display:flex;gap:16px;overflow-x:auto;padding:4px 4px 18px;scroll-snap-type:x mandatory}
+.gallery img{flex:none;width:220px;border:3px solid var(--ink);border-radius:20px;scroll-snap-align:start;background:#fff}
+.note{font-size:13px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:var(--card);border:3px solid var(--ink);border-radius:16px;box-shadow:4px 4px 0 var(--ink);padding:18px}
+.card b{display:block;font-size:18px;margin-bottom:6px}
+.box{background:var(--soft);border:2px solid var(--app);border-radius:14px;padding:16px 18px}
+dl.spec{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin:0}dl.spec dt{font-weight:900}dl.spec dd{margin:0}
+.faq details{background:var(--card);border:2px solid var(--ink);border-radius:12px;padding:12px 16px;margin:0 0 10px}
+.faq summary{font-weight:900;cursor:pointer}.faq p{margin:8px 0 0}
+.cta{text-align:center}
+footer{border-top:2px solid var(--ink);padding:28px 0 40px;font-size:14px;color:var(--muted)}
+footer a{color:var(--muted);margin-right:14px}
+@media (max-width:820px){
+ .hero{grid-template-columns:1fr;gap:28px;padding:28px 0 40px}h1{font-size:38px}
+ .who{grid-template-columns:1fr 1fr}
+ .feat,.feat:nth-of-type(even){grid-template-columns:1fr;gap:20px}.feat:nth-of-type(even) .shot{order:0}
+ .shot{max-width:280px;justify-self:center}
+ .phone{max-width:260px}
+ .app-id img{width:68px;height:68px}
+ header nav a{margin-left:12px;font-size:14px}
+}
+@media (max-width:480px){.logo{font-size:16px}header nav a{margin-left:10px;font-size:13px;white-space:nowrap}}
+@media (max-width:420px){.who{grid-template-columns:1fr}h1{font-size:32px}h2{font-size:24px}}
+
+.langs{font-size:13px;margin:10px 0 0}.langs a{color:var(--muted)}
+.btn-store{display:inline-flex;flex-direction:column;background:#000;color:#fff;text-decoration:none;border-radius:12px;padding:8px 18px;line-height:1.2;border:2px solid #000}.btn-store small{font-size:11px}.btn-store b{font-size:20px}
+h1{font-family:system-ui,"Zen Kaku Gothic New",sans-serif;font-weight:900}
+.feat ul{margin:0 0 12px;padding-left:1.2em}
+</style></head>
+<body><div class="wrap">
+<header class="top"><a class="logo" href="../../">MORK STUDIO</a><nav><a href="../../#apps">Apps</a><a href="../../team/">Team</a><a href="https://mork-studio.hatenablog.com/">Blog</a></nav></header>
+<p class="langs"><a href="../" hreflang="ja">日本語</a> ・ <a href="../en/" hreflang="en">English</a> ・ <b>Deutsch</b> ・ <a href="../ko/" hreflang="ko">한국어</a> ・ <a href="../zh-Hant/" hreflang="zh-Hant">繁體中文</a></p>
+<div class="hero"><div>
+<div class="app-id"><img src="../../assets/boomole-icon.jpg" alt=""><div><div class="nm">BOOMOLE: Spreng-Puzzle</div><div class="gn">iPhone ・ Kostenlos</div></div></div>
+<h1>Häuser gerade sprengen</h1>
+<p class="lead">Wohin mit den Bomben, damit das Haus gerade fällt? 100 Stufen mit echter Physik und Chef Bomtetsus Aufträgen. Spare Bomben, sammle Medaillen, baue das Boomole-Haus!</p>
+<a class="btn-store" href="https://apps.apple.com/app/id6832903245"><small>Laden im</small><b>App Store</b></a>
+</div><div class="phone"><img src="../../assets/boomole/de/1_start.jpg" alt="" width="300"></div></div>
+<section><h2>Neu in Version 1.0.3</h2><p class="sec-lead">Alle Level wurden neu gebaut.</p>
+<div class="feat"><div><ul><li>Alle 100 Level haben neue Gebäude.</li><li>Einstürze wirken natürlicher. Ein Gebäude, das auf einer dünnen Säule stehen bleibt, kippt jetzt um.</li><li>Du bekommst die Mindestzahl an Bomben plus eine Reserve. Mit der Mindestzahl gibt es die höchste Punktzahl.</li><li>Sobald du eine Bombe setzt, siehst du eine Vorschau des Einsturzes.</li><li>Die Zeitbombe hat eine neue Aufgabe: Sie zermahlt Teile, die aufs Nachbarhaus fallen würden, noch im Fall zu Staub. Dazu gibt es 10 eigene Level.</li><li>Neue Medaille „Handwerk“: 3 Sterne mit der Mindestzahl an Bomben, ohne Tipps und ohne Reserve. Bei 100 Medaillen passiert etwas Schönes im Boomole-Haus.</li><li>Molmy schaut vorbei und feuert dich an.</li></ul></div><figure class="shot"><img src="../../assets/boomole/de/3_forecast.jpg" alt="" loading="lazy" width="280"></figure></div></section>
+<section><h2>So wird gespielt</h2><p>Boomole, ein kleiner Maulwurf mit einem Blatt auf dem Kopf, ist der Neue bei der Abrissfirma Bomtetsu &amp; Co.</p><p>Lerne vom strengen, aber lieben Chef Bomtetsu und werde ein echter Sprengmeister!</p><p>Drück den Zünder und los geht&#x27;s!</p><p>Wohin mit den Bomben, damit das Haus gerade nach unten fällt?</p>
+<div class="feat"><div><h3>SO WIRD GESPIELT</h3><p>Lege Bomben an die Säulen und drücke ZÜNDEN!</p><p>Die Häuser stürzen mit echter Physik ein.</p><p>Lass den Schutt im Feld landen und hol 100 Sprengpunkte!</p><p>Ein Kratzer am Nachbarhaus gibt höchstens 2 Sterne. Stürzt es ein, ist die Runde verloren!</p></div><figure class="shot"><img src="../../assets/boomole/de/5_boom.jpg" alt="" loading="lazy" width="280"></figure></div>
+<div class="feat"><div><h3>DAS ERWARTET DICH</h3><ul><li>100 Stufen, von der Holzhütte bis zum Wolkenkratzer</li><li>4 Bombenarten: normal, stark, Schneidbombe und Zeitbombe</li><li>Viele Materialien: Holz, Glas, Beton, Stahlbeton und Stahl</li><li>Gasflaschen explodieren mit – nutze die Kettenreaktion</li><li>Die Strukturansicht zeigt, wo die Last liegt</li><li>Sammle 3 Sterne und 3 Medaillen: Handwerk, Perfekt und Kettenreaktion</li><li>Nicht weiter? Schau Werbung für einen Tipp, der einen Bombenplatz zeigt</li></ul></div><figure class="shot"><img src="../../assets/boomole/de/3_forecast.jpg" alt="" loading="lazy" width="280"></figure></div>
+<div class="feat"><div><h3>GESCHICHTE</h3><p>10 Folgen. Sparbefehl, ein geiziger Kunde, Chefs Hexenschuss…</p><p>Jede Baustelle bringt einen neuen Auftrag. Auch die süße Molmy ist dabei.</p></div><figure class="shot"><img src="../../assets/boomole/de/9_story.jpg" alt="" loading="lazy" width="280"></figure></div>
+<div class="feat"><div><h3>NOCH MEHR</h3><ul><li>Kapitel-Challenge: 10 Stufen hintereinander, je ein Versuch, Rang S bis C</li><li>10 Titel vom Lehrling bis zum Legendären Sprengmeister</li><li>Grabe mit Eicheln Räume im Boomole-Haus: Bett, Küche, heiße Quelle, Kino und mehr</li></ul></div><figure class="shot"><img src="../../assets/boomole/de/8_house.jpg" alt="" loading="lazy" width="280"></figure></div>
+<div class="card" style="margin:18px 0"><b>SICHER SPIELEN</b><ul><li>Niemand wird verletzt. Nur Häuser werden gesprengt</li><li>Spielstände bleiben auf deinem Gerät. Kein Name, keine E-Mail nötig</li><li>Werbung mit Kinder-Einstellungen, nur Inhalte für alle Altersgruppen</li><li>Keine Werbung während einer Stufe. Belohnungswerbung nur, wenn du willst</li></ul></div>
+</section>
+<section><h2>Bildschirme</h2><div class="gallery"><img src="../../assets/boomole/de/1_start.jpg" alt="" loading="lazy" width="220"><img src="../../assets/boomole/de/2_title.jpg" alt="" loading="lazy" width="220"><img src="../../assets/boomole/de/3_forecast.jpg" alt="" loading="lazy" width="220"><img src="../../assets/boomole/de/4_aim.jpg" alt="" loading="lazy" width="220"><img src="../../assets/boomole/de/5_boom.jpg" alt="" loading="lazy" width="220"><img src="../../assets/boomole/de/6_timer.jpg" alt="" loading="lazy" width="220"><img src="../../assets/boomole/de/7_result.jpg" alt="" loading="lazy" width="220"><img src="../../assets/boomole/de/8_house.jpg" alt="" loading="lazy" width="220"><img src="../../assets/boomole/de/9_story.jpg" alt="" loading="lazy" width="220"></div></section>
+<section class="faq"><h2>FAQ &amp; Support</h2><details><summary>Kann ich meinen Spielstand auf ein neues Gerät übertragen?</summary><p>Der Spielstand wird nur auf deinem Gerät gespeichert und kann nicht übertragen werden.</p></details><details><summary>Was passiert, wenn ich die App lösche?</summary><p>Dein Spielstand wird mit gelöscht.</p></details><details><summary>Es ist kein Ton zu hören.</summary><p>Prüfe den Stummschalter und die Lautstärke deines iPhone.</p></details><p style="margin-top:20px">Fehlermeldungen und Feedback bitte per E-Mail – am besten mit Gerät, iOS-Version und dem Level, in dem es passiert ist.<br>MORK STUDIO: <a href="mailto:morkstudio@icloud.com">morkstudio@icloud.com</a></p><p><a href="../privacy.html">Datenschutzerklärung</a></p></section>
+<section class="cta"><h2>BOOMOLE laden</h2><a class="btn-store" href="https://apps.apple.com/app/id6832903245"><small>Laden im</small><b>App Store</b></a></section>
+<footer><a href="../../">MORK STUDIO</a><a href="../privacy.html">Datenschutzerklärung</a><br>&copy; 2026 MORK STUDIO</footer></div></body></html>
