@@ -40,6 +40,14 @@ window.MORK_STAFF_ALL = [
     avatar: { skin: "#f6d6b8", hair: "bob", hairColor: "#4a3428", outfit: "jacket", color: "#3d4f63", eyes: "smile", hat: "none", items: ["notebook"] }
   },
   {
+    id: "assistant", name: "メグル", tentative: false, names: [], role: "外出連絡担当",
+    title: "統括本部 外出連絡担当", dept: "office", app: null,
+    job: "オーナーが外にいるときの窓口。受けた連絡を、ユイにつなぐ。",
+    quote: "",
+    note: "オーナーの MacBook に住んでいて、外出先ではわたしが窓口です。ユイに回せることは、ぜんぶ笑顔で回します。",
+    avatar: { skin: "#f6d6b8", hair: "short", hairColor: "#4a3428", outfit: "hoodie", color: "#3d4f63", eyes: "smile", hat: "none", items: ["headphones", "compass"] }
+  },
+  {
     id: "designer", name: "イロハ", tentative: false, names: [], role: "デザイナーさん",
     title: "制作本部 デザイン課長 兼 コントラスト比 測定係", dept: "studio", app: null,
     job: "色・文字・画面の決まり（デザインシステム）をつくる。サイトの見た目。",
@@ -110,6 +118,14 @@ window.MORK_STAFF_ALL = [
     quote: "",
     note: "10 分ごとに見回ります。数字が合うまで帰りません。合っても念のためもう一度見ます。",
     avatar: { skin: "#f2cfae", hair: "side", hairColor: "#262b33", outfit: "jacket", color: "#58708a", eyes: "dot", hat: "none", items: ["bridgepin", "torch"] }
+  },
+  {
+    id: "patrol", name: "ミハリ", tentative: false, names: [], role: "見回り係",
+    title: "財務部 5分おき巡回担当・ひとこと係", dept: "finance", app: null,
+    job: "掲示板と連絡箱を5分おきに見て回り、変わったことを関係する人に伝える。",
+    quote: "",
+    note: "5分おきに、掲示板と連絡箱をぐるっと見て回っています。変わったことがなければ「異状なし」と静かに終わるのが、いちばんの得意技です。",
+    avatar: { skin: "#f2cfae", hair: "short", hairColor: "#262b33", outfit: "vest", color: "#3d4f63", eyes: "smile", hat: "chiefcap", items: ["clipboard", "torch"] }
   },
   {
     id: "berry", name: "Berry", tentative: false, names: [], role: "Berry",
@@ -230,6 +246,8 @@ window.MORK_STAFF = window.MORK_STAFF_ALL.filter(function (p) { return !p.hidden
       bridgepin: '<path d="M30 86 v-6 h14 v6 h-3 a4 4 0 0 0 -8 0Z" fill="#fff" stroke="' + ink + '" stroke-width="1.6"/>',
       torch:     '<path d="M70 70 L92 52 V86Z" fill="#ffd400" opacity=".55"/><rect x="60" y="72" width="15" height="9" rx="2" transform="rotate(-25 67 76)" fill="#c7ccd3" stroke="' + ink + '" stroke-width="2"/>' + hand(62, 82),
       berrypin:  '<path d="M64 26 C58 23 58 15 64 15 C70 15 70 23 64 26Z" fill="#e8202a" stroke="' + ink + '" stroke-width="1.6"/><path d="M60 15 L64 12 L68 15 L64 16Z" fill="#23855c" stroke="' + ink + '" stroke-width="1.2"/>',
+      headphones:'<path d="M30 66 Q48 82 66 66" fill="none" stroke="' + ink + '" stroke-width="3.5"/><rect x="25" y="62" width="9" height="12" rx="4" fill="#5fd3b5" stroke="' + ink + '" stroke-width="2"/><rect x="62" y="62" width="9" height="12" rx="4" fill="#5fd3b5" stroke="' + ink + '" stroke-width="2"/>',
+      compass:   '<circle cx="36" cy="84" r="6" fill="#fff" stroke="' + ink + '" stroke-width="1.8"/><path d="M36 79 L38 84 L36 89 L34 84Z" fill="#5fd3b5" stroke="' + ink + '" stroke-width="1"/>',
       lens:      '<circle cx="74" cy="74" r="9" fill="#e8f1ef" stroke="' + ink + '" stroke-width="3.2"/><line x1="68" y1="81" x2="62" y2="90" stroke="' + ink + '" stroke-width="4" stroke-linecap="round"/>' + hand(62, 90)
     };
     items.forEach(function (k) { if (M[k]) o.push(M[k]); });
