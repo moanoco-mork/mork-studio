@@ -10,7 +10,8 @@
 body{margin:0;background:var(--surface);color:var(--ink);font-family:"Zen Kaku Gothic New",system-ui,sans-serif;line-height:1.8}
 a{color:var(--link)}
 .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-header.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:2px solid var(--ink)}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:2px solid var(--ink);position:sticky;top:0;z-index:50;background:var(--surface)}
+[id]{scroll-margin-top:90px}
 .logo{font-family:"Dela Gothic One",sans-serif;font-size:22px;letter-spacing:.04em;color:var(--logo);text-decoration:none}
 header nav a{color:var(--ink);text-decoration:none;font-weight:700;margin-left:22px}
 .crumb{font-size:13px;color:var(--muted);margin:20px 0 0}

@@ -22,7 +22,8 @@ img{max-width:100%;height:auto}
 html,body{overflow-x:hidden}
 p,li,dd,summary{overflow-wrap:anywhere}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-header.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:2px solid var(--ink)}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:2px solid var(--ink);position:sticky;top:0;z-index:50;background:var(--bg)}
+[id]{scroll-margin-top:90px}
 .logo{font-family:"Dela Gothic One",sans-serif;font-size:20px;letter-spacing:.04em;color:var(--logo);text-decoration:none}
 header nav a{color:var(--ink);text-decoration:none;font-weight:700;margin-left:18px;font-size:15px}
 .crumb{font-size:13px;color:var(--muted);margin:14px 0 0}.crumb a{color:var(--muted)}
