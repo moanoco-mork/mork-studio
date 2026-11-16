@@ -25,7 +25,7 @@
      bg      : 背景 "rays"（青い集中線）など。無ければなし */
 window.MORK_STAFF_ALL = [
   {
-    id: "owner", name: "モーク", tentative: false, names: [], role: "オーナー",
+    id: "owner", name: "モルク", tentative: false, names: [], role: "オーナー",
     title: "オーナー", dept: "office", app: null,
     job: "アプリのアイデアを出す。できたものを触って、OK か NG を出す。",
     quote: "それでいいよ", note: "",
