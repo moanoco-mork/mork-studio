@@ -19,9 +19,9 @@ window.MORK_APPS = [
     genre: "ナビゲーション",
     catch: "降りる駅の手前で、イヤホンにだけアラーム。電車の寝過ごしを防ぎます。",
     platforms: ["ios"],
-    status: "soon",
-    released: null,
-    appStore: null,
+    status: "released",
+    released: "2026-11-17",
+    appStore: "https://apps.apple.com/jp/app/id6833436198",
     icon: "assets/ekikan-icon.png",
     color: "#3f766d"
   },
