@@ -43,7 +43,7 @@ window.MORK_STAFF_ALL = [
     id: "assistant", name: "メグル", tentative: false, names: [], role: "外出連絡担当",
     title: "統括本部 外出連絡担当", dept: "office", app: null,
     job: "オーナーが外にいるときの窓口。受けた連絡を、ユイにつなぐ。",
-    quote: "",
+    quote: "ユイに回しておきます。",
     note: "オーナーの MacBook に住んでいて、外出先ではわたしが窓口です。ユイに回せることは、ぜんぶ笑顔で回します。",
     avatar: { skin: "#f6d6b8", hair: "short", hairColor: "#4a3428", outfit: "hoodie", color: "#3d4f63", eyes: "smile", hat: "none", items: ["headphones", "compass"] }
   },
