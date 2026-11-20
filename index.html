@@ -28,6 +28,8 @@ header nav a{color:var(--ink);text-decoration:none;font-weight:700;margin-left:2
 .crowd svg{width:100%;max-width:120px;height:auto}
 .crowd > :nth-child(3n+2){transform:translateY(22px)}
 /* 数字とスタッフへの入口 */
+.team-sec{border-top:2px solid var(--ink);padding:56px 0 0}
+.apps-count{margin:-8px 0 28px}
 .staff{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:stretch;padding:0 0 64px}
 .count{display:flex;gap:14px}
 .count div{background:var(--card);border:3px solid var(--ink);border-radius:16px;box-shadow:5px 5px 0 var(--ink);padding:12px 18px;text-align:center;min-width:120px}
@@ -133,17 +135,17 @@ footer ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;g
 
   <section class="apps" id="apps">
     <div class="head"><h2>アプリ</h2><p class="sec-note" id="apps-note">新しい順に並べています。</p></div>
+    <div class="count apps-count" aria-label="アプリの数"><div><b id="n-released">0</b><span>公開中のアプリ</span></div><div><b id="n-soon">0</b><span>近日公開</span></div></div>
     <ul class="grid" id="app-grid"></ul>
     <noscript><p>アプリの一覧を表示するには JavaScript を有効にしてください。</p></noscript>
   </section>
 
-  <section class="staff">
-    <div class="count" aria-label="数字">
-      <div><b id="n-released">0</b><span>公開中のアプリ</span></div>
-      <div><b id="n-soon">0</b><span>近日公開</span></div>
-      <div><b id="n-staff">0</b><span>スタッフ</span></div>
+  <section class="team-sec" id="team">
+    <div class="head"><h2>スタッフ</h2><p class="sec-note">オーナーのモルクと、AI のスタッフでつくっています。</p></div>
+    <div class="staff">
+      <div class="count" aria-label="スタッフの数"><div><b id="n-staff">0</b><span>スタッフ</span></div></div>
+      <a class="staff-link" href="team/"><span class="faces" id="faces"></span><span><b>スタッフ紹介</b><br>MORK STUDIO では、こんな人たちが働いています →</span></a>
     </div>
-    <a class="staff-link" href="team/"><span class="faces" id="faces"></span><span><b>スタッフ紹介</b><br>MORK STUDIO では、こんな人たちが働いています →</span></a>
   </section>
 
   <section class="xposts" id="x">
