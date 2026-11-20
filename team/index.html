@@ -61,6 +61,7 @@ footer{border-top:2px solid var(--ink);padding:28px 0 44px;font-size:14px;color:
   .person .av svg{width:72px;height:72px}
   .person h3{font-size:21px}
 }
+.made{margin:40px 0 8px}.made h2{font-size:22px;margin:0 0 14px}.made-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}.made-list a{display:flex;gap:12px;align-items:center;padding:12px;border:3px solid var(--ink,#262b33);border-radius:16px;background:#fff;box-shadow:5px 5px 0 var(--ink,#262b33);text-decoration:none;color:inherit}.made-list img{width:56px;height:56px;border-radius:12px;flex:none}.made-list b{display:block}.made-list small{display:block;font-size:13px;opacity:.75;line-height:1.5;margin-top:2px}
 </style>
 <script src="../apps.js"></script>
 <script src="../staff.js"></script>
@@ -82,6 +83,7 @@ footer{border-top:2px solid var(--ink);padding:28px 0 44px;font-size:14px;color:
 
   <div id="depts"></div>
 
+  <section class="made"><h2>このチームでつくったアプリ</h2><ul class="made-list" id="made"></ul></section>
   <p class="notice" id="notice"><b>名前は選考中です。</b> 「（仮）」の名前は、本人たちが自分で考えた名乗りの案です。点線の枠はほかの候補です。オーナーが選んだら、ここに決まった名前が載ります。</p>
 </div>
 <div class="wrap"><footer>&copy; <span id="year">2026</span> MORK STUDIO　<a href="../">ホームへ戻る</a>  <div class="ga-note">このサイトでは、アクセス数を知るために Google アナリティクス（Cookie）を使っています。個人を特定する情報は集めていません。</div>
@@ -127,6 +129,7 @@ footer{border-top:2px solid var(--ink);padding:28px 0 44px;font-size:14px;color:
     '<div><b>' + ai + ' 名</b><span>うち AI</span></div>' +
     '<div><b>' + apps.length + ' 本</b><span>担当アプリ</span></div>' +
     '<div><b>0 円</b><span>残業代</span><small>※ AI のため</small></div>';
+  document.getElementById("made").innerHTML = apps.filter(function (a) { return a.status === "released"; }).map(function (a) { return '<li><a href="../' + esc(a.id) + '/">' + (a.icon ? '<img src="../' + esc(a.icon) + '" alt="" width="56" height="56">' : '') + '<span><b>' + esc(a.name) + '</b><small>' + esc(a.catch) + '</small></span></a></li>'; }).join("");
   if (!staff.some(function (p) { return p.tentative; })) document.getElementById("notice").remove();
   document.getElementById("year").textContent = new Date().getFullYear();
 })();
