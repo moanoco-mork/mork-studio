@@ -106,7 +106,8 @@ footer ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;g
 .appstrip a{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 6px 10px;border:3px solid var(--ink);border-radius:14px;background:var(--card);box-shadow:4px 4px 0 var(--ink);text-decoration:none;color:var(--ink);font-weight:900;font-size:13px;line-height:1.3;text-align:center;white-space:nowrap}
 .appstrip img{width:52px;height:52px;border-radius:12px;display:block}
 .appstrip small{display:block;font-weight:400;font-size:11px;opacity:.7}
-@media (max-width:720px){.appstrip{gap:10px}.appstrip a{font-size:11px;padding:10px 2px 8px;letter-spacing:-.02em}.appstrip img{width:46px;height:46px}.appstrip small{display:none}}
+.appstrip .nm{display:block;font-weight:900;max-width:100%}
+@media (max-width:720px){.appstrip{gap:10px}.appstrip a{font-size:12px;padding:10px 4px 8px;white-space:normal;word-break:keep-all;overflow-wrap:anywhere;line-height:1.35}.appstrip img{width:46px;height:46px}.appstrip small{display:none}}
 </style>
 <script src="apps.js"></script>
 <script src="staff.js"></script>
@@ -221,7 +222,7 @@ footer ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;g
   var pubs = [];
   apps.forEach(function (a) { if (a.status === "released") (a.platforms || []).forEach(function (p) { if (pubs.indexOf(p) < 0) pubs.push(p); }); });
   if (pubs.length) document.getElementById("apps-note").textContent = "新しい順に並べています。いまは " + pubs.map(function (p) { return (PLATFORM[p] || p) + " 版"; }).join("・") + "を公開中です。";
-  (function () { var s = document.getElementById("appstrip"); if (!s) return; apps.filter(function (a) { return a.status === "released"; }).forEach(function (a) { s.appendChild(el("li", {}, [el("a", { href: a.id + "/" }, [a.icon ? el("img", { src: a.icon, alt: "", width: 44, height: 44 }) : null, el("span", {}, [document.createTextNode(a.name), el("small", { text: a.genre })])])])); }); })();
+  (function () { var s = document.getElementById("appstrip"); if (!s) return; apps.filter(function (a) { return a.status === "released"; }).forEach(function (a) { s.appendChild(el("li", {}, [el("a", { href: a.id + "/" }, [a.icon ? el("img", { src: a.icon, alt: "", width: 44, height: 44 }) : null, el("span", {}, (function () { var parts = a.name.match(/^(駅間|てくてく|発破職人)(.+)$/); var nm = el("b", { class: "nm" }); if (parts) { nm.appendChild(document.createTextNode(parts[1])); nm.appendChild(document.createElement("wbr")); nm.appendChild(document.createTextNode(parts[2])); } else nm.textContent = a.name; return [nm, el("small", { text: a.genre })]; })())])])); }); })();
   document.getElementById("n-released").textContent = apps.filter(function (a) { return a.status === "released"; }).length;
   document.getElementById("n-soon").textContent = apps.filter(function (a) { return a.status !== "released"; }).length;
 
