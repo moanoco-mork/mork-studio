@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Railnap — Open station data</title>
+<style>body{font-family:-apple-system,system-ui,sans-serif;max-width:720px;margin:2rem auto;padding:0 16px;line-height:1.6;color:#222;background:#fff}code{background:#f3f3f3;padding:0 4px}</style>
+</head><body>
+<h1>Railnap — open station data</h1>
+<p>Railnap bundles station data derived from open data. Data derived from sources licensed under the Open Database License (ODbL) is published here under the same licence.</p>
+<h2>France — SNCF</h2>
+<ul>
+<li>File: <a href="sncf-stations.json">sncf-stations.json</a> (stations, coordinates, adjacent stations and typical travel times derived from the SNCF Voyageurs GTFS).</li>
+<li>Source: SNCF Voyageurs open data (GTFS), licensed under the <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License (ODbL) 1.0</a>.</li>
+<li>This derived database is made available under the <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL 1.0</a>. Any rights in individual contents are licensed under the <a href="https://opendatacommons.org/licenses/dbcl/1-0/">Database Contents License</a>.</li>
+<li>Format: <code>{"source", "lines": [[operator, line]], "stations": [[id, name, line, group, lat, lon, [[neighbour id, metres, seconds], ...]]], "fastest": {"a-b": seconds}}</code></li>
+</ul>
+<p>Railnap is not sponsored by, affiliated with, or operated by SNCF.</p>
+<p><a href="../">Railnap support</a></p>
+</body></html>
