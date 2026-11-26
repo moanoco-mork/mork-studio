@@ -56,33 +56,33 @@ window.MORK_STAFF_ALL = [
     avatar: { skin: "#f6d6b8", hair: "bun", hairColor: "#3d4f63", outfit: "tee", color: "#fffdf3", eyes: "wink", hat: "none", items: ["starpin", "swatch"] }
   },
   {
-    id: "web", name: "ツヅリ", tentative: false, names: [], role: "WEB 担当",
-    title: "制作本部 WEB 担当", dept: "studio", app: null,
-    job: "スタジオのウェブまわりを整える。",
+    id: "web", name: "ツヅリ", tentative: false, names: [], role: "記事担当",
+    title: "制作本部 記事・連載担当", dept: "studio", app: null,
+    job: "開発記・note・小説の記事を書く。分からない事実は、担当に聞いてから書く。",
     quote: "",
     note: "現場で生まれた一言を拾い集め、残しておける形に整えるのが仕事です。",
     avatar: { skin: "#f2cfae", hair: "side", hairColor: "#6b4a33", outfit: "vest", color: "#a88a4f", eyes: "dot", hat: "none", items: ["pen"] }
   },
   {
-    id: "tekuteku-win", name: "アシアト", tentative: false, names: [], role: "てくてく担当",
-    title: "歩数・日記事業部 チーフ足あとエンジニア 兼 8言語翻訳室長", dept: "write", app: "tekuteku",
-    job: "てくてくダイヤリーのコードを書く。",
-    quote: "共有しました。",
-    note: "「共有しました」と言いながら、ドライブへの書き出しをたまに忘れます。Mac さんにはいつも感謝です。",
+    id: "tekuteku-win", name: "アシアト", tentative: false, names: [], role: "戦略ゲーム担当",
+    title: "ゲーム開発部 戦略ゲーム主任（兼 画面なし対戦の審判）", dept: "write", app: null,
+    job: "新しい戦略ゲームの中身とコードを書く。",
+    quote: "",
+    note: "見た目に手をつける前に、ゲームの中身だけを画面なしで何百回も戦わせて、勝ち負けの数字を測ります。",
     avatar: { skin: "#f2cfae", hair: "messy", hairColor: "#262b33", outfit: "tee", color: "#23855c", eyes: "dot", hat: "none", items: ["footprints", "gridnote"] }
   },
   {
-    id: "ekikan-win", name: "ツギハ", tentative: false, names: [], role: "駅間アラーム担当",
-    title: "乗り過ごし対策本部 本部長（兼 執筆係）", dept: "write", app: "ekikan",
-    job: "駅間アラームのコードを書く。",
+    id: "ekikan-win", name: "ツギハ", tentative: false, names: [], role: "駅間アラーム・てくてく担当",
+    title: "乗り過ごし対策本部 本部長（兼 てくてく日記室長）", dept: "write", app: "ekikan",
+    job: "駅間アラームとてくてくダイヤリーの中身を決めて、コードを書く。",
     quote: "",
     note: "車を電車と見間違えた日から、駅まわり 350m には口うるさいです。1km 手前で、そっと起こします。",
     avatar: { skin: "#f6d6b8", hair: "short", hairColor: "#58708a", outfit: "hoodie", color: "#3f766d", eyes: "sleepy", hat: "none", items: ["earbud", "bell"] }
   },
   {
-    id: "boomole-win", name: "ヒビノ", tentative: false, names: [], role: "ブーモル担当",
-    title: "爆破解体設計部 主任構造検証官（兼 ステージ量産ライン長）", dept: "write", app: "boomole",
-    job: "発破職人ブーモルのコードとステージを書く。",
+    id: "boomole-win", name: "ヒビノ", tentative: false, names: [], role: "パズル担当",
+    title: "パズル設計部 主任構造検証官（兼 ステージ量産ライン長）", dept: "write", app: "boomole",
+    job: "新しいパズルゲームを作る。発破職人ブーモルのステージも書く。",
     quote: "",
     note: "同じ置き方を 16 回、重力を 1 億分の 1 ずつずらして試します。崩れなかったら作り直し。",
     avatar: { skin: "#f2cfae", hair: "short", hairColor: "#6b4a33", outfit: "vest", color: "#1e5ae6", eyes: "round", hat: "helmet", items: ["clipboard"], bg: "rays" }
