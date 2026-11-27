@@ -24,7 +24,16 @@
    "appStoreID": "6837707874",
    "released": true,
    "only": [
-    "USA"
+    "USA",
+    "AUS",
+    "CAN",
+    "NZL",
+    "KOR",
+    "TWN",
+    "SGP",
+    "MYS",
+    "CHE",
+    "NOR"
    ],
    "icon": "https://mork-studio.net/promo/railnap.png",
    "name": {
