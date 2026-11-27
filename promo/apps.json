@@ -1,0 +1,239 @@
+{
+ "note": "MORK STUDIO のアプリの中で「ほかのアプリ」として紹介する一覧（11/28 モリオ「広告枠のようにうちのアプリを紹介」）。released を true にするとアプリに出る。only/except は App Store の国（ISO 3文字）。",
+ "updated": "2026-11-28",
+ "apps": [
+  {
+   "id": "ekikan",
+   "appStoreID": "6833436198",
+   "released": true,
+   "only": [
+    "JPN"
+   ],
+   "icon": "https://mork-studio.net/promo/ekikan.png",
+   "name": {
+    "ja": "駅間アラーム",
+    "en": "Ekikan Alarm"
+   },
+   "catch": {
+    "ja": "降りる駅の手前で、イヤホンにだけアラーム。電車の寝過ごしを防ぎます。",
+    "en": "An earphone-only alarm just before your stop."
+   }
+  },
+  {
+   "id": "railnap",
+   "appStoreID": "6837707874",
+   "released": true,
+   "only": [
+    "USA"
+   ],
+   "icon": "https://mork-studio.net/promo/railnap.png",
+   "name": {
+    "ja": "Railnap",
+    "en": "Railnap"
+   },
+   "catch": {
+    "ja": "降りる駅の手前で、イヤホンにだけアラーム。",
+    "en": "Doze off on the train and still get off at the right stop.",
+    "de": "Im Zug einnicken und trotzdem richtig aussteigen.",
+    "es": "Duerme en el tren y bájate en tu parada.",
+    "fr": "Somnolez dans le train et descendez au bon arrêt.",
+    "it": "Addormentati in treno e scendi alla fermata giusta.",
+    "ko": "지하철에서 졸아도 내릴 역에서 깨워 줍니다.",
+    "zh-Hant": "在車上打盹，也能在要下車的站醒來。"
+   }
+  },
+  {
+   "id": "tekuteku",
+   "appStoreID": "6834400667",
+   "released": true,
+   "except": [
+    "AUT",
+    "BEL",
+    "BGR",
+    "HRV",
+    "CYP",
+    "CZE",
+    "DNK",
+    "EST",
+    "FIN",
+    "FRA",
+    "DEU",
+    "GRC",
+    "HUN",
+    "IRL",
+    "ITA",
+    "LVA",
+    "LTU",
+    "LUX",
+    "MLT",
+    "NLD",
+    "POL",
+    "PRT",
+    "ROU",
+    "SVK",
+    "SVN",
+    "ESP",
+    "SWE"
+   ],
+   "icon": "https://mork-studio.net/promo/tekuteku.png",
+   "name": {
+    "ja": "てくてくダイヤリー",
+    "en": "TekuTeku Diary",
+    "de": "TekuTeku Tagebuch",
+    "es": "TekuTeku Diario",
+    "fr": "TekuTeku Journal",
+    "it": "TekuTeku Diario",
+    "ko": "데쿠테쿠 다이어리",
+    "zh-Hant": "TekuTeku 日記"
+   },
+   "catch": {
+    "ja": "歩いた歩数と行った場所が、カレンダーと日記に自動で残ります。",
+    "en": "Your steps and the places you went, saved to a calendar diary automatically.",
+    "de": "Deine Schritte und Orte landen automatisch in einem Kalender-Tagebuch.",
+    "es": "Tus pasos y lugares se guardan solos en un diario con calendario.",
+    "fr": "Vos pas et lieux visités s’enregistrent tout seuls dans un journal-calendrier.",
+    "it": "I tuoi passi e i luoghi visitati finiscono da soli in un diario a calendario.",
+    "ko": "걸음 수와 다녀온 곳이 캘린더 일기에 자동으로 남습니다.",
+    "zh-Hant": "走路步數和去過的地方，自動記在日曆日記裡。"
+   }
+  },
+  {
+   "id": "boomole",
+   "appStoreID": "6832903245",
+   "released": true,
+   "except": [
+    "AUT",
+    "BEL",
+    "BGR",
+    "HRV",
+    "CYP",
+    "CZE",
+    "DNK",
+    "EST",
+    "FIN",
+    "FRA",
+    "DEU",
+    "GRC",
+    "HUN",
+    "IRL",
+    "ITA",
+    "LVA",
+    "LTU",
+    "LUX",
+    "MLT",
+    "NLD",
+    "POL",
+    "PRT",
+    "ROU",
+    "SVK",
+    "SVN",
+    "ESP",
+    "SWE",
+    "CHN"
+   ],
+   "icon": "https://mork-studio.net/promo/boomole.png",
+   "name": {
+    "ja": "発破職人ブーモル",
+    "en": "Boomole"
+   },
+   "catch": {
+    "ja": "ビルのどこに爆弾を仕掛ければ、まっすぐ崩れる？ 爆破解体パズル。",
+    "en": "Where should the charges go so the building falls just right? A demolition puzzle."
+   }
+  },
+  {
+   "id": "remindbox",
+   "appStoreID": "6839297283",
+   "released": false,
+   "except": [
+    "AUT",
+    "BEL",
+    "BGR",
+    "HRV",
+    "CYP",
+    "CZE",
+    "DNK",
+    "EST",
+    "FIN",
+    "FRA",
+    "DEU",
+    "GRC",
+    "HUN",
+    "IRL",
+    "ITA",
+    "LVA",
+    "LTU",
+    "LUX",
+    "MLT",
+    "NLD",
+    "POL",
+    "PRT",
+    "ROU",
+    "SVK",
+    "SVN",
+    "ESP",
+    "SWE",
+    "CHN"
+   ],
+   "icon": "https://mork-studio.net/promo/remindbox.png",
+   "name": {
+    "ja": "RemindBox",
+    "en": "RemindBox"
+   },
+   "catch": {
+    "ja": "撮るだけで、忘れずにお知らせ。",
+    "en": "Just take a photo, and get reminded on time.",
+    "de": "Einfach fotografieren – und rechtzeitig erinnert werden.",
+    "es": "Toma una foto y recibe el aviso a tiempo.",
+    "fr": "Prenez une photo, soyez rappelé à temps.",
+    "it": "Scatta una foto e ricevi il promemoria in tempo.",
+    "ko": "찍기만 하면 잊지 않게 알려 줍니다.",
+    "zh-Hant": "拍一張照，就會準時提醒你。"
+   }
+  },
+  {
+   "id": "splashville",
+   "appStoreID": "6837160341",
+   "released": false,
+   "except": [
+    "AUT",
+    "BEL",
+    "BGR",
+    "HRV",
+    "CYP",
+    "CZE",
+    "DNK",
+    "EST",
+    "FIN",
+    "FRA",
+    "DEU",
+    "GRC",
+    "HUN",
+    "IRL",
+    "ITA",
+    "LVA",
+    "LTU",
+    "LUX",
+    "MLT",
+    "NLD",
+    "POL",
+    "PRT",
+    "ROU",
+    "SVK",
+    "SVN",
+    "ESP",
+    "SWE",
+    "CHN"
+   ],
+   "icon": "https://mork-studio.net/promo/splashville.png",
+   "name": {
+    "ja": "Splashville",
+    "en": "Splashville"
+   },
+   "catch": {
+    "ja": "風船を割って、しぶきをつなげるパズル。",
+    "en": "Pop balloons and chain the splashes."
+   }
+  }
+ ]
+}
