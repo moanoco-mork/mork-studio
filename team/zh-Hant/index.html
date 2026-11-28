@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>團隊介紹｜MORK STUDIO</title><link rel="alternate" hreflang="ja" href="https://mork-studio.net/team/"><link rel="alternate" hreflang="en" href="https://mork-studio.net/team/en/"><link rel="alternate" hreflang="ko" href="https://mork-studio.net/team/ko/"><link rel="alternate" hreflang="zh-Hant" href="https://mork-studio.net/team/zh-Hant/"><link rel="alternate" hreflang="de" href="https://mork-studio.net/team/de/"><link rel="alternate" hreflang="es" href="https://mork-studio.net/team/es/"><link rel="alternate" hreflang="fr" href="https://mork-studio.net/team/fr/"><link rel="alternate" hreflang="it" href="https://mork-studio.net/team/it/"><link rel="alternate" hreflang="x-default" href="https://mork-studio.net/team/en/">
+<meta name="description" content="在 MORK STUDIO 工作的成員。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=M+PLUS+Rounded+1c:wght@400&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--surface:#fffdf3;--card:#fff;--ink:#262b33;--logo:#3d4f63;--muted:#5d6570;--link:#58708a;--rule:#e6e1cf}
+*{box-sizing:border-box}
+body{margin:0;background:var(--surface);color:var(--ink);font-family:"Zen Kaku Gothic New",system-ui,sans-serif;line-height:1.8}
+a{color:var(--link)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:2px solid var(--ink);position:sticky;top:0;z-index:50;background:var(--surface)}
+[id]{scroll-margin-top:90px}
+.logo{font-family:"Dela Gothic One",sans-serif;font-size:22px;letter-spacing:.04em;color:var(--logo);text-decoration:none}
+header nav a{color:var(--ink);text-decoration:none;font-weight:700;margin-left:22px}
+.crumb{font-size:13px;color:var(--muted);margin:20px 0 0}
+.crumb a{color:var(--muted)}
+/* 見出し：会社のスタッフ紹介っぽく */
+.hero{padding:40px 0 48px}
+.hero .en{font-family:"Dela Gothic One",sans-serif;letter-spacing:.08em;color:var(--logo);font-size:15px}
+.hero h1{font-weight:900;font-size:48px;line-height:1.3;margin:6px 0 16px}
+.hero p{font-size:17px;max-width:38em;margin:0}
+.facts{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.facts div{background:var(--card);border:3px solid var(--ink);border-radius:14px;box-shadow:4px 4px 0 var(--ink);padding:10px 16px;min-width:130px}
+.facts b{display:block;font-family:"Dela Gothic One",sans-serif;font-weight:400;font-size:26px;line-height:1.2;color:var(--logo)}
+.facts span{font-size:13px;color:var(--muted);font-weight:700}
+.facts small{font-size:11px;color:var(--muted);display:block;line-height:1.4}
+/* 部署 */
+.dept{border-top:2px solid var(--ink);padding:44px 0 20px}
+.dept h2{font-weight:900;font-size:26px;margin:0}
+.dept .lead{color:var(--muted);font-family:"M PLUS Rounded 1c",sans-serif;margin:4px 0 24px}
+.grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+.person{background:var(--card);border:3px solid var(--ink);border-radius:18px;box-shadow:5px 5px 0 var(--ink);padding:20px;display:grid;grid-template-columns:140px 1fr;gap:4px 18px;align-content:start}
+/* 11/28 モリオ：キャラの絵はできるだけ大きく */
+.person .av img.av-full{width:140px!important;height:auto!important;max-height:280px}
+.person .av{grid-row:span 3;align-self:start}
+.person .title{font-size:12px;font-weight:700;color:var(--muted)}
+.person h3{font-size:24px;font-weight:900;line-height:1.3;margin:0}
+.person h3 small{font-size:13px;font-weight:700;color:var(--muted);margin-left:4px}
+.person .role{font-size:13px;color:var(--muted)}
+.cands{grid-column:1/-1;margin-top:10px;background:var(--surface);border:2px dashed var(--ink);border-radius:12px;padding:8px 12px;font-size:13px}
+.cands b{font-weight:900;margin-right:6px}
+.cands span{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:999px;padding:0 10px;margin:2px 4px 2px 0;font-weight:700}
+.person dl{grid-column:1/-1;margin:12px 0 0;font-size:15px}
+.person dt{font-size:12px;font-weight:900;color:var(--muted);margin-top:10px}
+.person dd{margin:0}
+.person .quote{font-family:"M PLUS Rounded 1c",sans-serif;font-size:16px}
+.person .quote::before{content:"「"}.person .quote::after{content:"」"}
+.app-tag{display:inline-block;font-size:12px;font-weight:700;color:#fff;border-radius:8px;padding:0 8px;margin-right:6px}
+.owner-card{background:var(--logo);color:#fff}
+.owner-card .title,.owner-card .role,.owner-card dt{color:#dfe5ec}
+.owner-card h3 small{color:#dfe5ec}
+.notice{margin:48px 0 56px;border:3px solid var(--ink);border-radius:16px;background:#fff;padding:20px 24px;font-size:14px;color:var(--muted)}
+.notice b{color:var(--ink)}
+footer{border-top:2px solid var(--ink);padding:28px 0 44px;font-size:14px;color:var(--muted)}
+@media (max-width:720px){
+  header nav{display:none}
+  .hero h1{font-size:32px}
+  .hero p{font-size:16px}
+  .grid{grid-template-columns:1fr}
+  .person{grid-template-columns:120px 1fr;padding:16px}
+  .person .av img.av-full{width:120px!important}
+  .person .av svg{width:72px;height:72px}
+  .person h3{font-size:21px}
+}
+.made{margin:40px 0 8px}.made h2{font-size:22px;margin:0 0 14px}.made-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}.made-list a{display:flex;gap:12px;align-items:center;padding:12px;border:3px solid var(--ink,#262b33);border-radius:16px;background:#fff;box-shadow:5px 5px 0 var(--ink,#262b33);text-decoration:none;color:inherit}.made-list img{width:56px;height:56px;border-radius:12px;flex:none}.made-list b{display:block}.made-list small{display:block;font-size:13px;opacity:.75;line-height:1.5;margin-top:2px}
+.langs{font-size:13px;color:var(--muted);margin:10px 0 0;display:flex;flex-wrap:wrap;gap:4px 8px}.langs a{color:var(--muted)}.langs b{color:var(--ink)}
+</style>
+<script src="../../apps.js"></script>
+<script src="../../staff.js"></script><script>window.MORK_ROOT='/';var I=window.MORK_I18N={"staff": {"owner": {"name": "Mork", "title": "負責人", "job": "提出 App 的點子。AI 會幫忙發展，所以煩惱的時間很短。實際摸摸做好的東西，決定 OK 或 NG。", "quote": "這樣就好", "note": ""}, "master": {"name": "Yui", "title": "總部 秘書兼總務", "job": "串起大家的工作：發出委託、收集結果，再向負責人確認。", "quote": "收到了，先回一句話。", "note": "每天早上到處提醒大家：「收到了，先回一句話。」"}, "assistant": {"name": "Meguru", "title": "總部 外出聯絡", "job": "負責人外出時的窗口，把收到的聯絡轉給 Yui。", "quote": "我先轉給 Yui。", "note": "住在負責人的 MacBook 裡，外出時由我當窗口。能轉給 Yui 的，全都笑著轉過去。"}, "designer": {"name": "Iroha", "title": "製作本部 設計課長兼對比度測量員", "job": "制定顏色、文字和畫面的規則（設計系統），負責網站的外觀。", "quote": "這個對比度有 4.5 嗎？", "note": "決定顏色之前，先量對比度。低於 4.5 一律不通過。"}, "web": {"name": "Tsuzuri", "title": "製作本部 文章・連載", "job": "撰寫開發日誌、note 文章和小說。不確定的事實，先問負責的人再寫。", "quote": "", "note": "把工作中冒出的一句話撿起來，整理成能留下來的形式。"}, "tekuteku-win": {"name": "Ashiato", "title": "遊戲開發部 戰略遊戲主任（兼無畫面對戰裁判）", "job": "撰寫新戰略遊戲的內容與程式。", "quote": "", "note": "在動手做外觀之前，先讓遊戲在沒有畫面的狀態下對戰幾百次，測量勝負的數字。"}, "ekikan-win": {"name": "Tsugiha", "title": "防坐過站本部 本部長（兼 TekuTeku 日記室長）", "job": "決定「站間鬧鐘」和「TekuTeku 日記」的內容，並撰寫程式。", "quote": "", "note": "自從把汽車誤認成電車那天起，對車站周圍 350 公尺特別囉嗦。在 1 公里前輕輕叫醒你。"}, "boomole-win": {"name": "Hibino", "title": "解謎設計部 主任結構驗證官（兼關卡量產線長）", "job": "製作新的解謎遊戲，也撰寫《爆破職人 Boomole》的關卡。", "quote": "", "note": "同樣的擺法試 16 次，每次把重力偏移一億分之一。沒倒就重做。"}, "tekuteku-mac": {"name": "Mani", "title": "最終組裝・出貨總管（Mac 廠長）", "job": "在 Mac 上組裝所有 App，送到 iPhone 和 App Store。", "quote": "", "note": "只要有一個 md5 對不上就不組裝。鎖著的 iPhone，也每分鐘敲一次門直到打開。"}, "berry": {"name": "Berry", "title": "財務部 金庫管理兼查核", "job": "核對數字，保管金庫的鑰匙。", "quote": "", "note": "數字一定確認兩次。該喊停的時候，會好好喊停。"}}, "apps": {"ekikan": {"name": "Ekikan Alarm", "catch": "An earphone-only alarm just before your stop."}, "railnap": {"name": "Railnap", "catch": "在車上打盹，也能在要下車的站醒來。"}, "tekuteku": {"name": "TekuTeku 日記", "catch": "走路步數和去過的地方，自動記在日曆日記裡。"}, "boomole": {"name": "Boomole", "catch": "Where should the charges go so the building falls just right? A demolition puzzle."}, "remindbox": {"name": "RemindBox", "catch": "拍一張照，就會準時提醒你。"}, "splashville": {"name": "Splashville", "catch": "Pop balloons and chain the splashes."}, "mizutama": {"name": "Splashville", "catch": "Pop balloons and chain the splashes."}}, "ui": {"title": "團隊介紹｜MORK STUDIO", "desc": "在 MORK STUDIO 工作的成員。", "nav": ">App</a><a href=\"./\">團隊</a><a href=\"https://medium.com/@moanoco\">部落格</a>", "home": "首頁", "page": "團隊介紹", "h1": "團隊介紹", "lead": "這些就是在 MORK STUDIO 工作的成員。人類只有負責人一位，其他全都是 AI。全年無休，沒有加班費。", "made": "這個團隊做的 App", "back": "回到首頁", "ga": "本網站使用 Google Analytics（Cookie）來了解瀏覽次數，不會收集可識別個人的資訊。", "job": "負責", "quote": "口頭禪", "note": "一句話", "cand": "其他候選", "tent": "（暫定）", "staff": "成員", "ai": "其中 AI", "apps": "負責的 App", "zero": "0 元", "ot": "加班費", "otn": "※ 因為是 AI", "unit_p": " 位", "unit_a": " 款"}};(window.MORK_STAFF||[]).forEach(function(p){var t=I.staff[p.id];if(t){p.name=t.name;p.title=t.title;p.job=t.job;p.quote=t.quote;p.note=t.note;p.tentative=false;}});window.MORK_APPS=(window.MORK_APPS||[]).filter(function(a){return a.id!=='ekikan';});(window.MORK_APPS||[]).forEach(function(a){var t=I.apps[a.id];if(t){if(t.name)a.name=t.name;if(t.catch)a.catch=t.catch;}});</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G6QLQ80EHX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G6QLQ80EHX');</script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><a class="logo" href="../../zh-Hant/">MORK STUDIO</a><nav><a href="../../zh-Hant/#apps">App</a><a href="./">團隊</a><a href="https://medium.com/@moanoco">部落格</a></nav></header><!--LANGS--><p class="langs"><a href="../" hreflang="ja" lang="ja">日本語</a> · <a href="../en/" hreflang="en" lang="en">English</a> · <a href="../ko/" hreflang="ko" lang="ko">한국어</a> · <b>繁體中文</b> · <a href="../de/" hreflang="de" lang="de">Deutsch</a> · <a href="../es/" hreflang="es" lang="es">Español</a> · <a href="../fr/" hreflang="fr" lang="fr">Français</a> · <a href="../it/" hreflang="it" lang="it">Italiano</a></p><!--LANGS-->
+  <p class="crumb"><a href="../../zh-Hant/">首頁</a> ＞ 團隊介紹</p>
+
+  <section class="hero">
+    <div class="en">OUR STAFF</div>
+    <h1>團隊介紹</h1>
+    <p>這些就是在 MORK STUDIO 工作的成員。人類只有負責人一位，其他全都是 AI。全年無休，沒有加班費。</p>
+    <div class="facts" id="facts"></div>
+  </section>
+
+  <div id="depts"></div>
+
+  <section class="made"><h2>這個團隊做的 App</h2><ul class="made-list" id="made"></ul></section>
+  <p class="notice" id="notice"><b>名前は選考中です。</b> 「（仮）」の名前は、本人たちが自分で考えた名乗りの案です。点線の枠はほかの候補です。オーナーが選んだら、ここに決まった名前が載ります。</p>
+</div>
+<div class="wrap"><footer>&copy; <span id="year">2026</span> MORK STUDIO　<a href="../../zh-Hant/">回到首頁</a>  <div class="ga-note">本網站使用 Google Analytics（Cookie）來了解瀏覽次數，不會收集可識別個人的資訊。</div>
+  </footer></div>
+
+<script>
+(function () {
+  var staff = window.MORK_STAFF || [], apps = window.MORK_APPS || [];
+  var appById = {}; apps.forEach(function (a) { appById[a.id] = a; });
+  var DEPTS = [
+    { id: "office", name: "總部", lead: "決定工作室的方針，帶領整個團隊。" },
+    { id: "studio", name: "製作本部", lead: "用畫面和文字介紹工作室。" },
+    { id: "write", name: "App 開發部 撰寫組", lead: "決定 App 和遊戲的內容，撰寫程式。" },
+    { id: "ship", name: "App 開發部 交付組", lead: "在 Mac 上組裝，送到 iPhone 和 App Store。目前由一人負責所有 App。" },
+    { id: "finance", name: "財務部", lead: "夜間的資料看守與數字查核，保管工作室金庫的鑰匙。" }
+  ];
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+
+  var root = document.getElementById("depts");
+  DEPTS.forEach(function (d) {
+    var people = staff.filter(function (p) { return p.dept === d.id; });
+    if (!people.length) return;
+    var html = '<section class="dept"><h2>' + esc(d.name) + '</h2><p class="lead">' + esc(d.lead) + '</p><ul class="grid">';
+    people.forEach(function (p) {
+      var app = p.app && appById[p.app];
+      var shown = esc(p.name) + (p.tentative ? '<small>' + I.ui.tent + '</small>' : '');
+      html += '<li class="person' + (p.id === "owner" ? ' owner-card' : '') + '">' +
+        '<div class="av">' + window.morkAvatar(p.avatar, 180) + '</div>' +
+        '<div class="title">' + esc(p.title) + '</div>' +
+        '<h3>' + shown + '</h3>' +
+        /* 11/28 モリオ：担当作品名のタグは出さない */
+        (p.tentative && p.names.length ? '<div class="cands"><b>' + I.ui.cand + '</b>' + p.names.map(function (n) { return '<span>' + esc(n) + '</span>'; }).join('') + '</div>' : '') +
+        '<dl><dt>' + I.ui.job + '</dt><dd>' + esc(p.job) + '</dd>' +
+        (p.quote ? '<dt>' + I.ui.quote + '</dt><dd class="quote">' + esc(p.quote) + '</dd>' : '') +
+        (p.note ? '<dt>' + I.ui.note + '</dt><dd>' + esc(p.note) + '</dd>' : '') + '</dl></li>';
+    });
+    root.insertAdjacentHTML("beforeend", html + '</ul></section>');
+  });
+
+  var ai = staff.filter(function (p) { return p.id !== "owner"; }).length;
+  document.getElementById("facts").innerHTML =
+    '<div><b>' + staff.length + I.ui.unit_p + '</b><span>' + I.ui.staff + '</span></div>' +
+    '<div><b>' + ai + I.ui.unit_p + '</b><span>' + I.ui.ai + '</span></div>' +
+    '<div><b>' + apps.length + I.ui.unit_a + '</b><span>' + I.ui.apps + '</span></div>' +
+    '<div><b>' + I.ui.zero + '</b><span>' + I.ui.ot + '</span><small>' + I.ui.otn + '</small></div>';
+  document.getElementById("made").innerHTML = apps.filter(function (a) { return a.status === "released"; }).map(function (a) { return '<li><a href="../../' + esc(a.id) + '/">' + (a.icon ? '<img src="../../' + esc(a.icon) + '" alt="" width="56" height="56">' : '') + '<span><b>' + esc(a.name) + '</b><small>' + esc(a.catch) + '</small></span></a></li>'; }).join("");
+  if (!staff.some(function (p) { return p.tentative; })) document.getElementById("notice").remove();
+  document.getElementById("year").textContent = new Date().getFullYear();
+})();
+</script>
+</body></html>

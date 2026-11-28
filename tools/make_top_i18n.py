@@ -193,6 +193,10 @@ def build(lang, ja, promo):
         if a not in h:
             raise SystemExit(f"見つからないコード: {a[:50]}")
         h = h.replace(a, b)
+    # スタッフ紹介も言葉ごとの頁へ（11/28）
+    h = h.replace('href="../team/"', 'href="../team/' + lang + '/"')
+    for j in [" (Japanese)", " (일본어)", "（日文）", " (auf Japanisch)", " (en japonés)", " (en japonais)", " (in giapponese)"]:
+        h = h.replace(j, "")
     h = add_common(h, lang, "../")
     return h
 

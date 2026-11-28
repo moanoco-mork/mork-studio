@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>스태프 소개｜MORK STUDIO</title><link rel="alternate" hreflang="ja" href="https://mork-studio.net/team/"><link rel="alternate" hreflang="en" href="https://mork-studio.net/team/en/"><link rel="alternate" hreflang="ko" href="https://mork-studio.net/team/ko/"><link rel="alternate" hreflang="zh-Hant" href="https://mork-studio.net/team/zh-Hant/"><link rel="alternate" hreflang="de" href="https://mork-studio.net/team/de/"><link rel="alternate" hreflang="es" href="https://mork-studio.net/team/es/"><link rel="alternate" hreflang="fr" href="https://mork-studio.net/team/fr/"><link rel="alternate" hreflang="it" href="https://mork-studio.net/team/it/"><link rel="alternate" hreflang="x-default" href="https://mork-studio.net/team/en/">
+<meta name="description" content="MORK STUDIO에서는 이런 사람들이 일하고 있습니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=M+PLUS+Rounded+1c:wght@400&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--surface:#fffdf3;--card:#fff;--ink:#262b33;--logo:#3d4f63;--muted:#5d6570;--link:#58708a;--rule:#e6e1cf}
+*{box-sizing:border-box}
+body{margin:0;background:var(--surface);color:var(--ink);font-family:"Zen Kaku Gothic New",system-ui,sans-serif;line-height:1.8}
+a{color:var(--link)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:2px solid var(--ink);position:sticky;top:0;z-index:50;background:var(--surface)}
+[id]{scroll-margin-top:90px}
+.logo{font-family:"Dela Gothic One",sans-serif;font-size:22px;letter-spacing:.04em;color:var(--logo);text-decoration:none}
+header nav a{color:var(--ink);text-decoration:none;font-weight:700;margin-left:22px}
+.crumb{font-size:13px;color:var(--muted);margin:20px 0 0}
+.crumb a{color:var(--muted)}
+/* 見出し：会社のスタッフ紹介っぽく */
+.hero{padding:40px 0 48px}
+.hero .en{font-family:"Dela Gothic One",sans-serif;letter-spacing:.08em;color:var(--logo);font-size:15px}
+.hero h1{font-weight:900;font-size:48px;line-height:1.3;margin:6px 0 16px}
+.hero p{font-size:17px;max-width:38em;margin:0}
+.facts{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.facts div{background:var(--card);border:3px solid var(--ink);border-radius:14px;box-shadow:4px 4px 0 var(--ink);padding:10px 16px;min-width:130px}
+.facts b{display:block;font-family:"Dela Gothic One",sans-serif;font-weight:400;font-size:26px;line-height:1.2;color:var(--logo)}
+.facts span{font-size:13px;color:var(--muted);font-weight:700}
+.facts small{font-size:11px;color:var(--muted);display:block;line-height:1.4}
+/* 部署 */
+.dept{border-top:2px solid var(--ink);padding:44px 0 20px}
+.dept h2{font-weight:900;font-size:26px;margin:0}
+.dept .lead{color:var(--muted);font-family:"M PLUS Rounded 1c",sans-serif;margin:4px 0 24px}
+.grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+.person{background:var(--card);border:3px solid var(--ink);border-radius:18px;box-shadow:5px 5px 0 var(--ink);padding:20px;display:grid;grid-template-columns:140px 1fr;gap:4px 18px;align-content:start}
+/* 11/28 モリオ：キャラの絵はできるだけ大きく */
+.person .av img.av-full{width:140px!important;height:auto!important;max-height:280px}
+.person .av{grid-row:span 3;align-self:start}
+.person .title{font-size:12px;font-weight:700;color:var(--muted)}
+.person h3{font-size:24px;font-weight:900;line-height:1.3;margin:0}
+.person h3 small{font-size:13px;font-weight:700;color:var(--muted);margin-left:4px}
+.person .role{font-size:13px;color:var(--muted)}
+.cands{grid-column:1/-1;margin-top:10px;background:var(--surface);border:2px dashed var(--ink);border-radius:12px;padding:8px 12px;font-size:13px}
+.cands b{font-weight:900;margin-right:6px}
+.cands span{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:999px;padding:0 10px;margin:2px 4px 2px 0;font-weight:700}
+.person dl{grid-column:1/-1;margin:12px 0 0;font-size:15px}
+.person dt{font-size:12px;font-weight:900;color:var(--muted);margin-top:10px}
+.person dd{margin:0}
+.person .quote{font-family:"M PLUS Rounded 1c",sans-serif;font-size:16px}
+.person .quote::before{content:"「"}.person .quote::after{content:"」"}
+.app-tag{display:inline-block;font-size:12px;font-weight:700;color:#fff;border-radius:8px;padding:0 8px;margin-right:6px}
+.owner-card{background:var(--logo);color:#fff}
+.owner-card .title,.owner-card .role,.owner-card dt{color:#dfe5ec}
+.owner-card h3 small{color:#dfe5ec}
+.notice{margin:48px 0 56px;border:3px solid var(--ink);border-radius:16px;background:#fff;padding:20px 24px;font-size:14px;color:var(--muted)}
+.notice b{color:var(--ink)}
+footer{border-top:2px solid var(--ink);padding:28px 0 44px;font-size:14px;color:var(--muted)}
+@media (max-width:720px){
+  header nav{display:none}
+  .hero h1{font-size:32px}
+  .hero p{font-size:16px}
+  .grid{grid-template-columns:1fr}
+  .person{grid-template-columns:120px 1fr;padding:16px}
+  .person .av img.av-full{width:120px!important}
+  .person .av svg{width:72px;height:72px}
+  .person h3{font-size:21px}
+}
+.made{margin:40px 0 8px}.made h2{font-size:22px;margin:0 0 14px}.made-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}.made-list a{display:flex;gap:12px;align-items:center;padding:12px;border:3px solid var(--ink,#262b33);border-radius:16px;background:#fff;box-shadow:5px 5px 0 var(--ink,#262b33);text-decoration:none;color:inherit}.made-list img{width:56px;height:56px;border-radius:12px;flex:none}.made-list b{display:block}.made-list small{display:block;font-size:13px;opacity:.75;line-height:1.5;margin-top:2px}
+.langs{font-size:13px;color:var(--muted);margin:10px 0 0;display:flex;flex-wrap:wrap;gap:4px 8px}.langs a{color:var(--muted)}.langs b{color:var(--ink)}
+.person .quote::before{content:"C"}.person .quote::after{content:"D"}</style>
+<script src="../../apps.js"></script>
+<script src="../../staff.js"></script><script>window.MORK_ROOT='/';var I=window.MORK_I18N={"staff": {"owner": {"name": "모르크", "title": "오너", "job": "앱 아이디어를 냅니다. AI가 살을 붙여 주니 고민하는 시간은 짧게. 완성된 것을 만져 보고 OK인지 NG인지 정합니다.", "quote": "그걸로 좋아", "note": ""}, "master": {"name": "유이", "title": "총괄본부 비서 겸 총무", "job": "모두의 일을 잇습니다. 의뢰를 보내고, 결과를 모으고, 오너에게 확인합니다.", "quote": "받으면 먼저 한마디 답장을.", "note": "“받으면 먼저 한마디 답장을” 하고 매일 아침 모두에게 말하고 다닙니다."}, "assistant": {"name": "메구루", "title": "총괄본부 외출 연락 담당", "job": "오너가 밖에 있을 때의 창구. 받은 연락을 유이에게 전합니다.", "quote": "유이에게 넘겨 둘게요.", "note": "오너의 MacBook에 살고 있어서, 외출 중에는 제가 창구예요. 유이에게 넘길 수 있는 건 전부 웃으며 넘깁니다."}, "designer": {"name": "이로하", "title": "제작본부 디자인 과장 겸 명도 대비 측정 담당", "job": "색·글자·화면의 규칙(디자인 시스템)을 만듭니다. 사이트의 겉모습.", "quote": "그 명도 대비, 4.5 되나요?", "note": "색을 정하기 전에 먼저 명도 대비를 잽니다. 4.5 미만은 통과시키지 않아요."}, "web": {"name": "츠즈리", "title": "제작본부 기사·연재 담당", "job": "개발기·note·소설 기사를 씁니다. 모르는 사실은 담당자에게 물어보고 씁니다.", "quote": "", "note": "현장에서 나온 한마디를 주워 모아, 남겨 둘 수 있는 형태로 다듬는 것이 일입니다."}, "tekuteku-win": {"name": "아시아토", "title": "게임개발부 전략 게임 주임 (겸 화면 없는 대전 심판)", "job": "새 전략 게임의 내용과 코드를 씁니다.", "quote": "", "note": "겉모습에 손대기 전에, 게임 내용만 화면 없이 수백 번 싸우게 해서 승패 숫자를 잽니다."}, "ekikan-win": {"name": "츠기하", "title": "하차 놓침 방지본부 본부장 (겸 데쿠테쿠 일기 실장)", "job": "역간 알람과 데쿠테쿠 다이어리의 내용을 정하고 코드를 씁니다.", "quote": "", "note": "차를 전철로 착각한 날부터, 역 주변 350m에는 잔소리가 많아요. 1km 앞에서 살짝 깨워 줍니다."}, "boomole-win": {"name": "히비노", "title": "퍼즐설계부 주임 구조 검증관 (겸 스테이지 양산 라인장)", "job": "새 퍼즐 게임을 만듭니다. 발파 장인 부몰의 스테이지도 씁니다.", "quote": "", "note": "같은 배치를 16번, 중력을 1억분의 1씩 바꿔 가며 시험합니다. 무너지지 않으면 다시 만들어요."}, "tekuteku-mac": {"name": "마니", "title": "최종 조립·출하 총괄 매니저 (Mac 공장장)", "job": "모든 앱을 Mac에서 조립해 iPhone과 App Store에 전달합니다.", "quote": "", "note": "md5가 하나라도 어긋나면 조립하지 않아요. 잠긴 iPhone에도 열릴 때까지 1분마다 노크합니다."}, "berry": {"name": "Berry", "title": "재무부 금고지기 겸 사실 확인 담당", "job": "숫자를 확인합니다. 금고 열쇠를 맡고 있습니다.", "quote": "", "note": "숫자는 반드시 두 번 확인하는 편. 멈춰야 할 때는 제대로 멈춥니다."}}, "apps": {"ekikan": {"name": "Ekikan Alarm", "catch": "An earphone-only alarm just before your stop."}, "railnap": {"name": "Railnap", "catch": "지하철에서 졸아도 내릴 역에서 깨워 줍니다."}, "tekuteku": {"name": "데쿠테쿠 다이어리", "catch": "걸음 수와 다녀온 곳이 캘린더 일기에 자동으로 남습니다."}, "boomole": {"name": "Boomole", "catch": "Where should the charges go so the building falls just right? A demolition puzzle."}, "remindbox": {"name": "RemindBox", "catch": "찍기만 하면 잊지 않게 알려 줍니다."}, "splashville": {"name": "Splashville", "catch": "Pop balloons and chain the splashes."}, "mizutama": {"name": "Splashville", "catch": "Pop balloons and chain the splashes."}}, "ui": {"title": "스태프 소개｜MORK STUDIO", "desc": "MORK STUDIO에서는 이런 사람들이 일하고 있습니다.", "nav": ">앱</a><a href=\"./\">스태프</a><a href=\"https://medium.com/@moanoco\">블로그</a>", "home": "홈", "page": "스태프 소개", "h1": "스태프 소개", "lead": "MORK STUDIO에서는 이런 사람들이 일하고 있습니다. 사람은 오너 1명뿐, 나머지는 모두 AI입니다. 연중무휴, 야근 수당은 없습니다.", "made": "이 팀이 만든 앱", "back": "홈으로 돌아가기", "ga": "이 사이트는 방문 수를 알기 위해 Google 애널리틱스(쿠키)를 사용합니다. 개인을 식별하는 정보는 수집하지 않습니다.", "job": "담당", "quote": "말버릇", "note": "한마디", "cand": "다른 후보", "tent": "(가칭)", "staff": "스태프", "ai": "그중 AI", "apps": "담당 앱", "zero": "0원", "ot": "야근 수당", "otn": "※ AI라서", "unit_p": " 명", "unit_a": " 개"}};(window.MORK_STAFF||[]).forEach(function(p){var t=I.staff[p.id];if(t){p.name=t.name;p.title=t.title;p.job=t.job;p.quote=t.quote;p.note=t.note;p.tentative=false;}});window.MORK_APPS=(window.MORK_APPS||[]).filter(function(a){return a.id!=='ekikan';});(window.MORK_APPS||[]).forEach(function(a){var t=I.apps[a.id];if(t){if(t.name)a.name=t.name;if(t.catch)a.catch=t.catch;}});</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G6QLQ80EHX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G6QLQ80EHX');</script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><a class="logo" href="../../ko/">MORK STUDIO</a><nav><a href="../../ko/#apps">앱</a><a href="./">스태프</a><a href="https://medium.com/@moanoco">블로그</a></nav></header><!--LANGS--><p class="langs"><a href="../" hreflang="ja" lang="ja">日本語</a> · <a href="../en/" hreflang="en" lang="en">English</a> · <b>한국어</b> · <a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../de/" hreflang="de" lang="de">Deutsch</a> · <a href="../es/" hreflang="es" lang="es">Español</a> · <a href="../fr/" hreflang="fr" lang="fr">Français</a> · <a href="../it/" hreflang="it" lang="it">Italiano</a></p><!--LANGS-->
+  <p class="crumb"><a href="../../ko/">홈</a> ＞ 스태프 소개</p>
+
+  <section class="hero">
+    <div class="en">OUR STAFF</div>
+    <h1>스태프 소개</h1>
+    <p>MORK STUDIO에서는 이런 사람들이 일하고 있습니다. 사람은 오너 1명뿐, 나머지는 모두 AI입니다. 연중무휴, 야근 수당은 없습니다.</p>
+    <div class="facts" id="facts"></div>
+  </section>
+
+  <div id="depts"></div>
+
+  <section class="made"><h2>이 팀이 만든 앱</h2><ul class="made-list" id="made"></ul></section>
+  <p class="notice" id="notice"><b>名前は選考中です。</b> 「（仮）」の名前は、本人たちが自分で考えた名乗りの案です。点線の枠はほかの候補です。オーナーが選んだら、ここに決まった名前が載ります。</p>
+</div>
+<div class="wrap"><footer>&copy; <span id="year">2026</span> MORK STUDIO　<a href="../../ko/">홈으로 돌아가기</a>  <div class="ga-note">이 사이트는 방문 수를 알기 위해 Google 애널리틱스(쿠키)를 사용합니다. 개인을 식별하는 정보는 수집하지 않습니다.</div>
+  </footer></div>
+
+<script>
+(function () {
+  var staff = window.MORK_STAFF || [], apps = window.MORK_APPS || [];
+  var appById = {}; apps.forEach(function (a) { appById[a.id] = a; });
+  var DEPTS = [
+    { id: "office", name: "총괄본부", lead: "스튜디오의 방침을 정하고 팀을 이끕니다." },
+    { id: "studio", name: "제작본부", lead: "그림과 말로 스튜디오를 알립니다." },
+    { id: "write", name: "앱개발부 쓰는 팀", lead: "앱과 게임의 내용을 정하고 코드를 씁니다." },
+    { id: "ship", name: "앱개발부 전하는 팀", lead: "Mac에서 조립해 iPhone과 App Store에 전달합니다. 지금은 한 명이 모든 앱을 맡고 있어요." },
+    { id: "finance", name: "재무부", lead: "밤의 데이터 지킴이와 숫자 확인. 스튜디오 금고의 열쇠를 맡고 있습니다." }
+  ];
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+
+  var root = document.getElementById("depts");
+  DEPTS.forEach(function (d) {
+    var people = staff.filter(function (p) { return p.dept === d.id; });
+    if (!people.length) return;
+    var html = '<section class="dept"><h2>' + esc(d.name) + '</h2><p class="lead">' + esc(d.lead) + '</p><ul class="grid">';
+    people.forEach(function (p) {
+      var app = p.app && appById[p.app];
+      var shown = esc(p.name) + (p.tentative ? '<small>' + I.ui.tent + '</small>' : '');
+      html += '<li class="person' + (p.id === "owner" ? ' owner-card' : '') + '">' +
+        '<div class="av">' + window.morkAvatar(p.avatar, 180) + '</div>' +
+        '<div class="title">' + esc(p.title) + '</div>' +
+        '<h3>' + shown + '</h3>' +
+        /* 11/28 モリオ：担当作品名のタグは出さない */
+        (p.tentative && p.names.length ? '<div class="cands"><b>' + I.ui.cand + '</b>' + p.names.map(function (n) { return '<span>' + esc(n) + '</span>'; }).join('') + '</div>' : '') +
+        '<dl><dt>' + I.ui.job + '</dt><dd>' + esc(p.job) + '</dd>' +
+        (p.quote ? '<dt>' + I.ui.quote + '</dt><dd class="quote">' + esc(p.quote) + '</dd>' : '') +
+        (p.note ? '<dt>' + I.ui.note + '</dt><dd>' + esc(p.note) + '</dd>' : '') + '</dl></li>';
+    });
+    root.insertAdjacentHTML("beforeend", html + '</ul></section>');
+  });
+
+  var ai = staff.filter(function (p) { return p.id !== "owner"; }).length;
+  document.getElementById("facts").innerHTML =
+    '<div><b>' + staff.length + I.ui.unit_p + '</b><span>' + I.ui.staff + '</span></div>' +
+    '<div><b>' + ai + I.ui.unit_p + '</b><span>' + I.ui.ai + '</span></div>' +
+    '<div><b>' + apps.length + I.ui.unit_a + '</b><span>' + I.ui.apps + '</span></div>' +
+    '<div><b>' + I.ui.zero + '</b><span>' + I.ui.ot + '</span><small>' + I.ui.otn + '</small></div>';
+  document.getElementById("made").innerHTML = apps.filter(function (a) { return a.status === "released"; }).map(function (a) { return '<li><a href="../../' + esc(a.id) + '/">' + (a.icon ? '<img src="../../' + esc(a.icon) + '" alt="" width="56" height="56">' : '') + '<span><b>' + esc(a.name) + '</b><small>' + esc(a.catch) + '</small></span></a></li>'; }).join("");
+  if (!staff.some(function (p) { return p.tentative; })) document.getElementById("notice").remove();
+  document.getElementById("year").textContent = new Date().getFullYear();
+})();
+</script>
+</body></html>
