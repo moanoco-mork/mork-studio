@@ -14,6 +14,18 @@
    color     : カードに少しだけ使うアプリの色（白い文字が 4.5:1 以上で読める濃さにする） */
 window.MORK_APPS = [
   {
+    id: "remindbox",
+    name: "RemindBox",
+    genre: "仕事効率化",
+    catch: "撮るだけで、忘れない。写真から日付を読み取って、その日にお知らせ。",
+    platforms: ["ios"],
+    status: "soon",
+    released: null,
+    appStore: null,
+    icon: "assets/remindbox-icon.png",
+    color: "#1f6b4f"
+  },
+  {
     id: "ekikan",
     name: "駅間アラーム",
     genre: "ナビゲーション",
