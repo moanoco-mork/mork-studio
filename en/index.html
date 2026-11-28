@@ -249,8 +249,9 @@ footer ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;g
   var staff = window.MORK_STAFF || [];
   document.getElementById("n-staff").textContent = staff.length;
   (function () { /* 11/28 モリオの決定版の並び（Figma 103:2）。left＝その子のまん中、bottom＝足もと、height＝箱の高さに対する割合 */
-    var P = { berry:[12.5,43.5,42,1], tsugiha:[31,51,42,2], hibino:[49.7,58,42,3], mani:[68.5,51,42,2], ashiato:[87.1,43.5,42,1],
-              meguru:[12.5,14,45.8,4], tsuzuri:[31,7,45.8,5], mork:[49.7,0,52.6,6], yui:[68.5,7,45.8,5], iroha:[87.1,14,45.8,4] };
+    /* 重なり順（4つ目の数・大きいほど手前）：11/28 モリオ「ヒビノは一番下のレイヤーに」。後ろの段は高い所の子ほど奥 */
+    var P = { berry:[12.5,43.5,42,5], tsugiha:[31,51,42,2], hibino:[49.7,58,42,1], mani:[68.5,51,42,3], ashiato:[87.1,43.5,42,4],
+              meguru:[12.5,14,45.8,7], tsuzuri:[31,7,45.8,8], mork:[49.7,0,52.6,10], yui:[68.5,7,45.8,9], iroha:[87.1,14,45.8,6] };
     var root = (window.MORK_ROOT || "/") + "assets/staff/";
     document.getElementById("crowd").innerHTML = staff.filter(function (p) { return p.avatar && P[p.avatar.img]; }).map(function (p) {
       var v = P[p.avatar.img];
