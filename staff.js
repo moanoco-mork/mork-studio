@@ -13,7 +13,7 @@
    job       : 担当
    quote     : 口ぐせ（無ければ "" で、ページには出ない）
    note      : ひとこと（無ければ "" で、ページには出ない）
-   avatar    : 人のキャラクターの組み合わせ（下の morkAvatar が描く）
+   avatar    : 人のキャラクターの組み合わせ（下の morkAvatar が描く）。img があれば assets/staff/<img>.webp のイラストを出す
      skin    : 肌の色
      hair    : 髪型 "short" | "bob" | "bun" | "side" | "messy" | "long" | "crop"
      hairColor
@@ -29,7 +29,7 @@ window.MORK_STAFF_ALL = [
     title: "オーナー", dept: "office", app: null,
     job: "アプリの元ネタを出す。AI がふくらませてくれるので、悩む時間はみじかめ。できたものを触って、OK か NG を出す。",
     quote: "それでいいよ", note: "",
-    avatar: { skin: "#f2cfae", hair: "crop", hairColor: "#262b33", outfit: "hoodie", color: "#3d4f63", eyes: "dot", hat: "none", items: ["mug"] }
+    avatar: { img: "mork", skin: "#f2cfae", hair: "crop", hairColor: "#262b33", outfit: "hoodie", color: "#3d4f63", eyes: "dot", hat: "none", items: ["mug"] }
   },
   {
     id: "master", name: "ユイ", tentative: false, names: [], role: "master",
@@ -37,7 +37,7 @@ window.MORK_STAFF_ALL = [
     job: "みんなの仕事をつなぐ。依頼を出して、結果を集めて、オーナーに確かめる。",
     quote: "受け取ったら、まず一言お返事を。",
     note: "「受け取ったら、まず一言お返事を」と、毎朝みなさんに言って回っています。",
-    avatar: { skin: "#f6d6b8", hair: "bob", hairColor: "#4a3428", outfit: "jacket", color: "#3d4f63", eyes: "smile", hat: "none", items: ["notebook"] }
+    avatar: { img: "yui", skin: "#f6d6b8", hair: "bob", hairColor: "#4a3428", outfit: "jacket", color: "#3d4f63", eyes: "smile", hat: "none", items: ["notebook"] }
   },
   {
     id: "assistant", name: "メグル", tentative: false, names: [], role: "外出連絡担当",
@@ -45,7 +45,7 @@ window.MORK_STAFF_ALL = [
     job: "オーナーが外にいるときの窓口。受けた連絡を、ユイにつなぐ。",
     quote: "ユイに回しておきます。",
     note: "オーナーの MacBook に住んでいて、外出先ではわたしが窓口です。ユイに回せることは、ぜんぶ笑顔で回します。",
-    avatar: { skin: "#f6d6b8", hair: "short", hairColor: "#4a3428", outfit: "hoodie", color: "#3d4f63", eyes: "smile", hat: "none", items: ["headphones", "compass"] }
+    avatar: { img: "meguru", skin: "#f6d6b8", hair: "short", hairColor: "#4a3428", outfit: "hoodie", color: "#3d4f63", eyes: "smile", hat: "none", items: ["headphones", "compass"] }
   },
   {
     id: "designer", name: "イロハ", tentative: false, names: [], role: "デザイナーさん",
@@ -53,7 +53,7 @@ window.MORK_STAFF_ALL = [
     job: "色・文字・画面の決まり（デザインシステム）をつくる。サイトの見た目。",
     quote: "そのコントラスト比、4.5 ありますか？",
     note: "色を決める前に、まずコントラスト比を測ります。4.5 未満は通しません。",
-    avatar: { skin: "#f6d6b8", hair: "bun", hairColor: "#3d4f63", outfit: "tee", color: "#fffdf3", eyes: "wink", hat: "none", items: ["starpin", "swatch"] }
+    avatar: { img: "iroha", skin: "#f6d6b8", hair: "bun", hairColor: "#3d4f63", outfit: "tee", color: "#fffdf3", eyes: "wink", hat: "none", items: ["starpin", "swatch"] }
   },
   {
     id: "web", name: "ツヅリ", tentative: false, names: [], role: "記事担当",
@@ -61,7 +61,7 @@ window.MORK_STAFF_ALL = [
     job: "開発記・note・小説の記事を書く。分からない事実は、担当に聞いてから書く。",
     quote: "",
     note: "現場で生まれた一言を拾い集め、残しておける形に整えるのが仕事です。",
-    avatar: { skin: "#f2cfae", hair: "side", hairColor: "#6b4a33", outfit: "vest", color: "#a88a4f", eyes: "dot", hat: "none", items: ["pen"] }
+    avatar: { img: "tsuzuri", skin: "#f2cfae", hair: "side", hairColor: "#6b4a33", outfit: "vest", color: "#a88a4f", eyes: "dot", hat: "none", items: ["pen"] }
   },
   {
     id: "tekuteku-win", name: "アシアト", tentative: false, names: [], role: "戦略ゲーム担当",
@@ -69,7 +69,7 @@ window.MORK_STAFF_ALL = [
     job: "新しい戦略ゲームの中身とコードを書く。",
     quote: "",
     note: "見た目に手をつける前に、ゲームの中身だけを画面なしで何百回も戦わせて、勝ち負けの数字を測ります。",
-    avatar: { skin: "#f2cfae", hair: "messy", hairColor: "#262b33", outfit: "tee", color: "#23855c", eyes: "dot", hat: "none", items: ["footprints", "gridnote"] }
+    avatar: { img: "ashiato", skin: "#f2cfae", hair: "messy", hairColor: "#262b33", outfit: "tee", color: "#23855c", eyes: "dot", hat: "none", items: ["footprints", "gridnote"] }
   },
   {
     id: "ekikan-win", name: "ツギハ", tentative: false, names: [], role: "駅間アラーム・てくてく担当",
@@ -77,7 +77,7 @@ window.MORK_STAFF_ALL = [
     job: "駅間アラームとてくてくダイヤリーの中身を決めて、コードを書く。",
     quote: "",
     note: "車を電車と見間違えた日から、駅まわり 350m には口うるさいです。1km 手前で、そっと起こします。",
-    avatar: { skin: "#f6d6b8", hair: "short", hairColor: "#58708a", outfit: "hoodie", color: "#3f766d", eyes: "sleepy", hat: "none", items: ["earbud", "bell"] }
+    avatar: { img: "tsugiha", skin: "#f6d6b8", hair: "short", hairColor: "#58708a", outfit: "hoodie", color: "#3f766d", eyes: "sleepy", hat: "none", items: ["earbud", "bell"] }
   },
   {
     id: "boomole-win", name: "ヒビノ", tentative: false, names: [], role: "パズル担当",
@@ -85,7 +85,7 @@ window.MORK_STAFF_ALL = [
     job: "新しいパズルゲームを作る。発破職人ブーモルのステージも書く。",
     quote: "",
     note: "同じ置き方を 16 回、重力を 1 億分の 1 ずつずらして試します。崩れなかったら作り直し。",
-    avatar: { skin: "#f2cfae", hair: "short", hairColor: "#6b4a33", outfit: "vest", color: "#1e5ae6", eyes: "round", hat: "helmet", items: ["clipboard"], bg: "rays" }
+    avatar: { img: "hibino", skin: "#f2cfae", hair: "short", hairColor: "#6b4a33", outfit: "vest", color: "#1e5ae6", eyes: "round", hat: "helmet", items: ["clipboard"], bg: "rays" }
   },
   {
     id: "tekuteku-mac", name: "マニ", tentative: false, names: [], role: "Mac 担当",
@@ -93,7 +93,7 @@ window.MORK_STAFF_ALL = [
     job: "すべてのアプリを Mac で組み立てて、iPhone と App Store に届ける。",
     quote: "",
     note: "md5 が一つでもずれたら組み立てません。ロック中の iPhone にも、開くまで 1 分ごとにノックします。",
-    avatar: { skin: "#f6d6b8", hair: "short", hairColor: "#262b33", outfit: "overall", color: "#23855c", eyes: "dot", hat: "chiefcap", items: ["cheeks", "checkpin", "wrench", "footbox"] }
+    avatar: { img: "mani", skin: "#f6d6b8", hair: "short", hairColor: "#262b33", outfit: "overall", color: "#23855c", eyes: "dot", hat: "chiefcap", items: ["cheeks", "checkpin", "wrench", "footbox"] }
   },
   {
     id: "ekikan-mac", name: "クミタテ", hidden: true, tentative: false, names: [], role: "駅間アラーム Mac 担当",
@@ -133,7 +133,7 @@ window.MORK_STAFF_ALL = [
     job: "数字の裏をとる。金庫の鍵を預かる。",
     quote: "",
     note: "数字は必ず二度たしかめる派。止めるべき時は、ちゃんと止めます。",
-    avatar: { skin: "#f6d6b8", hair: "long", hairColor: "#6b4a33", outfit: "vest", color: "#e8202a", eyes: "smile", hat: "none", items: ["berrypin", "lens"] }
+    avatar: { img: "berry", skin: "#f6d6b8", hair: "long", hairColor: "#6b4a33", outfit: "vest", color: "#e8202a", eyes: "smile", hat: "none", items: ["berrypin", "lens"] }
   }
 ];
 window.MORK_STAFF = window.MORK_STAFF_ALL.filter(function (p) { return !p.hidden; });
@@ -144,6 +144,12 @@ window.MORK_STAFF = window.MORK_STAFF_ALL.filter(function (p) { return !p.hidden
   var uid = 0;
   window.morkAvatar = function (a, size) {
     var s = size || 96, id = "av" + (++uid);
+    /* 11/28 モリオ：ちびキャラのイラストがある人は、そのイラストを出す（大きい所は全身、小さい所は顔） */
+    if (a.img) {
+      var root = (window.MORK_ROOT || "/") + "assets/staff/";
+      if (s < 80) return '<img class="av-img av-face" src="' + root + a.img + '_face.webp" width="' + s + '" height="' + s + '" alt="" loading="lazy" style="border-radius:50%;object-fit:cover;background:#fffdf3;border:2px solid #262b33">';
+      return '<img class="av-img av-full" src="' + root + a.img + '.webp" height="' + Math.round(s * 1.5) + '" alt="" loading="lazy" style="width:auto;max-width:100%;height:' + Math.round(s * 1.5) + 'px;object-fit:contain">';
+    }
     var ink = "#262b33", cream = "#fffdf3", orange = "#f08a24", blush = "#f19b8f";
     var st = ' stroke="' + ink + '" stroke-width="2.5" stroke-linejoin="round"';
     var items = a.items || [], has = function (k) { return items.indexOf(k) >= 0; };
