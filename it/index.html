@@ -106,6 +106,18 @@ footer ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;g
 .appstrip img{width:52px;height:52px;border-radius:12px;display:block}
 .appstrip small{display:block;font-weight:400;font-size:11px;opacity:.7}
 .appstrip .nm{display:block;font-weight:900;max-width:100%}
+/* 11/28 イロハ：アプリが4つの時は、PC は1列に4つ（名前は2行まで折り返す）、スマホは2列×2段 */
+.appstrip.n4{grid-template-columns:repeat(4,minmax(0,1fr));max-width:525px}
+.appstrip.n4 a{white-space:normal;word-break:keep-all;overflow-wrap:anywhere}
+.appstrip .nm{white-space:normal}
+@media (max-width:720px){
+  .appstrip.n4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  /* スマホは「ボタン → キャラの絵 → アプリの一覧」の順（Figma 108:2） */
+  .hero{display:flex;flex-direction:column;align-items:stretch}
+  .hero > div:first-child{display:contents}
+  .hero .crowd{order:1;align-self:center;margin-top:19px}
+  .hero .appstrip{order:2;margin-top:24px}
+}
 @media (max-width:720px){.appstrip{gap:10px}.appstrip a{font-size:12px;padding:10px 4px 8px;white-space:normal;word-break:keep-all;overflow-wrap:anywhere;line-height:1.35}.appstrip img{width:46px;height:46px}.appstrip small{display:none}}
 .langs{font-size:13px;color:var(--muted);margin:10px 0 0;display:flex;flex-wrap:wrap;gap:4px 8px}.langs a{color:var(--muted)}.langs b{color:var(--ink)}
 </style>
@@ -223,6 +235,7 @@ footer ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;g
   apps.forEach(function (a) { if (a.status === "released") (a.platforms || []).forEach(function (p) { if (pubs.indexOf(p) < 0) pubs.push(p); }); });
   if (pubs.length) document.getElementById("apps-note").textContent = MORK_I18N.ui.note.replace("{p}", pubs.map(function (p) { return PLATFORM[p] || p; }).join(", "));
   (function () { var s = document.getElementById("appstrip"); if (!s) return; apps.filter(function (a) { return a.status === "released"; }).forEach(function (a) { s.appendChild(el("li", {}, [el("a", { href: "../" + a.id + "/" }, [a.icon ? el("img", { src: a.icon, alt: "", width: 44, height: 44 }) : null, el("span", {}, (function () { var parts = a.name.match(/^(駅間|てくてく|発破職人)(.+)$/); var nm = el("b", { class: "nm" }); if (parts) { nm.appendChild(document.createTextNode(parts[1])); nm.appendChild(document.createElement("wbr")); nm.appendChild(document.createTextNode(parts[2])); } else nm.textContent = a.name; return [nm, el("small", { text: a.genre })]; })())])])); }); })();
+  (function () { var s = document.getElementById("appstrip"); if (s && s.children.length === 4) s.classList.add("n4"); })();
   document.getElementById("n-released").textContent = apps.filter(function (a) { return a.status === "released"; }).length;
   document.getElementById("n-soon").textContent = apps.filter(function (a) { return a.status !== "released"; }).length;
 
