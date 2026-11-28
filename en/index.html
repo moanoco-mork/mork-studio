@@ -107,6 +107,9 @@ footer ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;g
 .appstrip small{display:block;font-weight:400;font-size:11px;opacity:.7}
 .appstrip .nm{display:block;font-weight:900;max-width:100%}
 /* 11/28 イロハ：アプリが4つの時は、PC は1列に4つ（名前は2行まで折り返す）、スマホは2列×2段 */
+/* 11/28 モリオ「高さ揃えて」：並んだ札は同じ高さに */
+.appstrip li{display:flex}
+.appstrip li>a{flex:1;justify-content:flex-start}
 .appstrip.n4{grid-template-columns:repeat(4,minmax(0,1fr));max-width:525px}
 .appstrip.n4 a{white-space:normal;word-break:keep-all;overflow-wrap:anywhere}
 .appstrip .nm{white-space:normal}
