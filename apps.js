@@ -11,8 +11,46 @@
    appStore  : App Store の URL。近日公開は null
    googlePlay: Google Play の URL（Android 版を出したら足す。無ければ省略）
    icon      : アイコン画像のパス。まだ無ければ null（アプリ名の頭文字の仮アイコンになる）
+   page      : false なら「くわしく見る」の頁がまだ無い（ボタンとフッターのリンクを出さない）
    color     : カードに少しだけ使うアプリの色（白い文字が 4.5:1 以上で読める濃さにする） */
 window.MORK_APPS = [
+  {
+    id: "railnap",
+    name: "Railnap",
+    genre: "ナビゲーション",
+    catch: "駅間アラームのアメリカ版。降りる駅の手前で、イヤホンにだけアラーム。",
+    platforms: ["ios"],
+    status: "released",
+    released: "2026-11-24",
+    appStore: "https://apps.apple.com/us/app/id6837707874",
+    icon: "promo/railnap.png",
+    color: "#3f5f86"
+  },
+  {
+    id: "mizutama",
+    name: "みずたまタウン",
+    genre: "ゲーム",
+    catch: "水風船を割って、しずくを連鎖。ひからびた町に水を戻すパズル。",
+    platforms: ["ios"],
+    status: "soon",
+    released: null,
+    appStore: null,
+    icon: "assets/mizutama-icon.jpg",
+    color: "#2f6fa8"
+  },
+  {
+    id: "partybox",
+    name: "リアルパーティゲームボックス",
+    genre: "ゲーム",
+    catch: "目の前の友だちと、iPhone をつないで。トランプもオリジナルの遊びも、これ1つで。",
+    platforms: ["ios"],
+    status: "soon",
+    released: null,
+    appStore: null,
+    icon: null,
+    page: false,
+    color: "#7a4fa0"
+  },
   {
     id: "remindbox",
     name: "RemindBox",

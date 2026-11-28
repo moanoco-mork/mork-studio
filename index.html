@@ -216,7 +216,7 @@ footer ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;g
         el("h3", { text: a.name }),
         el("p", { text: a.catch })
       ]),
-      el("div", { class: "links" }, stores.concat([el("a", { class: "sup", href: BASE + a.id + "/", text: "くわしく見る" })]))
+      el("div", { class: "links" }, stores.concat(a.page === false ? [] : [el("a", { class: "sup", href: BASE + a.id + "/", text: "くわしく見る" })]))
     ]);
     grid.appendChild(card);
   });
@@ -232,6 +232,7 @@ footer ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;g
   /* フッター：各アプリのサポートとプライバシーポリシー（既存の URL のまま） */
   var ul = document.getElementById("support-links");
   apps.forEach(function (a) {
+    if (a.page === false) return;
     ul.appendChild(el("li", {}, [el("a", { href: BASE + a.id + "/", text: a.name })]));
     ul.appendChild(el("li", {}, [el("a", { href: BASE + a.id + "/privacy.html", text: "プライバシー" })]));
   });

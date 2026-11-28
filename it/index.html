@@ -113,7 +113,7 @@ footer ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;g
 .langs{font-size:13px;color:var(--muted);margin:10px 0 0;display:flex;flex-wrap:wrap;gap:4px 8px}.langs a{color:var(--muted)}.langs b{color:var(--ink)}
 </style>
 <script src="../apps.js"></script>
-<script>window.MORK_I18N={"names": {"ekikan": "Ekikan Alarm", "railnap": "Railnap", "tekuteku": "TekuTeku Diario", "boomole": "Boomole", "remindbox": "RemindBox", "splashville": "Splashville"}, "catches": {"ekikan": "An earphone-only alarm just before your stop.", "railnap": "Addormentati in treno e scendi alla fermata giusta.", "tekuteku": "I tuoi passi e i luoghi visitati finiscono da soli in un diario a calendario.", "boomole": "Where should the charges go so the building falls just right? A demolition puzzle.", "remindbox": "Scatta una foto e ricevi il promemoria in tempo.", "splashville": "Pop balloons and chain the splashes."}, "genres": {"ナビゲーション": "Navigazione", "ライフスタイル": "Stile di vita", "ゲーム": "Giochi", "仕事効率化": "Produttività", "ユーティリティ": "Utility"}, "ui": {"released": "Disponibile", "soon": "In arrivo", "more": "Scopri di più", "privacy": "Privacy", "icon": " icona", "badge_alt": "Download on the App Store", "note": "Le più recenti per prime. Ora disponibili su {p}."}};(function(){var I=window.MORK_I18N;(window.MORK_APPS||[]).forEach(function(a){if(a.id==='ekikan'){a.id='railnap';a.appStore='https://apps.apple.com/app/id6837707874';a.icon='promo/railnap.png';}});(window.MORK_APPS||[]).forEach(function(a){if(I.names[a.id])a.name=I.names[a.id];if(I.catches[a.id])a.catch=I.catches[a.id];if(I.genres[a.genre])a.genre=I.genres[a.genre];if(a.icon&&a.icon.indexOf('http')!==0)a.icon='../'+a.icon;});})();</script><script src="../staff.js"></script>
+<script>window.MORK_I18N={"names": {"partybox": "Real Party Game Box", "ekikan": "Ekikan Alarm", "railnap": "Railnap", "tekuteku": "TekuTeku Diario", "boomole": "Boomole", "remindbox": "RemindBox", "splashville": "Splashville", "mizutama": "Splashville"}, "catches": {"partybox": "Collega gli iPhone di tutti. Carte e giochi di gruppo originali, tutto in una app.", "ekikan": "An earphone-only alarm just before your stop.", "railnap": "Addormentati in treno e scendi alla fermata giusta.", "tekuteku": "I tuoi passi e i luoghi visitati finiscono da soli in un diario a calendario.", "boomole": "Where should the charges go so the building falls just right? A demolition puzzle.", "remindbox": "Scatta una foto e ricevi il promemoria in tempo.", "splashville": "Pop balloons and chain the splashes.", "mizutama": "Pop balloons and chain the splashes."}, "genres": {"ナビゲーション": "Navigazione", "ライフスタイル": "Stile di vita", "ゲーム": "Giochi", "仕事効率化": "Produttività", "ユーティリティ": "Utility"}, "ui": {"released": "Disponibile", "soon": "In arrivo", "more": "Scopri di più", "privacy": "Privacy", "icon": " icona", "badge_alt": "Download on the App Store", "note": "Le più recenti per prime. Ora disponibili su {p}."}};(function(){var I=window.MORK_I18N;window.MORK_APPS=(window.MORK_APPS||[]).filter(function(a){return a.id!=='ekikan';});(window.MORK_APPS||[]).forEach(function(a){if(I.names[a.id])a.name=I.names[a.id];if(I.catches[a.id])a.catch=I.catches[a.id];if(I.genres[a.genre])a.genre=I.genres[a.genre];if(a.icon&&a.icon.indexOf('http')!==0)a.icon='../'+a.icon;});})();</script><script src="../staff.js"></script>
 <script src="../x-posts-en.js"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G6QLQ80EHX"></script>
@@ -216,7 +216,7 @@ footer ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;g
         el("h3", { text: a.name }),
         el("p", { text: a.catch })
       ]),
-      el("div", { class: "links" }, stores.concat([el("a", { class: "sup", href: BASE + a.id + "/", text: MORK_I18N.ui.more })]))
+      el("div", { class: "links" }, stores.concat(a.page === false ? [] : [el("a", { class: "sup", href: BASE + a.id + "/", text: MORK_I18N.ui.more })]))
     ]);
     grid.appendChild(card);
   });
@@ -232,6 +232,7 @@ footer ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;g
   /* フッター：各アプリのサポートとプライバシーポリシー（既存の URL のまま） */
   var ul = document.getElementById("support-links");
   apps.forEach(function (a) {
+    if (a.page === false) return;
     ul.appendChild(el("li", {}, [el("a", { href: BASE + a.id + "/", text: a.name })]));
     ul.appendChild(el("li", {}, [el("a", { href: BASE + a.id + "/privacy.html", text: MORK_I18N.ui.privacy })]));
   });

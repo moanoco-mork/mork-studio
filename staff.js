@@ -120,7 +120,7 @@ window.MORK_STAFF_ALL = [
     avatar: { skin: "#f2cfae", hair: "side", hairColor: "#262b33", outfit: "jacket", color: "#58708a", eyes: "dot", hat: "none", items: ["bridgepin", "torch"] }
   },
   {
-    id: "patrol", name: "ミハリ", tentative: false, names: [], role: "見回り係",
+    id: "patrol", name: "ミハリ", hidden: true, tentative: false, names: [], role: "見回り係",
     title: "財務部 5分おき巡回担当・ひとこと係", dept: "finance", app: null,
     job: "掲示板と連絡箱を5分おきに見て回り、変わったことを関係する人に伝える。",
     quote: "",

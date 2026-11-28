@@ -113,7 +113,7 @@ footer ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;g
 .langs{font-size:13px;color:var(--muted);margin:10px 0 0;display:flex;flex-wrap:wrap;gap:4px 8px}.langs a{color:var(--muted)}.langs b{color:var(--ink)}
 </style>
 <script src="../apps.js"></script>
-<script>window.MORK_I18N={"names": {"ekikan": "Ekikan Alarm", "railnap": "Railnap", "tekuteku": "데쿠테쿠 다이어리", "boomole": "Boomole", "remindbox": "RemindBox", "splashville": "Splashville"}, "catches": {"ekikan": "An earphone-only alarm just before your stop.", "railnap": "지하철에서 졸아도 내릴 역에서 깨워 줍니다.", "tekuteku": "걸음 수와 다녀온 곳이 캘린더 일기에 자동으로 남습니다.", "boomole": "Where should the charges go so the building falls just right? A demolition puzzle.", "remindbox": "찍기만 하면 잊지 않게 알려 줍니다.", "splashville": "Pop balloons and chain the splashes."}, "genres": {"ナビゲーション": "내비게이션", "ライフスタイル": "라이프스타일", "ゲーム": "게임", "仕事効率化": "생산성", "ユーティリティ": "유틸리티"}, "ui": {"released": "공개 중", "soon": "출시 예정", "more": "자세히 보기", "privacy": "개인정보", "icon": " 아이콘", "badge_alt": "Download on the App Store", "note": "최신순으로 정렬했습니다. 지금 {p}에서 이용할 수 있습니다."}};(function(){var I=window.MORK_I18N;(window.MORK_APPS||[]).forEach(function(a){if(a.id==='ekikan'){a.id='railnap';a.appStore='https://apps.apple.com/app/id6837707874';a.icon='promo/railnap.png';}});(window.MORK_APPS||[]).forEach(function(a){if(I.names[a.id])a.name=I.names[a.id];if(I.catches[a.id])a.catch=I.catches[a.id];if(I.genres[a.genre])a.genre=I.genres[a.genre];if(a.icon&&a.icon.indexOf('http')!==0)a.icon='../'+a.icon;});})();</script><script src="../staff.js"></script>
+<script>window.MORK_I18N={"names": {"partybox": "Real Party Game Box", "ekikan": "Ekikan Alarm", "railnap": "Railnap", "tekuteku": "데쿠테쿠 다이어리", "boomole": "Boomole", "remindbox": "RemindBox", "splashville": "Splashville", "mizutama": "Splashville"}, "catches": {"partybox": "그 자리의 iPhone을 연결해서. 트럼프도 오리지널 게임도 이거 하나로.", "ekikan": "An earphone-only alarm just before your stop.", "railnap": "지하철에서 졸아도 내릴 역에서 깨워 줍니다.", "tekuteku": "걸음 수와 다녀온 곳이 캘린더 일기에 자동으로 남습니다.", "boomole": "Where should the charges go so the building falls just right? A demolition puzzle.", "remindbox": "찍기만 하면 잊지 않게 알려 줍니다.", "splashville": "Pop balloons and chain the splashes.", "mizutama": "Pop balloons and chain the splashes."}, "genres": {"ナビゲーション": "내비게이션", "ライフスタイル": "라이프스타일", "ゲーム": "게임", "仕事効率化": "생산성", "ユーティリティ": "유틸리티"}, "ui": {"released": "공개 중", "soon": "출시 예정", "more": "자세히 보기", "privacy": "개인정보", "icon": " 아이콘", "badge_alt": "Download on the App Store", "note": "최신순으로 정렬했습니다. 지금 {p}에서 이용할 수 있습니다."}};(function(){var I=window.MORK_I18N;window.MORK_APPS=(window.MORK_APPS||[]).filter(function(a){return a.id!=='ekikan';});(window.MORK_APPS||[]).forEach(function(a){if(I.names[a.id])a.name=I.names[a.id];if(I.catches[a.id])a.catch=I.catches[a.id];if(I.genres[a.genre])a.genre=I.genres[a.genre];if(a.icon&&a.icon.indexOf('http')!==0)a.icon='../'+a.icon;});})();</script><script src="../staff.js"></script>
 <script src="../x-posts-en.js"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G6QLQ80EHX"></script>
@@ -216,7 +216,7 @@ footer ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;g
         el("h3", { text: a.name }),
         el("p", { text: a.catch })
       ]),
-      el("div", { class: "links" }, stores.concat([el("a", { class: "sup", href: BASE + a.id + "/", text: MORK_I18N.ui.more })]))
+      el("div", { class: "links" }, stores.concat(a.page === false ? [] : [el("a", { class: "sup", href: BASE + a.id + "/", text: MORK_I18N.ui.more })]))
     ]);
     grid.appendChild(card);
   });
@@ -232,6 +232,7 @@ footer ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;g
   /* フッター：各アプリのサポートとプライバシーポリシー（既存の URL のまま） */
   var ul = document.getElementById("support-links");
   apps.forEach(function (a) {
+    if (a.page === false) return;
     ul.appendChild(el("li", {}, [el("a", { href: BASE + a.id + "/", text: a.name })]));
     ul.appendChild(el("li", {}, [el("a", { href: BASE + a.id + "/privacy.html", text: MORK_I18N.ui.privacy })]));
   });

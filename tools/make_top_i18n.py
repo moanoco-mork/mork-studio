@@ -101,9 +101,18 @@ GENRE = {
 def promo_texts():
     d = json.load(open(os.path.join(ROOT, "promo", "apps.json"), encoding="utf-8"))
     apps = d if isinstance(d, list) else d.get("apps", [])
-    out = {}
+    out = {"partybox": {"name": {"en": "Real Party Game Box"}, "catch": {
+        "en": "Link the iPhones in the room. Cards and original party games, all in one.",
+        "ko": "그 자리의 iPhone을 연결해서. 트럼프도 오리지널 게임도 이거 하나로.",
+        "zh-Hant": "把在場的 iPhone 連起來，撲克牌和原創遊戲，一個 App 全包。",
+        "de": "Verbinde die iPhones im Raum. Kartenspiele und eigene Partyspiele in einer App.",
+        "es": "Conecta los iPhone de todos. Cartas y juegos de fiesta originales, en una sola app.",
+        "fr": "Reliez les iPhone de tout le monde. Jeux de cartes et jeux de soirée originaux, tout en un.",
+        "it": "Collega gli iPhone di tutti. Carte e giochi di gruppo originali, tutto in una app."}}}
     for a in apps:
         out[a["id"]] = {"name": a.get("name", {}), "catch": a.get("catch", {})}
+    if "splashville" in out:  # みずたまタウンの海外での名前
+        out["mizutama"] = out["splashville"]
     return out
 
 
@@ -164,7 +173,7 @@ def build(lang, ja, promo):
     inject = ("<script>window.MORK_I18N=" + json.dumps({"names": names, "catches": catches, "genres": genres, "ui": ui}, ensure_ascii=False) + ";"
               "(function(){var I=window.MORK_I18N;"
               # 11/28 モリオ：日本語以外のトップは、駅間アラームの代わりに Railnap（駅間の海外版）へつなぐ
-              "(window.MORK_APPS||[]).forEach(function(a){if(a.id==='ekikan'){a.id='railnap';a.appStore='https://apps.apple.com/app/id6837707874';a.icon='promo/railnap.png';}});"
+              "window.MORK_APPS=(window.MORK_APPS||[]).filter(function(a){return a.id!=='ekikan';});"
               "(window.MORK_APPS||[]).forEach(function(a){if(I.names[a.id])a.name=I.names[a.id];if(I.catches[a.id])a.catch=I.catches[a.id];if(I.genres[a.genre])a.genre=I.genres[a.genre];if(a.icon&&a.icon.indexOf('http')!==0)a.icon='../'+a.icon;});})();</script>")
     h = h.replace('<script src="../staff.js">', inject + '<script src="../staff.js">', 1)
     rep = [
