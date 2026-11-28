@@ -112,7 +112,7 @@ window.MORK_STAFF_ALL = [
     avatar: { skin: "#f6d6b8", hair: "crop", hairColor: "#262b33", outfit: "apron", color: "#3d4f63", eyes: "dot", hat: "bandana", items: ["shipbox", "wrench"] }
   },
   {
-    id: "bridge", name: "Bridge", tentative: false, names: [], role: "Bridge",
+    id: "bridge", name: "Bridge", hidden: true, tentative: false, names: [], role: "Bridge",
     title: "財務部 夜間当直主任 兼 データ橋渡し係", dept: "finance", app: null,
     job: "夜のあいだもデータを見張り、必要な人へ橋渡しする。",
     quote: "",
