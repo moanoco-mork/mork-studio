@@ -17,16 +17,16 @@ header.top{display:flex;justify-content:space-between;align-items:center;padding
 .logo{font-family:"Dela Gothic One",sans-serif;font-size:22px;letter-spacing:.04em;color:var(--logo);text-decoration:none}
 header nav a{color:var(--ink);text-decoration:none;font-weight:700;margin-left:22px}
 /* ヒーロー（案A の見た目） */
-.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding:56px 0 48px}
+.hero{display:grid;grid-template-columns:minmax(0,525px) 1fr;gap:13px;align-items:center;padding:56px 0 48px}
 .big{font-family:"Dela Gothic One",sans-serif;font-weight:400;font-size:96px;line-height:1;letter-spacing:.04em;color:var(--logo);margin:0}
 .hero .sub{font-weight:900;font-size:28px;line-height:1.45;margin:22px 0 10px}
 .hero .body{font-size:17px;max-width:32em;margin:0 0 26px}
 .btns{display:flex;gap:14px;flex-wrap:wrap}
 .btn{display:inline-block;font-weight:900;text-decoration:none;border:3px solid var(--ink);border-radius:14px;padding:12px 22px;box-shadow:4px 4px 0 var(--ink);color:var(--ink);background:var(--card)}
 .btn.primary{background:var(--logo);color:#fff}
-.crowd{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;justify-items:center;align-items:center;max-width:420px;margin-left:auto}
-.crowd svg{width:100%;max-width:120px;height:auto}
-.crowd > :nth-child(3n+2){transform:translateY(22px)}
+/* 11/28 モリオの決定版（Figma 103:2・108:2）：2段の集合写真。後ろは山の形（まん中ヒビノ）、前は谷の形（まん中モルク） */
+.crowd{position:relative;aspect-ratio:350/338;width:100%;max-width:542px;justify-self:end}
+.crowd img{position:absolute;transform:translateX(-50%);width:auto;display:block}
 /* 数字とスタッフへの入口 */
 .team-sec{border-top:2px solid var(--ink);padding:56px 0 0}
 .apps-count{margin:-8px 0 28px}
@@ -82,7 +82,7 @@ footer{border-top:2px solid var(--ink);padding:28px 0 44px;font-size:14px;color:
 footer ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;gap:6px 18px}
 @media (max-width:980px){
   .hero{grid-template-columns:1fr}
-  .crowd{margin:0;max-width:360px}
+  .crowd{margin:0 auto;max-width:420px;justify-self:center}
   .staff{grid-template-columns:1fr}
 }
 @media (max-width:720px){
@@ -91,10 +91,7 @@ footer ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;g
   .big{font-size:58px}
   .hero .sub{font-size:21px}
   .hero .body{font-size:16px}
-  .crowd{grid-template-columns:repeat(5,1fr);max-width:none}
-  .crowd > :nth-child(n+6){display:none}
-  .crowd > :nth-child(3n+2){transform:none}
-  .crowd > :nth-child(2n){transform:translateY(12px)}
+  .crowd{max-width:350px;margin-top:-5px}
   .count{gap:10px}
   .count div{min-width:0;flex:1;padding:10px 6px}
   .count b{font-size:30px}
@@ -238,7 +235,15 @@ footer ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-wrap:wrap;g
   });
   var staff = window.MORK_STAFF || [];
   document.getElementById("n-staff").textContent = staff.length;
-  document.getElementById("crowd").innerHTML = staff.slice(0, 9).map(function (p) { return window.morkAvatar(p.avatar, 120); }).join("");
+  (function () { /* 11/28 モリオの決定版の並び（Figma 103:2）。left＝その子のまん中、bottom＝足もと、height＝箱の高さに対する割合 */
+    var P = { berry:[12.5,43.5,42,1], tsugiha:[31,51,42,2], hibino:[49.7,58,42,3], mani:[68.5,51,42,2], ashiato:[87.1,43.5,42,1],
+              meguru:[12.5,14,45.8,4], tsuzuri:[31,7,45.8,5], mork:[49.7,0,52.6,6], yui:[68.5,7,45.8,5], iroha:[87.1,14,45.8,4] };
+    var root = (window.MORK_ROOT || "/") + "assets/staff/";
+    document.getElementById("crowd").innerHTML = staff.filter(function (p) { return p.avatar && P[p.avatar.img]; }).map(function (p) {
+      var v = P[p.avatar.img];
+      return '<img src="' + root + p.avatar.img + '.webp" alt="" loading="lazy" style="left:' + v[0] + '%;bottom:' + v[1] + '%;height:' + v[2] + '%;z-index:' + v[3] + '">';
+    }).join("");
+  })();
   document.getElementById("faces").innerHTML = staff.slice(0, 5).map(function (p) { return window.morkAvatar(p.avatar, 48); }).join("");
   document.getElementById("year").textContent = new Date().getFullYear();
 })();
