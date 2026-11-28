@@ -211,7 +211,7 @@ def build(lang, ja, pr):
               "(window.MORK_APPS||[]).forEach(function(a){var t=I.apps[a.id];if(t){if(t.name)a.name=t.name;if(t.catch)a.catch=t.catch;}});</script>")
     h = h.replace('<script src="../staff.js"></script>', '<script src="../../staff.js"></script>' + inject, 1)
     if lang != "zh-Hant":  # 口ぐせのかぎかっこは、その言葉の引用符に
-        h = h.replace("</style>", '.person .quote::before{content:"\201C"}.person .quote::after{content:"\201D"}</style>', 1)
+        h = h.replace("</style>", '.person .quote::before{content:"“"}.person .quote::after{content:"”"}</style>', 1)
     return add_common(h, lang, "../")
 
 
